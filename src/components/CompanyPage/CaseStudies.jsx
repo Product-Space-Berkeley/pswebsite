@@ -12,6 +12,30 @@ import verizon from "../images/company/verizon.png"
 import meta from "../images/company/meta.png"
 import oracle from "../images/company/oracle.png"
 
+function CaseStudies() {
+    return (
+       <Container>
+        <Heading> PAST CLIENTS </Heading>
+        <LogoContainerBeta>
+                    <Logos src={microsoft} alt="Microsoft" weight={150}  height={100}/>
+                    <Logos src={meta} alt="Meta" weight={100}  height={100}/>
+                    <Logos src={oracle} alt="Oracle" weight={100}  height={100}/>
+                    <Logos src={samsung} alt="Samsung" weight={100}  height={95}/>
+                    <Logos src={verizon} alt="verizon" weight={100}  height={60}/>
+                    <Logos src={amex} alt="AMEX" weight={150}  height={100}/>
+                    <Logos src={box} alt="box" weight={150}  height={100}/>
+                    <Logos src={hubspot} alt="hubspot" weight={180}  height={100}/>
+                    <Logos src={sega} alt="sega" weight={75}  height={75}/>
+                    <Logos src={bartleby} alt="bartleby" weight={60} height={60}/>
+                    <Logos src={edmodo} alt="edmodo" weight={150}  height={100}/>
+                    <Logos src={atsign} alt="atsign" weight={70}  height={75}/>
+                </LogoContainerBeta>
+       </Container>
+    )
+}
+
+export default CaseStudies
+
 const Container = styled.div`
     display: flex; 
     flex-direction: column; 
@@ -62,27 +86,3 @@ const LogoContainerBeta = styled.div`
     }
     
 `
-
-function CaseStudies() {
-    return (
-       <Container>
-        <Heading> PAST CLIENTS </Heading>
-        <LogoContainerBeta>
-                    <Logos src={microsoft} alt="Microsoft" weight={150}  height={100}/>
-                    <Logos src={meta} alt="Meta" weight={100}  height={100}/>
-                    <Logos src={oracle} alt="Oracle" weight={100}  height={100}/>
-                    <Logos src={samsung} alt="Samsung" weight={100}  height={95}/>
-                    <Logos src={verizon} alt="verizon" weight={100}  height={60}/>
-                    <Logos src={amex} alt="AMEX" weight={150}  height={100}/>
-                    <Logos src={box} alt="box" weight={150}  height={100}/>
-                    <Logos src={hubspot} alt="hubspot" weight={180}  height={100}/>
-                    <Logos src={sega} alt="sega" weight={75}  height={75}/>
-                    <Logos src={bartleby} alt="bartleby" weight={60} height={60}/>
-                    <Logos src={edmodo} alt="edmodo" weight={150}  height={100}/>
-                    <Logos src={atsign} alt="atsign" weight={70}  height={75}/>
-                </LogoContainerBeta>
-       </Container>
-    )
-}
-
-export default CaseStudies

@@ -1,5 +1,31 @@
 import styled from 'styled-components'
 
+function PSDescription() {
+    return (
+        <Container>
+            <Title> WHAT IS PRODUCT SPACE @ BERKELEY? </Title>
+            <Description> 
+            Product Space @ Berkeley is the UC Berkeley chapter of 
+            Product Space, a nation-wide family of students who are 
+            passionate about product management. We strive to cultivate a 
+            tight-knit community of product leaders who are well-prepared 
+            to guide impactful products in industry.
+            </Description>
+            <NumbersGroup>
+                <NumContainer> 
+                    <Number>30+</Number>
+                    <NumDesc>Active Members</NumDesc>
+                </NumContainer>
+                <NumContainer>
+                    <Number> 10</Number>
+                    <NumDesc>Active Semesters</NumDesc>
+                </NumContainer>
+            </NumbersGroup>
+        </Container>
+    )
+}
+
+export default PSDescription;
 
 const Container = styled.div`
     display: flex;
@@ -77,30 +103,3 @@ const NumDesc = styled.div`
 
     }
 `
-
-function PSDescription() {
-    return (
-        <Container>
-            <Title> WHAT IS PRODUCT SPACE @ BERKELEY? </Title>
-            <Description> 
-            Product Space @ Berkeley is the UC Berkeley chapter of 
-            Product Space, a nation-wide family of students who are 
-            passionate about product management. We strive to cultivate a 
-            tight-knit community of product leaders who are well-prepared 
-            to guide impactful products in industry.
-            </Description>
-            <NumbersGroup>
-                <NumContainer> 
-                    <Number>30+</Number>
-                    <NumDesc>Active Members</NumDesc>
-                </NumContainer>
-                <NumContainer>
-                    <Number> 10</Number>
-                    <NumDesc>Active Semesters</NumDesc>
-                </NumContainer>
-            </NumbersGroup>
-        </Container>
-    )
-}
-
-export default PSDescription;

@@ -8,6 +8,45 @@ const handleLinkClick = () => {
   };
 
 
+function Footer() {
+    return (
+      <Container>
+        <ItemContainer>
+        <Item >
+            <Link to="/Home" onClick={handleLinkClick}>
+                <HomeIcon src={HomeLogo} alt='ImageNotLoading'/>
+            </Link>
+            <Text> 
+                We are a student group acting 
+                independently of the University of 
+                California. We take full responsibility 
+                for our organization and this web site.
+            </Text>
+        </Item>
+        <Item> 
+            <Header> General </Header>
+            <SubHeader to="/About" onClick={handleLinkClick}> About</SubHeader>
+        </Item>
+        <Item> 
+            <Header> Students</Header>
+            <SubHeader to="/Students" onClick={handleLinkClick}> For Students</SubHeader>
+            <SubHeader to="/Apply" onClick={handleLinkClick}> Apply</SubHeader>
+            </Item>
+        <Item> 
+            <Header>Companies</Header>
+            <SubHeader to="/Companies" onClick={handleLinkClick}> For Companies</SubHeader>
+        </Item>
+        <Item> 
+            <Header> Contact Us</Header>
+            <SubHeader> contact@product.berkeley.edu</SubHeader>
+        </Item>
+        </ItemContainer>
+      </Container>
+    );
+  }
+  
+  export default Footer;
+
 const Container = styled.div`
     width: 100%;
     height: auto;
@@ -96,42 +135,3 @@ const Text = styled.div`
 `   
 
 
-
-function Footer() {
-    return (
-      <Container>
-        <ItemContainer>
-        <Item >
-            <Link to="/Home" onClick={handleLinkClick}>
-                <HomeIcon src={HomeLogo} alt='ImageNotLoading'/>
-            </Link>
-            <Text> 
-                We are a student group acting 
-                independently of the University of 
-                California. We take full responsibility 
-                for our organization and this web site.
-            </Text>
-        </Item>
-        <Item> 
-            <Header> General </Header>
-            <SubHeader to="/About" onClick={handleLinkClick}> About</SubHeader>
-        </Item>
-        <Item> 
-            <Header> Students</Header>
-            <SubHeader to="/Students" onClick={handleLinkClick}> For Students</SubHeader>
-            <SubHeader to="/Apply" onClick={handleLinkClick}> Apply</SubHeader>
-            </Item>
-        <Item> 
-            <Header>Companies</Header>
-            <SubHeader to="/Companies" onClick={handleLinkClick}> For Companies</SubHeader>
-        </Item>
-        <Item> 
-            <Header> Contact Us</Header>
-            <SubHeader> contact@product.berkeley.edu</SubHeader>
-        </Item>
-        </ItemContainer>
-      </Container>
-    );
-  }
-  
-  export default Footer;

@@ -4,6 +4,44 @@ import HomePG from '../images/pictures/HomeBG.png'
 import { Link } from "react-router-dom"
 import sp23funboard from "../images/pictures/funboardsp23.jpg"
 
+const handleLinkClick = () => {
+    window.scrollTo(0, 1200);
+  };
+
+
+function ApplyPanel() {
+    const openInNewTab = (url) => {
+        window.open(url, "_blank", "noreferrer");
+      };
+
+    return (
+    <Panel> 
+        <OpeningHeader>
+            <HeadingTitle> Apply</HeadingTitle>
+            <HeadingSubtitle> 
+                <HeadingInfo>
+                Product Space welcomes anyone with a passion for PM 
+                to apply. Join us and shape your product journey! 
+                </HeadingInfo>
+                <ApplicationButton style={{border: "none"}}/>
+               <ApplicationButton
+                        role="link" style={{zIndex: "100"}}
+                        onClick={() => openInNewTab("https://docs.google.com/forms/d/e/1FAIpQLSfb8HSYnon8dmtBfMp0Kgk7wWX4HF139PLhNvve99T_sDcnZw/closedform")}>
+                            Start Application
+                    </ApplicationButton> 
+
+             </HeadingSubtitle>
+
+            
+        </OpeningHeader>
+        <PictureContainer> 
+             <PictureBox src={sp23funboard} />
+        </PictureContainer>
+     </Panel> 
+    )
+}
+
+export default ApplyPanel;
 
 const Panel = styled.div`
     width: 100%;
@@ -172,43 +210,6 @@ const ApplicationButton = styled.button`
     // border: solid black 1px;
 `
 
-const handleLinkClick = () => {
-    window.scrollTo(0, 1200);
-  };
 
-
-function ApplyPanel() {
-    const openInNewTab = (url) => {
-        window.open(url, "_blank", "noreferrer");
-      };
-
-    return (
-    <Panel> 
-        <OpeningHeader>
-            <HeadingTitle> Apply</HeadingTitle>
-            <HeadingSubtitle> 
-                <HeadingInfo>
-                Product Space welcomes anyone with a passion for PM 
-                to apply. Join us and shape your product journey! 
-                </HeadingInfo>
-                <ApplicationButton style={{border: "none"}}/>
-               <ApplicationButton
-                        role="link" style={{zIndex: "100"}}
-                        onClick={() => openInNewTab("https://docs.google.com/forms/d/e/1FAIpQLSfb8HSYnon8dmtBfMp0Kgk7wWX4HF139PLhNvve99T_sDcnZw/closedform")}>
-                            Start Application
-                    </ApplicationButton> 
-
-             </HeadingSubtitle>
-
-            
-        </OpeningHeader>
-        <PictureContainer> 
-             <PictureBox src={sp23funboard} />
-        </PictureContainer>
-     </Panel> 
-    )
-}
-
-export default ApplyPanel;
 
 

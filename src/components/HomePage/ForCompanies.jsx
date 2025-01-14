@@ -7,6 +7,31 @@ const handleLinkClick = () => {
     window.scrollTo(0, 0);
   };
 
+
+
+function ForCompanies() {
+    return (
+        <Container> 
+        <Box>
+            <Title> FOR COMPANIES</Title>
+            <Description> 
+            The best undergraduate team for your products
+            </Description>
+            <Description2>
+            Product Space is uniquely positioned to assist
+             companies as the first and largest product management
+              organization at UC Berkeley. All client projects are
+               handled by a project manager, 4 to 6 product associates,
+                and an advisor.
+            </Description2>
+            <Button to="/Companies" onClick={handleLinkClick}> Learn More </Button>
+        </Box>
+        <PictureBox src={sp23Board} />
+    </Container>
+    )
+};
+
+export default ForCompanies;
 const Container = styled.div`
     display: flex; 
     justify-content: space-around;
@@ -77,26 +102,3 @@ const PictureBox = styled.img`
     }
 
 `
-function ForCompanies() {
-    return (
-        <Container> 
-        <Box>
-            <Title> FOR COMPANIES</Title>
-            <Description> 
-            The best undergraduate team for your products
-            </Description>
-            <Description2>
-            Product Space is uniquely positioned to assist
-             companies as the first and largest product management
-              organization at UC Berkeley. All client projects are
-               handled by a project manager, 4 to 6 product associates,
-                and an advisor.
-            </Description2>
-            <Button to="/Companies" onClick={handleLinkClick}> Learn More </Button>
-        </Box>
-        <PictureBox src={sp23Board} />
-    </Container>
-    )
-};
-
-export default ForCompanies;

@@ -4,6 +4,57 @@ import PSLogo from './images/miscicons/PSLogo.png'
 import hamburgerIcon from './images/miscicons/hamburgerIcon.png'
 import React, { useState } from 'react'
 
+
+
+
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const handleClick = () => {
+    console.log(isOpen)
+    setIsOpen(!isOpen)
+  }
+
+  const handleLinkClick = () => {
+      window.scrollTo(0, 0);
+  };
+
+  return (
+    <Container>
+        <HomeContainer>
+          <NavLink to="/Home" >
+            <HomeIcon src={PSLogo} alt='ImageNotLoading'/>
+          </NavLink>
+        </HomeContainer>
+        <ItemContainer>
+            <ANavLink to="/Home" onClick={handleLinkClick} activeClassName="active"> Home </ANavLink>
+            <ANavLink to="/About" onClick={handleLinkClick} activeClassName="active"> About </ANavLink>
+            <ANavLink to="/Students" onClick={handleLinkClick} activeClassName="active"> Students </ANavLink>
+            <ANavLink to="/Companies" onClick={handleLinkClick} activeClassName="active"> Companies </ANavLink>
+            <ANavLink to="/Careers" onClick={handleLinkClick} activeClassName="active"> Careers </ANavLink>
+            <ANavLink to="/Apply" onClick={handleLinkClick} activeClassName="active"> Apply </ANavLink>
+        </ItemContainer>
+        <DropdownContainer>
+          <HamburgerIcon src={hamburgerIcon} onClick={() => handleClick()}/>
+          {
+          isOpen && 
+            <DropdownItemContainer>
+              <DropdownListItem to="/Home" onClick={handleLinkClick}> Home </DropdownListItem>
+              <DropdownListItem to="/About" onClick={handleLinkClick}> About </DropdownListItem>
+              <DropdownListItem to="/Students" onClick={handleLinkClick}> Students </DropdownListItem>
+              <DropdownListItem to="/Companies" onClick={handleLinkClick}> Companies </DropdownListItem>
+              <DropdownListItem to="/Careers" onClick={handleLinkClick}> Careers </DropdownListItem>
+              <DropdownListItem to="/Apply" onClick={handleLinkClick}> Apply </DropdownListItem>
+            </DropdownItemContainer>
+        }
+        </DropdownContainer>
+    </Container>
+  );
+}
+
+export default Navbar;
+
+
 const Container = styled.div`
     position: sticky;
     top: 0;
@@ -155,51 +206,3 @@ const HamburgerIcon = styled.img`
     // border: solid blue;
 
 `;
-
-
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  
-  const handleClick = () => {
-    console.log(isOpen)
-    setIsOpen(!isOpen)
-  }
-
-  const handleLinkClick = () => {
-      window.scrollTo(0, 0);
-  };
-
-  return (
-    <Container>
-        <HomeContainer>
-          <NavLink to="/Home" >
-            <HomeIcon src={PSLogo} alt='ImageNotLoading'/>
-          </NavLink>
-        </HomeContainer>
-        <ItemContainer>
-            <ANavLink to="/Home" onClick={handleLinkClick} activeClassName="active"> Home </ANavLink>
-            <ANavLink to="/About" onClick={handleLinkClick} activeClassName="active"> About </ANavLink>
-            <ANavLink to="/Students" onClick={handleLinkClick} activeClassName="active"> Students </ANavLink>
-            <ANavLink to="/Companies" onClick={handleLinkClick} activeClassName="active"> Companies </ANavLink>
-            <ANavLink to="/Careers" onClick={handleLinkClick} activeClassName="active"> Careers </ANavLink>
-            <ANavLink to="/Apply" onClick={handleLinkClick} activeClassName="active"> Apply </ANavLink>
-        </ItemContainer>
-        <DropdownContainer>
-          <HamburgerIcon src={hamburgerIcon} onClick={() => handleClick()}/>
-          {
-          isOpen && 
-            <DropdownItemContainer>
-              <DropdownListItem to="/Home" onClick={handleLinkClick}> Home </DropdownListItem>
-              <DropdownListItem to="/About" onClick={handleLinkClick}> About </DropdownListItem>
-              <DropdownListItem to="/Students" onClick={handleLinkClick}> Students </DropdownListItem>
-              <DropdownListItem to="/Companies" onClick={handleLinkClick}> Companies </DropdownListItem>
-              <DropdownListItem to="/Careers" onClick={handleLinkClick}> Careers </DropdownListItem>
-              <DropdownListItem to="/Apply" onClick={handleLinkClick}> Apply </DropdownListItem>
-            </DropdownItemContainer>
-        }
-        </DropdownContainer>
-    </Container>
-  );
-}
-
-export default Navbar;

@@ -2,6 +2,32 @@ import styled from 'styled-components'
 import HomePG from '../images/pictures/HomeBG.png'
 import StudentPanelPic from '../images/pictures/StudentsPanelPic.png'
 
+
+function StudentPanel() {
+    return (
+        <Panel>
+            <OpeningHeader>
+                <HeadingTitle> Curricula</HeadingTitle>
+                <HeadingSubtitle> 
+                At Product Space, we invest a lot of our energies
+                into creating educational programs that are relevant,
+                high-impact, and full of insights into product management. 
+                From tackling interviews to performing case studies on
+                real-world issues, our members have made remarkable achievements
+                    putting what they’ve learned at Product Space into their
+                    internships and beyond.
+                </HeadingSubtitle>
+            </OpeningHeader>
+            <PictureContainer> 
+                <PictureBox src={StudentPanelPic} />
+            </PictureContainer>
+        </Panel>
+
+    )
+}
+
+export default StudentPanel;
+
 const Panel = styled.div`
     min-height: 650px;
     display: flex;
@@ -22,8 +48,6 @@ const Panel = styled.div`
         // border: solid black;
 
     }
-
-
 
 `
 const OpeningHeader = styled.div`
@@ -99,29 +123,3 @@ const PictureBox = styled.img`
     height: 550px;
 
 `;
-
-
-function StudentPanel() {
-    return (
-        <Panel>
-            <OpeningHeader>
-                <HeadingTitle> Curricula</HeadingTitle>
-                <HeadingSubtitle> 
-                At Product Space, we invest a lot of our energies
-                into creating educational programs that are relevant,
-                high-impact, and full of insights into product management. 
-                From tackling interviews to performing case studies on
-                real-world issues, our members have made remarkable achievements
-                    putting what they’ve learned at Product Space into their
-                    internships and beyond.
-                </HeadingSubtitle>
-            </OpeningHeader>
-            <PictureContainer> 
-                <PictureBox src={StudentPanelPic} />
-            </PictureContainer>
-        </Panel>
-
-    )
-}
-
-export default StudentPanel;

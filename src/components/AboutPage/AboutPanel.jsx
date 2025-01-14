@@ -5,6 +5,33 @@ import AboutPanelPic from '../images/pictures/AboutPanelPic.png'
 import fa23banquet from "../images/pictures/fa23banquetfellowship.png"
 import fa23retreatfellows from "../images/pictures/fa23retreatfellows.png"
 
+function AboutPanel() {
+    return (
+        <Panel>
+            <OpeningHeader>
+                <HeadingTitle> Mission</HeadingTitle>
+                <HeadingSubtitle> 
+                At Product Space, our mission is to help undergraduate 
+                students nurture the skills demanded in this field so 
+                they can thrive as product leaders and help others who are
+                interested in product management. To accomplish this, we
+                continue to build a strong, engaged community of future 
+                product managers who are excited to embark on their product 
+                journey and desire to give back as much as they take.
+                </HeadingSubtitle>
+            </OpeningHeader>
+            <AboutPanelPicContainer>
+                <AboutVPictureBox src={fa23retreatfellows}/>
+                <AboutHPictureBox src={fa23banquet} />
+            </AboutPanelPicContainer>
+
+    </Panel>
+
+    )
+}
+
+export default AboutPanel;
+
 const Panel = styled.div`
     width: 100%;
     min-height: 700px;
@@ -151,29 +178,3 @@ const AboutVPictureBox = styled.img`
 
 `;
 
-function AboutPanel() {
-    return (
-        <Panel>
-            <OpeningHeader>
-                <HeadingTitle> Mission</HeadingTitle>
-                <HeadingSubtitle> 
-                At Product Space, our mission is to help undergraduate 
-                students nurture the skills demanded in this field so 
-                they can thrive as product leaders and help others who are
-                interested in product management. To accomplish this, we
-                continue to build a strong, engaged community of future 
-                product managers who are excited to embark on their product 
-                journey and desire to give back as much as they take.
-                </HeadingSubtitle>
-            </OpeningHeader>
-            <AboutPanelPicContainer>
-                <AboutVPictureBox src={fa23retreatfellows}/>
-                <AboutHPictureBox src={fa23banquet} />
-            </AboutPanelPicContainer>
-
-    </Panel>
-
-    )
-}
-
-export default AboutPanel;

@@ -1,6 +1,21 @@
 import styled from "styled-components"
 import linkedinIcon from "../images/company/linkedinIcon.png"
 
+
+function SeniorAdvisorInfo(props) {
+    const { fullname, position} = props;
+    return (
+        <Container>
+            <InfoContainer>
+                <FullName>{fullname}</FullName>
+                <Position> {position}</Position>
+            </InfoContainer>
+        </Container>
+    )
+}
+
+export default SeniorAdvisorInfo; 
+
 const Container = styled.div`
     width: 215px;
     height: 150px;
@@ -54,17 +69,3 @@ const Position = styled.div`
 
 
 `
-
-function SeniorAdvisorInfo(props) {
-    const { fullname, position} = props;
-    return (
-        <Container>
-            <InfoContainer>
-                <FullName>{fullname}</FullName>
-                <Position> {position}</Position>
-            </InfoContainer>
-        </Container>
-    )
-}
-
-export default SeniorAdvisorInfo; 

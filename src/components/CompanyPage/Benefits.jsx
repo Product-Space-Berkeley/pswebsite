@@ -3,6 +3,50 @@ import icon1 from '../images/miscicons/CompanyIcon1.png'
 import icon2 from '../images/miscicons/CompanyIcon2.png'
 import icon3 from '../images/miscicons/CompanyIcon3.png'
 
+function Benefits() {
+    return (
+        <Container>
+            <TextContainer>
+                <Title>OUR BENEFITS</Title>
+            </TextContainer>
+            <CardContainer>
+                <Card>
+                    <CardTitle> Talent</CardTitle>
+                    <CardImg src={icon1}/>
+                    <CardSubtitle> 
+                    We take pride in our diverse and accomplished members.
+                     Many have previous internship experience through top
+                      PM programs at Google, Salesforce, Microsoft, and 
+                      more.
+                    </CardSubtitle>
+                </Card>
+                <Card>
+                    <CardTitle> Versatility</CardTitle>
+                    <CardImg src={icon2}/>
+                    <CardSubtitle> 
+                    From product design to marketing, our members offer a
+                     variety of skills to fulfill your project. Our client 
+                     teams are very flexible, capable of accomodating 
+                     products from different industries.
+                    </CardSubtitle>
+                </Card>
+                <Card>
+                    <CardTitle> Recruitment</CardTitle>
+                    <CardImg src={icon3}/>
+                    <CardSubtitle> 
+                    As a client, you will have access to a pool of top students 
+                    in product from UC Berkeley. Opportunities include our 
+                    resume book as well as priority in hosting workshops and other
+                     events.
+                    </CardSubtitle>
+                </Card>
+            </CardContainer>
+        </Container>
+    )
+}
+
+export default Benefits; 
+
 const Container = styled.div`
     display: flex; 
     flex-direction: column;
@@ -123,47 +167,3 @@ const CardImg = styled.img`
 
 
 `
-
-function Benefits() {
-    return (
-        <Container>
-            <TextContainer>
-                <Title>OUR BENEFITS</Title>
-            </TextContainer>
-            <CardContainer>
-                <Card>
-                    <CardTitle> Talent</CardTitle>
-                    <CardImg src={icon1}/>
-                    <CardSubtitle> 
-                    We take pride in our diverse and accomplished members.
-                     Many have previous internship experience through top
-                      PM programs at Google, Salesforce, Microsoft, and 
-                      more.
-                    </CardSubtitle>
-                </Card>
-                <Card>
-                    <CardTitle> Versatility</CardTitle>
-                    <CardImg src={icon2}/>
-                    <CardSubtitle> 
-                    From product design to marketing, our members offer a
-                     variety of skills to fulfill your project. Our client 
-                     teams are very flexible, capable of accomodating 
-                     products from different industries.
-                    </CardSubtitle>
-                </Card>
-                <Card>
-                    <CardTitle> Recruitment</CardTitle>
-                    <CardImg src={icon3}/>
-                    <CardSubtitle> 
-                    As a client, you will have access to a pool of top students 
-                    in product from UC Berkeley. Opportunities include our 
-                    resume book as well as priority in hosting workshops and other
-                     events.
-                    </CardSubtitle>
-                </Card>
-            </CardContainer>
-        </Container>
-    )
-}
-
-export default Benefits; 

@@ -6,6 +6,34 @@ import truonglineage from '../images/pictures/truonglineage.jpg'
 import tialineage from '../images/pictures/tialineage.jpg'
 
 
+function CareerPanel() {
+    return (
+        <Panel>
+            <OpeningHeader>
+                <HeadingTitle> Careers</HeadingTitle>
+                <HeadingSubtitle> 
+                Product Space represents a significant proportion 
+                of associate product managers from UC Berkeley. 
+                From Google to Reddit to Twitter, 20+ APM and PM 
+                programs have had Product Space members as an intern 
+                or full-timer. We've compiled our members' career 
+                placement for 2024 below.
+                </HeadingSubtitle>
+            </OpeningHeader>
+            <PictureContainer>
+                
+                <HPictureBox src={yutalineage} />
+                <VPictureBox src={tialineage}/> 
+                <VPictureBox src={truonglineage}/> 
+            </PictureContainer>
+
+        </Panel>
+
+    )
+}
+
+export default CareerPanel;
+
 const Panel = styled.div`
     width: 100%;
     min-height: 600px;
@@ -101,31 +129,3 @@ const VPictureBox = styled.img`
     height: 300px;
 
 `;
-
-function CareerPanel() {
-    return (
-        <Panel>
-            <OpeningHeader>
-                <HeadingTitle> Careers</HeadingTitle>
-                <HeadingSubtitle> 
-                Product Space represents a significant proportion 
-                of associate product managers from UC Berkeley. 
-                From Google to Reddit to Twitter, 20+ APM and PM 
-                programs have had Product Space members as an intern 
-                or full-timer. We've compiled our members' career 
-                placement for 2024 below.
-                </HeadingSubtitle>
-            </OpeningHeader>
-            <PictureContainer>
-                
-                <HPictureBox src={yutalineage} />
-                <VPictureBox src={tialineage}/> 
-                <VPictureBox src={truonglineage}/> 
-            </PictureContainer>
-
-        </Panel>
-
-    )
-}
-
-export default CareerPanel;

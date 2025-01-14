@@ -3,6 +3,50 @@ import Icon1 from '../images/miscicons/AboutIcon1.png'
 import Icon2 from '../images/miscicons/AboutIcon2.png'
 import Icon3 from '../images/miscicons/AboutIcon3.png'
 
+function Values() {
+    return (
+        <Container>
+            <TextContainer>
+                <Title>OUR VALUES</Title>
+                <Subtitle>
+                    At Product Space, we strive to embody the 
+                    following values to foster a welcoming and 
+                    enriching environment for our members.
+                </Subtitle>
+            </TextContainer>
+            <CardContainer>
+                <Card>
+                    <CardTitle> Empathy</CardTitle>
+                    <CardImg src={Icon1}/>
+                    <CardSubtitle> 
+                        A skilled PM demonstrates an exceptional 
+                        ability to empathize with individuals and
+                         products.
+                    </CardSubtitle>
+                </Card>
+                <Card>
+                    <CardTitle> Dedication</CardTitle>
+                    <CardImg src={Icon2}/>
+                    <CardSubtitle> 
+                        With dedication and love for what you do, we 
+                        believe the outcome of any effort will multiply
+                        in value.
+                    </CardSubtitle>
+                </Card>
+                <Card>
+                    <CardTitle> Impact</CardTitle>
+                    <CardImg src={Icon3}/>
+                    <CardSubtitle> 
+                    We constantly brainstorm and deliver exciting ideas to 
+                    impact the Berkeley campus and beyond.
+                    </CardSubtitle>
+                </Card>
+            </CardContainer>
+        </Container>
+    )
+}
+
+export default Values; 
 
 const Container = styled.div`
     display: flex; 
@@ -123,48 +167,3 @@ const CardSubtitle = styled.h4`
     padding-left: 10px;
     padding-right: 10px;
 `
-
-function Values() {
-    return (
-        <Container>
-            <TextContainer>
-                <Title>OUR VALUES</Title>
-                <Subtitle>
-                    At Product Space, we strive to embody the 
-                    following values to foster a welcoming and 
-                    enriching environment for our members.
-                </Subtitle>
-            </TextContainer>
-            <CardContainer>
-                <Card>
-                    <CardTitle> Empathy</CardTitle>
-                    <CardImg src={Icon1}/>
-                    <CardSubtitle> 
-                        A skilled PM demonstrates an exceptional 
-                        ability to empathize with individuals and
-                         products.
-                    </CardSubtitle>
-                </Card>
-                <Card>
-                    <CardTitle> Dedication</CardTitle>
-                    <CardImg src={Icon2}/>
-                    <CardSubtitle> 
-                        With dedication and love for what you do, we 
-                        believe the outcome of any effort will multiply
-                        in value.
-                    </CardSubtitle>
-                </Card>
-                <Card>
-                    <CardTitle> Impact</CardTitle>
-                    <CardImg src={Icon3}/>
-                    <CardSubtitle> 
-                    We constantly brainstorm and deliver exciting ideas to 
-                    impact the Berkeley campus and beyond.
-                    </CardSubtitle>
-                </Card>
-            </CardContainer>
-        </Container>
-    )
-}
-
-export default Values; 

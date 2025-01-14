@@ -3,6 +3,55 @@ import FA22Fellowship from "../images/pictures/fa2022fellowship.png"
 import Client from "../images/pictures/client.png"
 
 
+function OurPrograms() {
+    return(
+        <Container>
+            <Header> OUR PROGRAMS</Header>
+            <ProgramContainer>
+                <ProgramText>
+                    <Title> Fellowship</Title>
+                    <Description>
+                        If you’re new to product management, the
+                        fellowship program is the perfect place to 
+                        begin. Over the course of a semester, you’ll
+                        be mentored with a group of fellows on a variety
+                        of product management topics, including the 
+                        interview processes, design thinking, the day-to-day
+                        of a product manager, and the different roles within 
+                        this career field. Whether you’re trying to land a
+                        PM internship or decide if product management is 
+                        right for you, this program is a great way to meet 
+                        like-minded people and get a head start in your career.
+                    </Description>
+                </ProgramText>
+                <Image src={FA22Fellowship}/>
+            </ProgramContainer>
+            <ProgramContainer>
+                <Image src={Client}/>
+                <ProgramText>
+                    <Title> Client</Title>
+                    <Description>
+                    In addition to the fellowship program, members are grouped 
+                    into a client project to build real-world experience and 
+                    apply their learnings as a product associate for a Fortune 500 
+                    company. Throughout the semester, you’ll be working under an 
+                    experienced project manager to devise impactful features and products for 
+                    companies in various stages and industries. From talking 
+                    with stakeholders to conducting user research, the client 
+                    projects will provide you with invaluable experience for 
+                    your growth as a product manager.
+                    </Description>
+                </ProgramText>
+                
+
+            </ProgramContainer>
+
+        </Container>
+    ) 
+}
+
+export default OurPrograms;
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -109,52 +158,3 @@ const Description = styled.div`
 `
 
 
-
-function OurPrograms() {
-    return(
-        <Container>
-            <Header> OUR PROGRAMS</Header>
-            <ProgramContainer>
-                <ProgramText>
-                    <Title> Fellowship</Title>
-                    <Description>
-                        If you’re new to product management, the
-                        fellowship program is the perfect place to 
-                        begin. Over the course of a semester, you’ll
-                        be mentored with a group of fellows on a variety
-                        of product management topics, including the 
-                        interview processes, design thinking, the day-to-day
-                        of a product manager, and the different roles within 
-                        this career field. Whether you’re trying to land a
-                        PM internship or decide if product management is 
-                        right for you, this program is a great way to meet 
-                        like-minded people and get a head start in your career.
-                    </Description>
-                </ProgramText>
-                <Image src={FA22Fellowship}/>
-            </ProgramContainer>
-            <ProgramContainer>
-                <Image src={Client}/>
-                <ProgramText>
-                    <Title> Client</Title>
-                    <Description>
-                    In addition to the fellowship program, members are grouped 
-                    into a client project to build real-world experience and 
-                    apply their learnings as a product associate for a Fortune 500 
-                    company. Throughout the semester, you’ll be working under an 
-                    experienced project manager to devise impactful features and products for 
-                    companies in various stages and industries. From talking 
-                    with stakeholders to conducting user research, the client 
-                    projects will provide you with invaluable experience for 
-                    your growth as a product manager.
-                    </Description>
-                </ProgramText>
-                
-
-            </ProgramContainer>
-
-        </Container>
-    ) 
-}
-
-export default OurPrograms;

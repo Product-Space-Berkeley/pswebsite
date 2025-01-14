@@ -88,6 +88,26 @@ const imageMap = {
     "ananyagupta": ananya
 }
 
+function SeniorAdvisors() {
+    return (
+       <Container> 
+            <Headers>
+                <HeadingText> SENIOR ADVISORS & ALUMNI</HeadingText>
+                    
+            </Headers>
+            <SeniorContainer> 
+                {memberInfo.senior_advisors.map((senior_advisor) => (
+                    <SeniorCard>
+                        <SeniorImage src={imageMap[senior_advisor.imagekey]} alt="senior advisor" /> 
+                        <SeniorAdvisorInfo fullname={senior_advisor.fullname} position={senior_advisor.position} grade={senior_advisor.grade} major={senior_advisor.major}/>
+                    </SeniorCard>
+                ))}
+            </SeniorContainer>
+       </Container>
+    )
+}
+
+export default SeniorAdvisors;
 
 const Container = styled.div`
     display: flex; 
@@ -169,26 +189,3 @@ const Headers = styled.div`
 
     }
 `
-
-
-
-function SeniorAdvisors() {
-    return (
-       <Container> 
-            <Headers>
-                <HeadingText> SENIOR ADVISORS & ALUMNI</HeadingText>
-                    
-            </Headers>
-            <SeniorContainer> 
-                {memberInfo.senior_advisors.map((senior_advisor) => (
-                    <SeniorCard>
-                        <SeniorImage src={imageMap[senior_advisor.imagekey]} alt="senior advisor" /> 
-                        <SeniorAdvisorInfo fullname={senior_advisor.fullname} position={senior_advisor.position} grade={senior_advisor.grade} major={senior_advisor.major}/>
-                    </SeniorCard>
-                ))}
-            </SeniorContainer>
-       </Container>
-    )
-}
-
-export default SeniorAdvisors;
