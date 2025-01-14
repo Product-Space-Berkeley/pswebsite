@@ -38,6 +38,12 @@ const placements = [
                 title: "Associate Product Manager",
                 year: "Senior"
             },
+            {   
+                name: "Trinity Huynh",
+                company: "Meta",
+                title: "Rotational Product Manager",
+                year: "Senior"
+            },
             {
                 name: "Crystal Chang",
                 company: "Stripe",
