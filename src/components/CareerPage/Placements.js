@@ -220,7 +220,7 @@ const placements = [
             year: "Sophomore"
         },
         {
-            name: "Carly Chen",
+            name: "Carly Chan",
             company: "Uber",
             title: "Software Engineer Intern",
             year: "Freshmen"
