@@ -2,53 +2,49 @@ import React from "react";
 import styled from "styled-components"
 import LeadershipInfo from "./LeadershipInfo"
 
-import krish from "../images/people/krishkumar.png"
-import yuta from "../images/people/yuta.png"
-import wesley from "../images/people/wesley.png"
-import su from "../images/people/su.png"
-import angela from "../images/people/angela.png"
-import dasang from "../images/people/dasang.png"
-import michelle from "../images/people/michellelee.png"
 import anisa from "../images/people/anisa.png"
 import chris from "../images/people/chrislee.png"
-import suhani from "../images/people/suhaniramchandra.png"
-import christine from "../images/people/christine.png"
-import rick from "../images/people/rickxu.png"
-import anna from "../images/people/annacheng.png"
-import lauren from "../images/people/lauren.png"
 import andy from "../images/people/andywei.png"
-import vicky from "../images/people/vicky.png"
-import nina from "../images/people/ninacheuck.png"
-import marissa from "../images/people/marissa.png"
+import christine from "../images/people/christine.png"
 import melanie from "../images/people/melanie.png"
 import ryan from "../images/people/ryan.png"
-
-
-
+import rick from "../images/people/rickxu.png"
+import nina from "../images/people/ninacheuck.png"
+import ayami from "../images/people/ayami.png"
+import lucas from "../images/people/lucas.png"
+import xiao from "../images/people/xiao.png"
+import oscar from "../images/people/oscar.png"
+import carly from "../images/people/carlychan.png"
+import jonathan from "../images/people/jonathanchiang.png"
+import michael from "../images/people/michaelbohm.png"
+import mischa from "../images/people/mischa.png"
+import tim from "../images/people/timzhou.png"
+import vyoma from "../images/people/vyoma.png"
+import dasang from "../images/people/dasang.png"
+import vaishavi from "../images/people/dasang.png"
 
 import memberInfo from "../AboutPage/MemberInfo"
 
 const imageMap = {
-    "krishkumar": krish,
-    "yutayamada": yuta,
-    "wesleygriggs": wesley,
-    "sulee": su,
-    "angelazhang": angela,
-    "dasangdolma": dasang,
-    "michellelee": michelle,
     "anisamajhi": anisa,
     "chrislee": chris,
-    "suhanir": suhani,
-    "christinewong": christine,
-    "rickxu": rick,
-    "annacheng": anna,
-    "laurensung": lauren,
     "andywei": andy,
-    "vickyxiao": vicky,
-    "ninacheuck": nina,
-    "marissajensen": marissa,
+    "christinewong": christine,
     "melaniehsiang": melanie,
-    "ryancho": ryan
+    "ryancho": ryan,
+    "rickxu": rick,
+    "ninacheuck": nina,
+    "ayami": ayami,
+    "lucasomori": lucas,
+    "xiao": xiao,
+    "carlychan": carly,
+    "jonathanchiang": jonathan,
+    "michaelbohm": michael,
+    "mischa": mischa,
+    "timzhou": tim,
+    "vyoma": vyoma,
+    "oscarchow": oscar,
+    "dasangdolma": dasang
 }
 
 const Container = styled.div`
