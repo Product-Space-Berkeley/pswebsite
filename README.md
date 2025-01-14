@@ -1,3 +1,3 @@
 Official Product Space Website. 
 
-product.berkeley.edu
+https://product.studentorg.berkeley.edu
