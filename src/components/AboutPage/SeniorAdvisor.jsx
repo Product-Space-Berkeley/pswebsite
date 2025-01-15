@@ -42,9 +42,11 @@ import tsadi from "../images/people/tsadiobolu.png"
 import rickey from "../images/people/rickeymcgregor.png"
 import saumya from "../images/people/saumyachoudhary.png"
 import ananya from "../images/people/ananyagupta.png"
+import angela from "../images/people/angela.png"
 
 const imageMap = {
 
+    "angelazhang": angela,
     "hanamcnierney": hana,
     "lucasomori": lucas,
     "raymondfeng": raymond,

@@ -100,7 +100,7 @@ const members = {
             imagepath: "../images/people/ayami.png",
             imagekey: "ayami",
             fullname: "Ayami Matsumura",
-            position: "Fellowship mentor",
+            position: "Fellowship Mentor",
             grade: "Junior",
             major: "Cognitive Science, Data Science",
             hobbies: "Trying out new sports, traveling, window shopping, cooking/eating",
@@ -112,7 +112,7 @@ const members = {
             imagepath: "../images/people/lucas.png",
             imagekey: "lucasomori",
             fullname: "Lucas Omori",
-            position: "Fellowship mentor",
+            position: "Fellowship Mentor",
             grade: "Senior",
             major: "Data Science",
             hobbies: "Dance, Going to concerts (Kpop, Indie, RnB), Beli reviews",
@@ -124,7 +124,7 @@ const members = {
             imagepath: "../images/people/xiao.png",
             imagekey: "xiao",
             fullname: "Xiao li",
-            position: "Fellowship mentor",
+            position: "Fellowship Mentor",
             grade: "Junior",
             major: "Economics, Data Science",
             hobbies: "UPDATE",
@@ -138,11 +138,11 @@ const members = {
             fullname: "Carly Chan",
             position: "Project Manager",
             grade: "Sophmore",
-            major: "Computer Science",
-            hobbies: "UPDATE",
-            email: "UPDATE",
-            linkedin: "UPDATE",
-            calendlylink: "UPDATE"
+            major: "Computer Science, Applied Mathematics",
+            hobbies: "cafes & caffeine overconsumption, collecting cute things, reading, sketching",
+            email: "carlychvn@berkeley.edu",
+            linkedin: "ww.linkedin.com/in/carly-chvn",
+            calendlylink: "https://calendly.com/carlychvn-berkeley/carly-s-coffee-chats"
         },
         {
             imagepath: "../images/people/jonathanchiang.png",
@@ -151,10 +151,10 @@ const members = {
             position: "Project Manager",
             grade: "Sophmore",
             major: "Economics, Data Science",
-            hobbies: "UPDATE",
-            email: "UPDATE",
-            linkedin: "UPDATE",
-            calendlylink: "UPDATE"
+            hobbies: "Exploring cafe/restaurants, basketball, bedrot",
+            email: "cchiang0410@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/jonathan-chiang-26026120a/",
+            calendlylink: "https://calendly.com/cchiang0410-berkeley/coffee-chat"
         },
         {
             imagepath: "../images/people/michaelbohm.png",
@@ -230,6 +230,22 @@ const members = {
         },
     ],
     senior_advisors: [
+        {
+            imagepath: "../images/people/michelle.png",
+            imagekey: "angelazhang",
+            fullname: "Angela Zhang",
+            position: "VP Fellowship FA '24",
+            class: "2025",
+            major: "Cognitive Science, Computer Science"
+        },
+        {
+            imagepath: "../images/people/angela.png",
+            imagekey: "angelazhang",
+            fullname: "Angela Zhang",
+            position: "VP Fellowship FA '24",
+            class: "2025",
+            major: "Cognitive Science, Computer Science"
+        },
         {
             imagepath: "../images/people/hana.png",
             imagekey: "hanamcnierney",
