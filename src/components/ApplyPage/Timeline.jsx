@@ -2,6 +2,135 @@ import styled from 'styled-components'
 import { Link } from "react-router-dom"
 
 
+const handleLinkClick = () => {
+    window.scrollTo(0, 1200);
+  };
+
+
+function Timeline() {
+
+    const openInNewTab = (url) => {
+        window.open(url, "_blank", "noreferrer");
+      };
+      
+    return(
+        <Container> 
+            
+            <Header> TIMELINE FOR FALL 2024 </Header>
+            <Table>
+                <Row> 
+                    <DateRow>
+                        <DateText> 8/28 (Wed) - 9/5 (Thurs)</DateText>
+                    </DateRow> 
+                    <InfoRow> 
+                        <RowTitle> Tabling & Coffee Chats Open </RowTitle>
+                        <RowDescription>
+                            Find us tabling at Sproul or sign up for coffee chats with members at
+                            Product Space to learn more about the club! 
+                            <ALink to="../About" onClick={handleLinkClick}>
+                                <Subtitle> *Click here to sign up for coffee chats</Subtitle>
+                            </ALink>
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row>
+                    <DateRow>
+                        <DateText> 8/30 (Fri) </DateText>
+                    </DateRow> 
+                    <InfoRow> 
+                        <RowTitle> Applications Open </RowTitle>
+                        <ApplicationButton
+                        role="link"
+                        onClick={() => openInNewTab("https://docs.google.com/forms/d/e/1FAIpQLSfb8HSYnon8dmtBfMp0Kgk7wWX4HF139PLhNvve99T_sDcnZw/viewform")}>
+                            Start Application
+                        </ApplicationButton>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/3 (Tues) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> Info Session (8 - 10 PM PT) </RowTitle>
+                        <RowLocation> Location: Wheeler 224</RowLocation>
+                        <RowDescription>
+                            Join us to get a glimpse into the way we do 
+                            things at Product Space @ Berkeley.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/5 (Thurs) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> PS Case Workshop (8 - 10 PM PT) </RowTitle>
+                        <RowLocation> Location: The Standard at Berkeley (1st Floor Lounge)</RowLocation>
+                        <RowDescription>
+                        Whether you're completely new to PM or experienced, 
+                        the Intro to PM workshop—led by a senior PS member—is 
+                        an excellent way to be introduced to product
+                        management. We will also go over a popular product 
+                        case interview framework that we recommend to use 
+                        for our first round of interviews!
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/6 (Fri) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> Applications Close! (11:59PM PST)  </RowTitle>
+                        <RowDescription>
+                        Submit your Product Space application by midnight Pacific Time on this date!
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/8 (Sun) - 9/9 (Mon) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> 1st Round Interviews (invite only)</RowTitle>
+                        <RowDescription>
+                        We'll cover a couple of behavioral questions and a product design
+                         question to learn more about you and your interest in Product Space.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/11 (Wed) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> Final Round Interviews (invite only)</RowTitle>
+                        <RowDescription>
+                        The final step will be a presentation on a prompt we will 
+                        provide to you ahead of time to see how you might fit into our club.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText> 9/11 (Wed) </DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle> Social Night (6-8PM PT) (invite only)</RowTitle>
+                        <RowDescription>
+                        Meet all of us in Product Space at our social night!
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+
+
+            </Table>
+        </Container>
+    )
+}
+
+export default Timeline; 
+
 const Container = styled.div`
     display: flex; 
     flex-direction: column; 
@@ -169,133 +298,3 @@ const ApplicationButton = styled.button`
 
     }
 `
-
-
-const handleLinkClick = () => {
-    window.scrollTo(0, 1200);
-  };
-
-
-function Timeline() {
-
-    const openInNewTab = (url) => {
-        window.open(url, "_blank", "noreferrer");
-      };
-      
-    return(
-        <Container> 
-            
-            <Header> TIMELINE FOR FALL 2024 </Header>
-            <Table>
-                <Row> 
-                    <DateRow>
-                        <DateText> 8/28 (Wed) - 9/5 (Thurs)</DateText>
-                    </DateRow> 
-                    <InfoRow> 
-                        <RowTitle> Tabling & Coffee Chats Open </RowTitle>
-                        <RowDescription>
-                            Find us tabling at Sproul or sign up for coffee chats with members at
-                            Product Space to learn more about the club! 
-                            <ALink to="../About" onClick={handleLinkClick}>
-                                <Subtitle> *Click here to sign up for coffee chats</Subtitle>
-                            </ALink>
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row>
-                    <DateRow>
-                        <DateText> 8/30 (Fri) </DateText>
-                    </DateRow> 
-                    <InfoRow> 
-                        <RowTitle> Applications Open </RowTitle>
-                        <ApplicationButton
-                        role="link"
-                        onClick={() => openInNewTab("https://docs.google.com/forms/d/e/1FAIpQLSfb8HSYnon8dmtBfMp0Kgk7wWX4HF139PLhNvve99T_sDcnZw/viewform")}>
-                            Start Application
-                        </ApplicationButton>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/3 (Tues) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Info Session (8 - 10 PM PT) </RowTitle>
-                        <RowLocation> Location: Wheeler 224</RowLocation>
-                        <RowDescription>
-                            Join us to get a glimpse into the way we do 
-                            things at Product Space @ Berkeley.
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/5 (Thurs) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> PS Case Workshop (8 - 10 PM PT) </RowTitle>
-                        <RowLocation> Location: The Standard at Berkeley (1st Floor Lounge)</RowLocation>
-                        <RowDescription>
-                        Whether you're completely new to PM or experienced, 
-                        the Intro to PM workshop—led by a senior PS member—is 
-                        an excellent way to be introduced to product
-                        management. We will also go over a popular product 
-                        case interview framework that we recommend to use 
-                        for our first round of interviews!
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/6 (Fri) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Applications Close! (11:59PM PST)  </RowTitle>
-                        <RowDescription>
-                        Submit your Product Space application by midnight Pacific Time on this date!
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/8 (Sun) - 9/9 (Mon) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> 1st Round Interviews (invite only)</RowTitle>
-                        <RowDescription>
-                        We'll cover a couple of behavioral questions and a product design
-                         question to learn more about you and your interest in Product Space.
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/11 (Wed) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Final Round Interviews (invite only)</RowTitle>
-                        <RowDescription>
-                        The final step will be a presentation on a prompt we will 
-                        provide to you ahead of time to see how you might fit into our club.
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/11 (Wed) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Social Night (6-8PM PT) (invite only)</RowTitle>
-                        <RowDescription>
-                        Meet all of us in Product Space at our social night!
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-
-
-            </Table>
-        </Container>
-    )
-}
-
-export default Timeline; 

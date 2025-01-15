@@ -2,6 +2,32 @@ import styled from "styled-components"
 import sp23leadership from "../images/pictures/sp23leadership.jpg"
 import { Link } from 'react-router-dom';
 
+function Membership() {
+    return (
+        <Container> 
+            <PictureBox src={sp23leadership} /> 
+            <Box>
+                <Title> MEMBERSHIP</Title>
+                <Description> 
+                Pursue your product passion with like-minded peers
+                </Description>
+                <Description2>
+                By joining Product Space, you’ll meet a talented 
+                group of friends and colleagues who will help shape
+                 your product management journey. Our members are driven
+                  and dedicated, and many have gone on to join top APM programs
+                at Twitter, Uber, IBM, and more!
+
+
+                </Description2>
+                <Button to="../Apply"> Apply </Button>
+            </Box>
+        </Container>
+    )
+};
+
+export default Membership;
+
 
 const Container = styled.div`
     display: flex; 
@@ -76,30 +102,3 @@ const Button = styled(Link)`
     display: flex;
     justify-content: center;
 `
-
-
-function Membership() {
-    return (
-        <Container> 
-            <PictureBox src={sp23leadership} /> 
-            <Box>
-                <Title> MEMBERSHIP</Title>
-                <Description> 
-                Pursue your product passion with like-minded peers
-                </Description>
-                <Description2>
-                By joining Product Space, you’ll meet a talented 
-                group of friends and colleagues who will help shape
-                 your product management journey. Our members are driven
-                  and dedicated, and many have gone on to join top APM programs
-                at Twitter, Uber, IBM, and more!
-
-
-                </Description2>
-                <Button to="../Apply"> Apply </Button>
-            </Box>
-        </Container>
-    )
-};
-
-export default Membership;

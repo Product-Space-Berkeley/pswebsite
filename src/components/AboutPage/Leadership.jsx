@@ -25,6 +25,8 @@ import vaishavi from "../images/people/dasang.png"
 
 import memberInfo from "../AboutPage/MemberInfo"
 
+// Importing pictures is funky so I'm using a map here
+
 const imageMap = {
     "anisamajhi": anisa,
     "chrislee": chris,
@@ -33,6 +35,10 @@ const imageMap = {
     "melaniehsiang": melanie,
     "ryancho": ryan,
     "rickxu": rick,
+    "ninacheuck": nina,
+    "marissajensen": marissa,
+    "melaniehsiang": melanie,
+    "ryancho": ryan,
     "ninacheuck": nina,
     "ayami": ayami,
     "lucasomori": lucas,
@@ -47,6 +53,33 @@ const imageMap = {
     "dasangdolma": dasang
 }
 
+function Leadership() {
+    return (
+       <Container> 
+            <Headers>
+                <HeadingText> LEADERSHIP</HeadingText>
+                <Subtitle> Hover over the cards to sign up for coffee chats and to learn more about our leadership!</Subtitle>
+                <Subtitle> Note* -  number of coffee chats are limited to 2 per person</Subtitle>
+                    
+            </Headers>
+            <LeadersContainer> 
+                {memberInfo.leadership.map((leader) => (
+                    <LeaderCard>
+                        <LeaderImage src={imageMap[leader.imagekey]} alt="leader " /> 
+                        <LeaderInfo> 
+                            <LeadershipInfo fullname={leader.fullname} position={leader.position} grade={leader.grade}
+                            major={leader.major} hobbies={leader.hobbies}
+                            email={leader.email} linkedin={leader.linkedin}
+                            calendlylink={leader.calendlylink}/>
+                        </LeaderInfo>
+                    </LeaderCard>
+                ))}
+            </LeadersContainer>
+       </Container>
+    )
+}
+
+export default Leadership;
 const Container = styled.div`
     display: flex; 
     justify-content: center;
@@ -178,33 +211,3 @@ const Headers = styled.div`
 
     }
 `
-
-
-
-function Leadership() {
-    return (
-       <Container> 
-            <Headers>
-                <HeadingText> LEADERSHIP</HeadingText>
-                <Subtitle> Hover over the cards to sign up for coffee chats and to learn more about our leadership!</Subtitle>
-                <Subtitle> Note* -  number of coffee chats are limited to 2 per person</Subtitle>
-                    
-            </Headers>
-            <LeadersContainer> 
-                {memberInfo.leadership.map((leader) => (
-                    <LeaderCard>
-                        <LeaderImage src={imageMap[leader.imagekey]} alt="leader " /> 
-                        <LeaderInfo> 
-                            <LeadershipInfo fullname={leader.fullname} position={leader.position} grade={leader.grade}
-                            major={leader.major} hobbies={leader.hobbies}
-                            email={leader.email} linkedin={leader.linkedin}
-                            calendlylink={leader.calendlylink}/>
-                        </LeaderInfo>
-                    </LeaderCard>
-                ))}
-            </LeadersContainer>
-       </Container>
-    )
-}
-
-export default Leadership;

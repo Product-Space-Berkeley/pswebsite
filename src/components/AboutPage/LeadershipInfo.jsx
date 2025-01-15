@@ -1,6 +1,41 @@
 import styled from "styled-components"
 import linkedinIcon from "../images/company/linkedinIcon.png"
 
+function LeadershipInfo(props) {
+    const { fullname, position, grade, major, hobbies, email, linkedin, calendlylink} = props;
+    return (
+        <Container>
+            <TabBar/>
+            <InfoContainer>
+                <FullName>{fullname}</FullName>
+                <Position> {position}</Position>
+                <SubInfoContainer>
+                {"> " + grade + "\n" + "> " + major} 
+                </SubInfoContainer>
+                <Hobbies> 
+                    {"Hobbies: " + hobbies} 
+                </Hobbies>
+                <Email>
+                    {email}
+                </Email>
+                <LinkContainer>
+                    {linkedin ? (
+                        <LinkedIn href={linkedin} target="_blank" rel="noopener noreferrer">
+                        <img src={linkedinIcon} alt="LinkedIn" width="40" height="35"/>
+                    </LinkedIn>
+                    ) : null}
+                    <CoffeeChat href={calendlylink} target="_blank" rel="noopener noreferrer">
+                        Coffee Chat Me! 
+                    </CoffeeChat>
+                
+                </LinkContainer>
+            </InfoContainer>
+        </Container>
+    )
+}
+
+export default LeadershipInfo; 
+
 const Container = styled.div`
     width: 215px;
     height: 370px; 
@@ -131,39 +166,3 @@ const CoffeeChat = styled.a`
     font-size: 14px;
     // border: solid blue;
 `
-
-
-function LeadershipInfo(props) {
-    const { fullname, position, grade, major, hobbies, email, linkedin, calendlylink} = props;
-    return (
-        <Container>
-            <TabBar/>
-            <InfoContainer>
-                <FullName>{fullname}</FullName>
-                <Position> {position}</Position>
-                <SubInfoContainer>
-                {"> " + grade + "\n" + "> " + major} 
-                </SubInfoContainer>
-                <Hobbies> 
-                    {"Hobbies: " + hobbies} 
-                </Hobbies>
-                <Email>
-                    {email}
-                </Email>
-                <LinkContainer>
-                    {linkedin ? (
-                        <LinkedIn href={linkedin} target="_blank" rel="noopener noreferrer">
-                        <img src={linkedinIcon} alt="LinkedIn" width="40" height="35"/>
-                    </LinkedIn>
-                    ) : null}
-                    <CoffeeChat href={calendlylink} target="_blank" rel="noopener noreferrer">
-                        Coffee Chat Me! 
-                    </CoffeeChat>
-                
-                </LinkContainer>
-            </InfoContainer>
-        </Container>
-    )
-}
-
-export default LeadershipInfo; 

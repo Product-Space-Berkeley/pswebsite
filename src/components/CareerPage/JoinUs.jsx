@@ -2,6 +2,26 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import HomePG from '../images/pictures/HomeBG.png'
 
+function Join() { 
+    return( 
+        <Container>
+            <TextContainer>
+                <Header> Want To Join?</Header>
+                <Description>
+                Apply to Product Space and develop your 
+                product journey with peers who share your passion.
+                </Description>
+                <Button to="../Apply">
+                    Apply
+                </Button>
+            </TextContainer>
+
+        </Container>
+    )
+}
+
+export default Join; 
+
 const Container = styled.div`
     display: flex; 
     justify-content: flex-end;
@@ -71,23 +91,3 @@ const Button = styled(Link)`
     text-decoration: none;
 
 `
-
-function Join() { 
-    return( 
-        <Container>
-            <TextContainer>
-                <Header> Want To Join?</Header>
-                <Description>
-                Apply to Product Space and develop your 
-                product journey with peers who share your passion.
-                </Description>
-                <Button to="../Apply">
-                    Apply
-                </Button>
-            </TextContainer>
-
-        </Container>
-    )
-}
-
-export default Join; 

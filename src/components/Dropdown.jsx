@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+function Dropdown() {
+    return (
+        <Drop> 
+            Hello
+        </Drop>
+    )
+}
+
+export default Dropdown; 
 
 const Drop = styled.div`
 
@@ -17,12 +26,3 @@ const Drop = styled.div`
 `
 
 
-function Dropdown() {
-    return (
-        <Drop> 
-            Hello
-        </Drop>
-    )
-}
-
-export default Dropdown; 

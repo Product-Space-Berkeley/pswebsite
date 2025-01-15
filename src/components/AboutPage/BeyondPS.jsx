@@ -27,6 +27,55 @@ import retool from "../images/company/retoolLogo.png"
 import tackle from "../images/company/tackleioLogo.png"
 import bain from "../images/company/bainLogo.png"
 
+function BeyondPS() {
+    return(
+        <Container>
+            <TextContainer>
+                 <HeaderText>BEYOND PRODUCT SPACE</HeaderText>
+                 <Description> 
+                 Our members and alumni have continued their product 
+                 management journeys at a variety of companies through 
+                 internships and full-time opportunities.
+                 </Description>
+            </TextContainer>
+                <LogoContainerBeta>
+                    <Logos src={salesforce} alt="Salesforce" width={125}  height={90}/>
+                    <Logos src={google} alt="Google" width={90}  height={90}/>
+                    <Logos src={duolingo} alt="Duolingo" width={90}  height={90}/>
+                    <Logos src={databricks} alt="Databricks" width={100}  height={90}/>
+                    <Logos src={microsoft} alt="Microsoft" width={90}  height={90}/>
+                    <Logos src={hubspot} alt="hubspot" width={140}  height={90}/>
+                    <Logos src={amex} alt="AMEX" width={90}  height={90}/>
+                    <Logos src={eagames} alt="EAGames" width={90}  height={90}/>
+                    <Logos src={tesla} alt="Tesla" width={120}  height={80}/>
+                    <Logos src={robinhood} alt="Robinhood" width={150}  height={90}/>
+                    <Logos src={apple} alt="Apple" width={160}  height={90}/>
+                    <Logos src={blizzard} alt="Blizzard" width={160}  height={80}/>
+                    <Logos src={bcg} alt="Boston Consulting Group" width={140}  height={90}/>
+                    <Logos src={cisco} alt="Cisco" width={125}  height={80}/>
+                    <Logos src={stripe} alt="Stripe" width={145}  height={65}/>
+                    <Logos src={amazon} alt="Amazon" width={145}  height={75}/>
+                    <Logos src={workday} alt="Workday" width={140}  height={90}/>
+                    <Logos src={pan} alt="Palo Alto Networks" width={200}  height={70}/>
+                    <Logos src={roblox} alt="Roblox" width={90}  height={90}/>
+                    <Logos src={twitter} alt="Twitter" width={90}  height={90}/>
+                    <Logos src={uber} alt="Uber" width={100}  height={75}/>
+                    <Logos src={IBM} alt="IBM" width={130}  height={70}/>
+                    <Logos src={nvidia} alt="NVIDIA" width={200}  height={80}/>
+                    <Logos src={retool} alt="Retool" width={180}  height={60}/>
+                    <Logos src={tackle} alt="Tackle.io" width={190}  height={60}/>
+                    <Logos src={bain} alt="Bain" width={120}  height={50}/>
+
+
+
+            
+                </LogoContainerBeta>
+
+        </Container>
+    )
+}
+
+export default BeyondPS;
 
 const Container = styled.div`
     display: flex;
@@ -97,53 +146,3 @@ const LogoContainerBeta = styled.div`
     }
 `
 
-
-function BeyondPS() {
-    return(
-        <Container>
-            <TextContainer>
-                 <HeaderText>BEYOND PRODUCT SPACE</HeaderText>
-                 <Description> 
-                 Our members and alumni have continued their product 
-                 management journeys at a variety of companies through 
-                 internships and full-time opportunities.
-                 </Description>
-            </TextContainer>
-                <LogoContainerBeta>
-                    <Logos src={salesforce} alt="Salesforce" width={125}  height={90}/>
-                    <Logos src={google} alt="Google" width={90}  height={90}/>
-                    <Logos src={duolingo} alt="Duolingo" width={90}  height={90}/>
-                    <Logos src={databricks} alt="Databricks" width={100}  height={90}/>
-                    <Logos src={microsoft} alt="Microsoft" width={90}  height={90}/>
-                    <Logos src={hubspot} alt="hubspot" width={140}  height={90}/>
-                    <Logos src={amex} alt="AMEX" width={90}  height={90}/>
-                    <Logos src={eagames} alt="EAGames" width={90}  height={90}/>
-                    <Logos src={tesla} alt="Tesla" width={120}  height={80}/>
-                    <Logos src={robinhood} alt="Robinhood" width={150}  height={90}/>
-                    <Logos src={apple} alt="Apple" width={160}  height={90}/>
-                    <Logos src={blizzard} alt="Blizzard" width={160}  height={80}/>
-                    <Logos src={bcg} alt="Boston Consulting Group" width={140}  height={90}/>
-                    <Logos src={cisco} alt="Cisco" width={125}  height={80}/>
-                    <Logos src={stripe} alt="Stripe" width={145}  height={65}/>
-                    <Logos src={amazon} alt="Amazon" width={145}  height={75}/>
-                    <Logos src={workday} alt="Workday" width={140}  height={90}/>
-                    <Logos src={pan} alt="Palo Alto Networks" width={200}  height={70}/>
-                    <Logos src={roblox} alt="Roblox" width={90}  height={90}/>
-                    <Logos src={twitter} alt="Twitter" width={90}  height={90}/>
-                    <Logos src={uber} alt="Uber" width={100}  height={75}/>
-                    <Logos src={IBM} alt="IBM" width={130}  height={70}/>
-                    <Logos src={nvidia} alt="NVIDIA" width={200}  height={80}/>
-                    <Logos src={retool} alt="Retool" width={180}  height={60}/>
-                    <Logos src={tackle} alt="Tackle.io" width={190}  height={60}/>
-                    <Logos src={bain} alt="Bain" width={120}  height={50}/>
-
-
-
-            
-                </LogoContainerBeta>
-
-        </Container>
-    )
-}
-
-export default BeyondPS;

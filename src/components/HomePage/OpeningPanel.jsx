@@ -15,6 +15,56 @@ const handleLinkClick = () => {
     window.scrollTo(0, 1200);
   };
 
+function OpeningPanel() {
+
+    const images = [allclubformal, sp24fellows, digHealth, calday];
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        // Calculate the next image index
+        const nextIndex = (currentImageIndex + 1) % images.length;
+        setCurrentImageIndex(nextIndex);
+        }, 2500); // 2.5 seconds in milliseconds
+
+        return () => {
+        // Clear the interval when the component unmounts
+        clearInterval(interval);
+        };
+    }, [currentImageIndex, images.length]);
+
+
+    return (
+        <Panel>
+            <OpeningHeader>
+                {/* <HeadingTitle> Product Space @ Berkeley</HeadingTitle> */}
+                <PSLogo src={psHomeLogo} />
+                <HeadingSubtitle> UC Berkeley Product Management Organization</HeadingSubtitle>
+                <ApplyButton to="../Apply"> Apply Now</ApplyButton>
+                <ALink to="../About" onClick={handleLinkClick}>
+                    <Subtitle> *Click Here to sign up for coffee chats</Subtitle>
+                </ALink>
+
+            </OpeningHeader>
+            <PictureContainer> 
+            {images.map((image, index) => (
+                <PictureBox
+                    key={index}
+                    src={image}
+                    style={{
+                    opacity: currentImageIndex === index ? 1 : 0, // Control opacity
+                    transition: 'opacity 1s ease-in-out', // Add CSS transition
+                    }}
+                />
+            ))}
+            </PictureContainer>
+        </Panel>
+
+    )
+}
+
+export default OpeningPanel;
+
 const Panel = styled.div`
     width: 100%;
     height: auto;
@@ -186,53 +236,3 @@ const PictureBox = styled.img`
     transition: opacity 1s ease-in-out;
 
 `;
-
-function OpeningPanel() {
-
-    const images = [allclubformal, sp24fellows, digHealth, calday];
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-        // Calculate the next image index
-        const nextIndex = (currentImageIndex + 1) % images.length;
-        setCurrentImageIndex(nextIndex);
-        }, 2500); // 2.5 seconds in milliseconds
-
-        return () => {
-        // Clear the interval when the component unmounts
-        clearInterval(interval);
-        };
-    }, [currentImageIndex, images.length]);
-
-
-    return (
-        <Panel>
-            <OpeningHeader>
-                {/* <HeadingTitle> Product Space @ Berkeley</HeadingTitle> */}
-                <PSLogo src={psHomeLogo} />
-                <HeadingSubtitle> UC Berkeley Product Management Organization</HeadingSubtitle>
-                <ApplyButton to="../Apply"> Apply Now</ApplyButton>
-                <ALink to="../About" onClick={handleLinkClick}>
-                    <Subtitle> *Click Here to sign up for coffee chats</Subtitle>
-                </ALink>
-
-            </OpeningHeader>
-            <PictureContainer> 
-            {images.map((image, index) => (
-                <PictureBox
-                    key={index}
-                    src={image}
-                    style={{
-                    opacity: currentImageIndex === index ? 1 : 0, // Control opacity
-                    transition: 'opacity 1s ease-in-out', // Add CSS transition
-                    }}
-                />
-            ))}
-            </PictureContainer>
-        </Panel>
-
-    )
-}
-
-export default OpeningPanel;

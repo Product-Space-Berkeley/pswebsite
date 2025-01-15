@@ -38,6 +38,12 @@ const placements = [
                 title: "Associate Product Manager",
                 year: "Senior"
             },
+            {   
+                name: "Trinity Huynh",
+                company: "Meta",
+                title: "Rotational Product Manager",
+                year: "Senior"
+            },
             {
                 name: "Crystal Chang",
                 company: "Stripe",
@@ -214,7 +220,7 @@ const placements = [
             year: "Sophomore"
         },
         {
-            name: "Carly Chen",
+            name: "Carly Chan",
             company: "Uber",
             title: "Software Engineer Intern",
             year: "Freshmen"

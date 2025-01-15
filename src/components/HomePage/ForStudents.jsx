@@ -6,6 +6,29 @@ const handleLinkClick = () => {
     window.scrollTo(0, 0);
   };
 
+function ForStudents() {
+    return (
+        <Container> 
+            <PictureBox src={AdvaitLineage} /> 
+            <Box>
+                <Title> FOR STUDENTS</Title>
+                <Description> 
+                    2 different programs where you can thrive
+                </Description>
+                <Description2>
+                At Product Space, we take pride in our firm commitment 
+                to product management education. We offer the fellowship 
+                program and client projects for our members who come with
+                various levels of experience.
+                </Description2>
+                <Button to="/Students" onClick={handleLinkClick}> Learn More </Button>
+            </Box>
+        </Container>
+    )
+};
+
+export default ForStudents;
+
 const Container = styled.div`
     display: flex; 
     justify-content: space-around;
@@ -83,27 +106,3 @@ const Button = styled(Link)`
     text-decoration: none;
     color: black;
 `
-
-
-function ForStudents() {
-    return (
-        <Container> 
-            <PictureBox src={AdvaitLineage} /> 
-            <Box>
-                <Title> FOR STUDENTS</Title>
-                <Description> 
-                    2 different programs where you can thrive
-                </Description>
-                <Description2>
-                At Product Space, we take pride in our firm commitment 
-                to product management education. We offer the fellowship 
-                program and client projects for our members who come with
-                various levels of experience.
-                </Description2>
-                <Button to="/Students" onClick={handleLinkClick}> Learn More </Button>
-            </Box>
-        </Container>
-    )
-};
-
-export default ForStudents;

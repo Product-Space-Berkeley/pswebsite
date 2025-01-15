@@ -2,6 +2,22 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import HomePG from '../images/pictures/HomeBG.png'
 
+function Join() { 
+    return( 
+        <Container>
+            <TextContainer>
+                <Header> Interested In Working With Us?</Header>
+                <Description>
+                Contact Us: contact@product.berkeley.edu
+                </Description>
+            </TextContainer>
+
+        </Container>
+    )
+}
+
+export default Join; 
+
 const Container = styled.div`
     display: flex; 
     justify-content: flex-end;
@@ -58,18 +74,3 @@ const Description = styled.div`
 
 
 `
-function Join() { 
-    return( 
-        <Container>
-            <TextContainer>
-                <Header> Interested In Working With Us?</Header>
-                <Description>
-                Contact Us: contact@product.berkeley.edu
-                </Description>
-            </TextContainer>
-
-        </Container>
-    )
-}
-
-export default Join; 

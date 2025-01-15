@@ -2,7 +2,32 @@ import styled from 'styled-components'
 import HomePG from '../images/pictures/HomeBG.png'
 import CompanyPanelPic from '../images/pictures/CompanyPanelPic.png'
 
+function CompanyPanel() {
+    return (
+        <Container>
+            <TextContainer>
+                <Header> What we offer </Header>
+                <Description> 
+                    All client projects are paired with an experienced 
+                    project manager, advisor, and 4 to 6 product associates
+                    who have gone through our training programs. Product
+                    Space enlists its most experienced members to ensure 
+                    that your project is in good hands.
+                </Description>
+                <Button>
+                    Contact Us: contact@product.berkeley.edu
+                </Button>
+            </TextContainer>
+            <PictureContainer> 
+                <PictureBox src={CompanyPanelPic} />
+            </PictureContainer>
+            
 
+        </Container>
+    )
+}
+
+export default CompanyPanel
 
 const Container = styled.div`
     display: flex; 
@@ -123,29 +148,3 @@ const PictureBox = styled.img`
 
 `;
 
-function CompanyPanel() {
-    return (
-        <Container>
-            <TextContainer>
-                <Header> What we offer </Header>
-                <Description> 
-                    All client projects are paired with an experienced 
-                    project manager, advisor, and 4 to 6 product associates
-                    who have gone through our training programs. Product
-                    Space enlists its most experienced members to ensure 
-                    that your project is in good hands.
-                </Description>
-                <Button>
-                    Contact Us: contact@product.berkeley.edu
-                </Button>
-            </TextContainer>
-            <PictureContainer> 
-                <PictureBox src={CompanyPanelPic} />
-            </PictureContainer>
-            
-
-        </Container>
-    )
-}
-
-export default CompanyPanel

@@ -1,7 +1,34 @@
 import styled from "styled-components"
 import placementData from "./Placements"
 
-
+function TableContainer() {
+    return (
+      <Container>
+            {placementData.map((placement) => (
+            <Table key={placement.timeline}>
+                <Header>{placement.timeline}</Header>
+                <HeaderRow>
+                    <HeaderName >Name</HeaderName>
+                    <HeaderCompany>Company</HeaderCompany>
+                    <HeaderTitle>Title</HeaderTitle>
+                    <HeaderYear>Year</HeaderYear>
+                </HeaderRow>
+                {placement.data.map((item) => (
+                    <Row key={item.name}>
+                        <Name>{item.name}</Name>
+                        <Company>{item.company}</Company>
+                        <Title>{item.title}</Title>
+                        <Year>{item.year}</Year>
+                </Row>
+                ))}
+            </Table>
+            ))}
+      </Container>
+    );
+  }
+  
+  export default TableContainer;
+  
 
 const Container = styled.div`
     display: flex;
@@ -142,30 +169,3 @@ const Year = styled.div`
 
 
 `
-function TableContainer() {
-    return (
-      <Container>
-            {placementData.map((placement) => (
-            <Table key={placement.timeline}>
-                <Header>{placement.timeline}</Header>
-                <HeaderRow>
-                    <HeaderName >Name</HeaderName>
-                    <HeaderCompany>Company</HeaderCompany>
-                    <HeaderTitle>Title</HeaderTitle>
-                    <HeaderYear>Year</HeaderYear>
-                </HeaderRow>
-                {placement.data.map((item) => (
-                    <Row key={item.name}>
-                        <Name>{item.name}</Name>
-                        <Company>{item.company}</Company>
-                        <Title>{item.title}</Title>
-                        <Year>{item.year}</Year>
-                </Row>
-                ))}
-            </Table>
-            ))}
-      </Container>
-    );
-  }
-  
-  export default TableContainer;
