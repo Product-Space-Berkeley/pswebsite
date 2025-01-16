@@ -14,7 +14,7 @@ import ryansun from "../images/people/ryansun.png"
 import raymond from "../images/people/raymond.png"
 import hana from "../images/people/hana.png"
 import geetanjali from "../images/people/geetanjali.png"
-import lucas from "../images/people/lucas.png"
+import yuta from "../images/people/yuta.png"
 import maya from "../images/people/mayahaylock.png"
 import advait from "../images/people/advaitmarathe.png"
 import katherine from "../images/people/katherinegan.png"
@@ -61,7 +61,7 @@ const imageMap = {
     "marissa": marissa,
     "angelazhang": angela,
     "hanamcnierney": hana,
-    "lucasomori": lucas,
+    "yutayamada": yuta,
     "raymondfeng": raymond,
     "geetanjalijain": geetanjali,
     "jordanyee": jordan,

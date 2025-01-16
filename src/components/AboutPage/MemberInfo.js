@@ -137,7 +137,7 @@ const members = {
             imagekey: "carlychan",
             fullname: "Carly Chan",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "Computer Science, Applied Mathematics",
             hobbies: "cafes & caffeine overconsumption, collecting cute things, reading, sketching",
             email: "carlychvn@berkeley.edu",
@@ -149,7 +149,7 @@ const members = {
             imagekey: "jonathanchiang",
             fullname: "Jonathan Chiang",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "Economics, Data Science",
             hobbies: "Exploring cafe/restaurants, basketball, bedrot",
             email: "cchiang0410@berkeley.edu",
@@ -161,7 +161,7 @@ const members = {
             imagekey: "michaelbohm",
             fullname: "Michael Bohm",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "Economics, Minor in Data Science",
             hobbies: "working out, nonfiction reading, sleeping, playing with my dog",
             email: "mbohm357@berkeley.edu",
@@ -173,7 +173,7 @@ const members = {
             imagekey: "mischa",
             fullname: "Mischa Mikami",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "Data Science",
             hobbies: "(attempting to) cook, stargazing, going on side quests, napping",
             email: "mmikami@berkeley.edu",
@@ -185,7 +185,7 @@ const members = {
             imagekey: "timzhou",
             fullname: "Tim Zhou",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "EECS, IEOR",
             hobbies: "soccer, traveling, movie soundtracks, baking, food videos",
             email: "zhouhaitz@berkeley.edu",
@@ -197,12 +197,12 @@ const members = {
             imagekey: "vyoma",
             fullname: "Vyoma Patel",
             position: "Project Manager",
-            grade: "Sophmore",
+            grade: "Sophomore",
             major: "EECS, Business (M.E.T)",
-            hobbies: "UPDATE",
-            email: "UPDATE",
-            linkedin: "UPDATE",
-            calendlylink: "UPDATE"
+            hobbies: "table tennis, photography, spicy food, rooftops + stargazing, down to talk about anything!",
+            email: "vyoma.patel@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/vyomapatel12/",
+            calendlylink: "https://calendly.com/vyoma-patel-berkeley/ps-vyoma-patel-coffee-chats"
         },
         {
             imagepath: "../images/people/oscar.png",
@@ -228,6 +228,18 @@ const members = {
             linkedin: "https://linkedin.com/in/dasang-dolma-8740051b3",
             calendlylink: "https://calendly.com/dasangdolma/dasang-coffee-chats"
         },
+        {
+            imagepath: "../images/people/vaishavi.png",
+            imagekey: "vaishavi",
+            fullname: "Vaishavi Sahu",
+            position: "Historian",
+            grade: "Sophomore",
+            major: "Cognitive Science + Neuroscience",
+            hobbies: "Reading, scrapbooking, watching rom-coms, listening to podcasts, hiking",
+            email: "vaishavi_sahu@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/vaishavi-sahu-5400b5229/",
+            calendlylink: "https://calendly.com/vaishavi_sahu/30min"
+        }
     ],
     senior_advisors: [
         {
@@ -271,10 +283,18 @@ const members = {
             major: "Business, Data Science"
         },
         {
+            imagepath: "../images/people/yuta.png",
+            imagekey: "yutayamada",
+            fullname: "Yuta Yamada",
+            position: "VP Development FA '24",
+            class: "2025",
+            major: "Computer Science, Data Science"
+        },
+        {
             imagepath: "../images/people/lauren.png",
             imagekey: "lauren",
             fullname: "Lauren Sung",
-            position: "IVP Sp '24 / PM FA '24",
+            position: "IVP SP '24 / PM FA '24",
             class: "2025",
             major: "Data Science"
         },
@@ -287,28 +307,12 @@ const members = {
             major: "Business (GMP), Computer Science"
         },
         {
-            imagepath: "../images/people/marissa.png",
-            imagekey: "marissa",
-            fullname: "Marissa Jensen",
-            position: "Project Manager Sp '25",
-            class: "2026",
-            major: "Business (GMP), Data Science"
-        },
-        {
             imagepath: "../images/people/hana.png",
             imagekey: "hanamcnierney",
             fullname: "Hana McNierney",
             position: "President SP '24",
             class: "2025",
             major: "Business"
-        },
-        {
-            imagepath: "../images/people/lucas.png",
-            imagekey: "lucasomori",
-            fullname: "Lucas Omori",
-            position: "IVP/VP Projects SP'24",
-            class: "2025",
-            major: "Data Science"
         },
         {
             imagepath: "../images/people/geetanjali.png",
@@ -325,6 +329,14 @@ const members = {
             position: "VP Development SP'24",
             class: "2025",
             major: "Data Science, Economics"
+        },
+        {
+            imagepath: "../images/people/marissa.png",
+            imagekey: "marissa",
+            fullname: "Marissa Jensen",
+            position: "Project Manager SP '24",
+            class: "2026",
+            major: "Business (GMP), Data Science"
         },
         {
             imagepath: "../images/people/jordan.png",

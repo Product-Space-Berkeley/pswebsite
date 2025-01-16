@@ -21,7 +21,7 @@ import mischa from "../images/people/mischa.png"
 import tim from "../images/people/timzhou.png"
 import vyoma from "../images/people/vyoma.png"
 import dasang from "../images/people/dasang.png"
-import vaishavi from "../images/people/dasang.png"
+import vaishavi from "../images/people/vaishavi.png"
 
 import memberInfo from "../AboutPage/MemberInfo"
 
@@ -49,7 +49,8 @@ const imageMap = {
     "timzhou": tim,
     "vyoma": vyoma,
     "oscarchow": oscar,
-    "dasangdolma": dasang
+    "dasangdolma": dasang,
+    "vaishavi": vaishavi
 }
 
 function Leadership() {
