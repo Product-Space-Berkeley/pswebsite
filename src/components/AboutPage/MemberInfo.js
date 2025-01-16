@@ -207,7 +207,7 @@ const members = {
         {
             imagepath: "../images/people/oscar.png",
             imagekey: "oscarchow",
-            fullname: "Oscar",
+            fullname: "Oscar Chow",
             position: "Community Development Manager",
             grade: "Senior",
             major: "Cognitive Science",
