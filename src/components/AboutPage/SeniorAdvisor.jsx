@@ -50,8 +50,10 @@ import su from "../images/people/su.png"
 import lauren from "../images/people/lauren.png"
 import michelle from "../images/people/michellelee.png"
 import wesley from "../images/people/wesley.png"
+import suhani from "../images/people/suhani.png"
 
 const imageMap = {
+    "suhaniramchandra": suhani,
     "wesley": wesley,
     "michellelee": michelle,
     "lauren": lauren,
