@@ -16,11 +16,11 @@ function Timeline() {
     return(
         <Container> 
             
-            <Header> TIMELINE FOR FALL 2024 </Header>
+            <Header> TIMELINE FOR SPRING 2025 </Header>
             <Table>
                 <Row> 
                     <DateRow>
-                        <DateText> 8/28 (Wed) - 9/5 (Thurs)</DateText>
+                        <DateText> 1/21 (Tues) - 1/31 (Fri)</DateText>
                     </DateRow> 
                     <InfoRow> 
                         <RowTitle> Tabling & Coffee Chats Open </RowTitle>
@@ -35,7 +35,7 @@ function Timeline() {
                 </Row>
                 <Row>
                     <DateRow>
-                        <DateText> 8/30 (Fri) </DateText>
+                        <DateText> TBD (DATE) </DateText>
                     </DateRow> 
                     <InfoRow> 
                         <RowTitle> Applications Open </RowTitle>
@@ -48,11 +48,11 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/3 (Tues) </DateText>
+                        <DateText> 1/28 (Tues) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Info Session (8 - 10 PM PT) </RowTitle>
-                        <RowLocation> Location: Wheeler 224</RowLocation>
+                        <RowTitle> Info Session (8-10 PM PT) </RowTitle>
+                        <RowLocation> Location: TBD</RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do 
                             things at Product Space @ Berkeley.
@@ -61,11 +61,11 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/5 (Thurs) </DateText>
+                        <DateText> 1/30 (Thurs) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> PS Case Workshop (8 - 10 PM PT) </RowTitle>
-                        <RowLocation> Location: The Standard at Berkeley (1st Floor Lounge)</RowLocation>
+                        <RowTitle> PS Case Workshop (8-10 PM PT) </RowTitle>
+                        <RowLocation> Location: TBD</RowLocation>
                         <RowDescription>
                         Whether you're completely new to PM or experienced, 
                         the Intro to PM workshop—led by a senior PS member—is 
@@ -78,18 +78,18 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/6 (Fri) </DateText>
+                        <DateText> 1/31 (Fri) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Applications Close! (11:59PM PST)  </RowTitle>
+                        <RowTitle> Applications Close! (8 PM PST)  </RowTitle>
                         <RowDescription>
-                        Submit your Product Space application by midnight Pacific Time on this date!
+                        Submit your Product Space application by 8 PM Pacific Time on this date!
                         </RowDescription>
                     </InfoRow>
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/8 (Sun) - 9/9 (Mon) </DateText>
+                        <DateText> 2/2 (Sun) - 2/3 (Mon) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> 1st Round Interviews (invite only)</RowTitle>
@@ -101,7 +101,7 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/11 (Wed) </DateText>
+                        <DateText> 2/6 (Thurs) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> Final Round Interviews (invite only)</RowTitle>
@@ -113,10 +113,10 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/11 (Wed) </DateText>
+                        <DateText> 2/6 (Thurs) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Social Night (6-8PM PT) (invite only)</RowTitle>
+                        <RowTitle> Social Night (7-9 PM PT) (invite only)</RowTitle>
                         <RowDescription>
                         Meet all of us in Product Space at our social night!
                         </RowDescription>
