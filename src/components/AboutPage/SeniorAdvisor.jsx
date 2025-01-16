@@ -43,9 +43,22 @@ import rickey from "../images/people/rickeymcgregor.png"
 import saumya from "../images/people/saumyachoudhary.png"
 import ananya from "../images/people/ananyagupta.png"
 import angela from "../images/people/angela.png"
+import marissa from "../images/people/marissa.png"
+import anna from "../images/people/annacheng.png"
+import krish from "../images/people/krishkumar.png"
+import su from "../images/people/su.png"
+import lauren from "../images/people/lauren.png"
+import michelle from "../images/people/michellelee.png"
+import wesley from "../images/people/wesley.png"
 
 const imageMap = {
-
+    "wesley": wesley,
+    "michellelee": michelle,
+    "lauren": lauren,
+    "krishkumar": krish,
+    "su":su,
+    "annacheng":anna,
+    "marissa": marissa,
     "angelazhang": angela,
     "hanamcnierney": hana,
     "lucasomori": lucas,

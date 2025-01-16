@@ -79,10 +79,10 @@ const members = {
             position: "VP of Fellowship",
             grade: "Sophomore",
             major: "EECS, Business (M.E.T)",
-            hobbies: "UPDATE",
+            hobbies: "stalking dining.berkeley.edu, exploring the great outdoors, being afraid of horror movies",
             email: "rickxu@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/rickx",
-            calendlylink: "UPDATE"
+            calendlylink: "https://calendly.com/rickxu-berkeley/20min"
         },
         {
             imagepath: "../images/people/ninacheuck.png",
@@ -123,14 +123,14 @@ const members = {
         {
             imagepath: "../images/people/xiao.png",
             imagekey: "xiao",
-            fullname: "Xiao li",
+            fullname: "Xiaojian Li",
             position: "Fellowship Mentor",
             grade: "Junior",
             major: "Economics, Data Science",
-            hobbies: "UPDATE",
-            email: "UPDATE",
-            linkedin: "UPDATE",
-            calendlylink: "UPDATE"
+            hobbies: "Basketball, volleyball, ranking food on Beli, singles inferno",
+            email: "xiaojianli@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/xiaojianli/",
+            calendlylink: "https://calendly.com/xiaojianli"
         },
         {
             imagepath: "../images/people/carlychan.png",
@@ -175,10 +175,10 @@ const members = {
             position: "Project Manager",
             grade: "Sophmore",
             major: "Data Science",
-            hobbies: "UPDATE",
-            email: "UPDATE",
-            linkedin: "UPDATE",
-            calendlylink: "UPDATE"
+            hobbies: "(attempting to) cook, stargazing, going on side quests, napping",
+            email: "mmikami@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/mischa-mikami/",
+            calendlylink: "https://calendly.com/mmikami-berkeley/mikami-coffee-chats"
         },
         {
             imagepath: "../images/people/timzhou.png",
@@ -231,12 +231,28 @@ const members = {
     ],
     senior_advisors: [
         {
-            imagepath: "../images/people/michelle.png",
-            imagekey: "angelazhang",
-            fullname: "Angela Zhang",
-            position: "VP Fellowship FA '24",
+            imagepath: "../images/people/krishkumar.png",
+            imagekey: "krishkumar",
+            fullname: "Krish Kumar",
+            position: "President FA '24",
             class: "2025",
-            major: "Cognitive Science, Computer Science"
+            major: "Data Science"
+        },
+        {
+            imagepath: "../images/people/su.png",
+            imagekey: "su",
+            fullname: "Su Lee",
+            position: "IVP FA '24",
+            class: "2025",
+            major: "Data Science"
+        },
+        {
+            imagepath: "../images/people/wesley.png",
+            imagekey: "wesley",
+            fullname: "Wesley Griggs",
+            position: "IVP FA '24",
+            class: "2025",
+            major: "Cognitive Science, Data Science"
         },
         {
             imagepath: "../images/people/angela.png",
@@ -245,6 +261,38 @@ const members = {
             position: "VP Fellowship FA '24",
             class: "2025",
             major: "Cognitive Science, Computer Science"
+        },
+        {
+            imagepath: "../images/people/michellelee.png",
+            imagekey: "michellelee",
+            fullname: "Michelle Lee",
+            position: "VP Fellowship FA '24",
+            class: "2025",
+            major: "Business, Data Science"
+        },
+        {
+            imagepath: "../images/people/lauren.png",
+            imagekey: "lauren",
+            fullname: "Lauren Sung",
+            position: "IVP Sp '24 / PM FA '24",
+            class: "2025",
+            major: "Data Science"
+        },
+        {
+            imagepath: "../images/people/annacheng.png",
+            imagekey: "annacheng",
+            fullname: "Anna Cheng",
+            position: "Project Manager FA '24",
+            class: "2026",
+            major: "Business (GMP), Computer Science"
+        },
+        {
+            imagepath: "../images/people/marissa.png",
+            imagekey: "marissa",
+            fullname: "Marissa Jensen",
+            position: "Project Manager Sp '25",
+            class: "2026",
+            major: "Business (GMP), Data Science"
         },
         {
             imagepath: "../images/people/hana.png",

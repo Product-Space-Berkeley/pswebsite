@@ -36,7 +36,6 @@ const imageMap = {
     "ryancho": ryan,
     "rickxu": rick,
     "ninacheuck": nina,
-    "marissajensen": marissa,
     "melaniehsiang": melanie,
     "ryancho": ryan,
     "ninacheuck": nina,
