@@ -2,7 +2,8 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import HomeLogo from './images/miscicons/psHomeLogo.png'
-import psFooterLogo from '/Users/carly/Desktop/psweb2/pswebsite/src/components/images/miscicons/FooterLogo.png'
+import psFooterLogo from './images/miscicons/FooterLogo.png'
+
 
 const handleLinkClick = () => {
     window.scrollTo(0, 0);

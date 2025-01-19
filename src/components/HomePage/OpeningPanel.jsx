@@ -119,7 +119,7 @@ const HeadingTextContainer = styled.div`
 `;
 
 const HeadingTitle = styled.div`
-    font-size: 84px;
+    font-size: 75px;
     font-weight: 550;
     color: #311543;
 
@@ -150,8 +150,8 @@ const HeadingSubtitle = styled.div`
 `
 
 const TitleImage = styled.img`
-    width: 500px; 
-    height: 500px;
+    width: 400px; 
+    height: 400px;
     margin-right: 40px;
 `;
 

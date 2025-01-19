@@ -67,7 +67,7 @@ const members = {
             position: "VP of Internal Affairs",
             grade: "Junior",
             major: "Bioengineering & Data Science",
-            hobbies: "UPDATE",
+            hobbies: "Volleyball + Cooking + Avatar TLA + Eating",
             email: "ryancho05@berkeley.edu",
             linkedin: "www.linkedin.com/in/ryancho05",
             calendlylink: "UPDATE"
