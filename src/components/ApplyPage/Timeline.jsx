@@ -35,7 +35,7 @@ function Timeline() {
                 </Row>
                 <Row>
                     <DateRow>
-                        <DateText> TBD (DATE) </DateText>
+                        <DateText> 1/21 (Tue) </DateText>
                     </DateRow> 
                     <InfoRow> 
                         <RowTitle> Applications Open </RowTitle>
@@ -48,7 +48,7 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 1/28 (Tues) </DateText>
+                        <DateText> 1/29 (Wed) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> Info Session (8-10 PM PT) </RowTitle>
