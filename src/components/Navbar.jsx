@@ -9,48 +9,57 @@ import React, { useState } from 'react'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   const handleClick = () => {
-    console.log(isOpen)
-    setIsOpen(!isOpen)
+    setIsOpen(!isOpen);
   }
 
   const handleLinkClick = () => {
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   };
+
+  const handleLogoClick = () => {
+    window.scrollTo(0, 0); 
+  }
 
   return (
     <Container>
         <HomeContainer>
-          <NavLink to="/Home" >
+          <NavLink to="/Home" onClick={handleLogoClick}>
             <HomeIcon src={PSLogo} alt='ImageNotLoading'/>
           </NavLink>
         </HomeContainer>
-        <ItemContainer>
-            <ANavLink to="/Home" onClick={handleLinkClick} activeClassName="active"> Home </ANavLink>
-            <ANavLink to="/About" onClick={handleLinkClick} activeClassName="active"> About </ANavLink>
-            <ANavLink to="/Students" onClick={handleLinkClick} activeClassName="active"> Students </ANavLink>
-            <ANavLink to="/Companies" onClick={handleLinkClick} activeClassName="active"> Companies </ANavLink>
-            <ANavLink to="/Careers" onClick={handleLinkClick} activeClassName="active"> Careers </ANavLink>
-            <ANavLink to="/Apply" onClick={handleLinkClick} activeClassName="active"> Apply </ANavLink>
-        </ItemContainer>
+        <ItemWrapper>
+          <ItemContainer>
+              <ANavLink to="/Home" onClick={handleLinkClick} activeClassName="active"> Home </ANavLink>
+              <ANavLink to="/About" onClick={handleLinkClick} activeClassName="active"> About </ANavLink>
+              <ANavLink to="/Students" onClick={handleLinkClick} activeClassName="active"> For Students </ANavLink>
+              <ANavLink to="/Companies" onClick={handleLinkClick} activeClassName="active"> For Companies </ANavLink>
+              <ANavLink to="/Careers" onClick={handleLinkClick} activeClassName="active"> Careers </ANavLink>
+          </ItemContainer>
+        </ItemWrapper>
+
+        <ApplyButton>
+          <ANavLink to="/Apply" onClick={handleLinkClick}> Apply </ANavLink>
+        </ApplyButton>
+
         <DropdownContainer>
-          <HamburgerIcon src={hamburgerIcon} onClick={() => handleClick()}/>
-          {
-          isOpen && 
+          <HamburgerIcon src={hamburgerIcon} onClick={handleClick}/>
+          {isOpen && (
             <DropdownItemContainer>
               <DropdownListItem to="/Home" onClick={handleLinkClick}> Home </DropdownListItem>
               <DropdownListItem to="/About" onClick={handleLinkClick}> About </DropdownListItem>
-              <DropdownListItem to="/Students" onClick={handleLinkClick}> Students </DropdownListItem>
-              <DropdownListItem to="/Companies" onClick={handleLinkClick}> Companies </DropdownListItem>
+              <DropdownListItem to="/Students" onClick={handleLinkClick}> For Students </DropdownListItem>
+              <DropdownListItem to="/Companies" onClick={handleLinkClick}> For Companies </DropdownListItem>
               <DropdownListItem to="/Careers" onClick={handleLinkClick}> Careers </DropdownListItem>
               <DropdownListItem to="/Apply" onClick={handleLinkClick}> Apply </DropdownListItem>
             </DropdownItemContainer>
-        }
+          )}
         </DropdownContainer>
     </Container>
   );
 }
+
 
 export default Navbar;
 
@@ -66,9 +75,9 @@ const Container = styled.div`
     gap: 30px;
     background: #FFFDFD;
     opacity: 0.95;
-    box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.2); 
-    overflow: hidden;
     z-index: 900;
+    text-align: center;
+    justify-content: space-between;
 
     @media only screen and (max-width: 780px) {
       overflow: visible;
@@ -76,7 +85,7 @@ const Container = styled.div`
 `
 
 const ANavLink = styled(NavLink)`
-    color: #1C2838;
+    color: inherit;
     font-size: 16px;
     text-decoration: none;
     height: 50px;
@@ -86,11 +95,11 @@ const ANavLink = styled(NavLink)`
 
     &.active {
       font-weight: 400; 
-      color: #EB5594; 
+      color: inherit; 
     }
 
     &:hover {
-      color: #EB5594; 
+      color: inherit; 
       transition: 0.5s ease-in-out;
     }
 
@@ -109,34 +118,29 @@ const ANavLink = styled(NavLink)`
     &:hover::after {
       width: 100%;
     }
-
-    // border: black solid;
-
-    @media only screen and (max-width: 400px) {
-        // border: solid black;
-    }
 `;
 
-
 const HomeIcon = styled.img`
-    height: 50px;
+    height: 70px;
     margin-left: 15px; 
-
-    // border: solid red;
+    margin-top: 20px;
 `
 const HomeContainer = styled.div`
     display: flex;
     justify-content: flex-start;
-
-    // border: solid black;
 `
+
+const ItemWrapper = styled.div`
+    display: flex;
+    flex: 1;
+    justify-content: center;
+`
+
 const ItemContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 30px;
-
-
-  // border: solid black;
+  justify-content: center;
 
   @media only screen and (max-width: 780px) {
     display: none;
@@ -145,7 +149,6 @@ const ItemContainer = styled.div`
 
 const DropdownContainer = styled.div`
   display: none;
-  // cursor: pointer;
 
   @media only screen and (max-width: 780px) {
     position: absolute;
@@ -156,14 +159,10 @@ const DropdownContainer = styled.div`
     align-items: flex-end;
     margin-top: 20px;
     margin-right: 40px;
-    overflow: visible;
-  
     top: 0;
     right: 0;
-    // border: solid black;
   }
 `;
-
 
 const DropdownItemContainer = styled.div`
   display: flex;
@@ -171,10 +170,8 @@ const DropdownItemContainer = styled.div`
   align-items: flex-end;
   width: 200px;
   height: 600px;
-
-  // border: solid blue;
-
 `
+
 const DropdownListItem = styled(NavLink)`
     color: #1C2838;
     font-size: 16px;
@@ -185,16 +182,12 @@ const DropdownListItem = styled(NavLink)`
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
-    align-items: center; 
-
-    // border: black solid;
+    align-items: center;
 
     &.active {
       font-weight: 400; 
       color: #EB5594; 
     }
-
-
 `;
 
 const HamburgerIcon = styled.img`
@@ -202,7 +195,21 @@ const HamburgerIcon = styled.img`
     width: 40px;
     height: 30px;
     cursor: pointer;
-    // margin-top: 20px;
-    // border: solid blue;
+`;
 
+const ApplyButton = styled.button`
+    display: flex;
+    margin-right: 15px;
+    justify-content: flex-end;
+    background-color: #592E73; 
+    color: white; 
+    padding: 0px 24px; 
+    border-radius: 18px; 
+    border: none; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+    @media only screen and (max-width: 780px) {
+        display: none; 
+    }
 `;
