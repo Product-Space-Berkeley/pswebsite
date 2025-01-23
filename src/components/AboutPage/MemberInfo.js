@@ -58,7 +58,7 @@ const members = {
             hobbies: "Cello, grocery shopping, retail therapy (in moderation)",
             email: "melaniehsiang@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/melaniehsiang/",
-            calendlylink: "https://www.google.com/url?q=https://calendly.com/melaniehsiang/coffeechat&sa=D&source=editors&ust=1736728313979198&usg=AOvVaw35nB8mILtI4wuywSz4Xzpm"
+            calendlylink: "https://calendly.com/melaniehsiang/coffeechat"
         },
         {
             imagepath: "../images/people/ryan.png",
@@ -70,7 +70,7 @@ const members = {
             hobbies: "Volleyball + Cooking + Avatar TLA + Eating",
             email: "ryancho05@berkeley.edu",
             linkedin: "www.linkedin.com/in/ryancho05",
-            calendlylink: "Broken"
+            calendlylink: "https://calendly.com/rycho07-berkeley/coffee-chats-1"
         },
         {
             imagepath: "../images/people/rickxu.png",
