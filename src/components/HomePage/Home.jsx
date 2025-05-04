@@ -22,8 +22,8 @@ function Home() {
             <Navbar/>
             <OpeningPanel/>
             <PSDescription/>
-            <ForStudents/>
             <ForCompanies/>
+            <ForStudents/>
             <Membership/>
             <Footer/>
         </Container>
