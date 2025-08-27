@@ -1,108 +1,108 @@
 import styled from "styled-components"
 import SeniorAdvisorInfo from "./SeniorAdvisorInfo"
 import memberInfo from "../AboutPage/MemberInfo"
-import jordan from "../images/people/jordan.png"
-import shannon from "../images/people/shannon.png"
-import tyler from "../images/people/tyler.png"
-import garrett from "../images/people/garrett.png"
-import cady from "../images/people/cady.png"
-import kayden from "../images/people/kaydenfu.png"
-import truong from "../images/people/truong.png"
-import hannah from "../images/people/hannahli.png"
-import tia from "../images/people/tiachang.png"
-import ryansun from "../images/people/ryansun.png"
-import raymond from "../images/people/raymond.png"
-import hana from "../images/people/hana.png"
-import geetanjali from "../images/people/geetanjali.png"
-import yuta from "../images/people/yuta.png"
-import maya from "../images/people/mayahaylock.png"
-import advait from "../images/people/advaitmarathe.png"
-import katherine from "../images/people/katherinegan.png"
-import arnav from "../images/people/arnavgupta.png"
-import jerry from "../images/people/jerryzhang.png"
-import sahil from "../images/people/sahilmehta.png"
-import vignesh from "../images/people/vigneshsiva.png"
-import brandon from "../images/people/brandonqin.png"
-import justin from "../images/people/justinquan.png"
-import aadhrik from "../images/people/aadhrikkuila.png"
-import kayli from "../images/people/kaylijiang.png"
-import prashant from "../images/people/prashantmalyala.png"
-import ismail from "../images/people/ismailazam.png"
-import lily from "../images/people/lilyli.png"
-import atharva from "../images/people/atharvamehendale.png"
-import neal from "../images/people/nealkothari.png"
-import trinity from "../images/people/trinityhuynh.png"
-import momo from "../images/people/momosiu.png"
-import dan from "../images/people/danzhu.png"
-import michellenguyen from "../images/people/michellenguyen.png"
-import tarun from "../images/people/tarunsreedhar.png"
-import crystal from "../images/people/crystalchang.png"
-import roma from "../images/people/romadesai.png"
-import tsadi from "../images/people/tsadiobolu.png"
-import rickey from "../images/people/rickeymcgregor.png"
-import saumya from "../images/people/saumyachoudhary.png"
-import ananya from "../images/people/ananyagupta.png"
-import angela from "../images/people/angela.png"
-import marissa from "../images/people/marissa.png"
-import anna from "../images/people/annacheng.png"
-import krish from "../images/people/krishkumar.png"
-import su from "../images/people/su.png"
-import lauren from "../images/people/lauren.png"
-import michelle from "../images/people/michellelee.png"
-import wesley from "../images/people/wesley.png"
-import suhani from "../images/people/suhani.png"
+import jordanYee from "../images/people/jordanyee.png"
+import shannonOr from "../images/people/shannonor.png"
+import tylerMcnierney from "../images/people/tylermcnierney.png"
+import garrettChau from "../images/people/garrettchau.png"
+import cadyHsu from "../images/people/cadyhsu.png"
+import kaydenFu from "../images/people/kaydenfu.png"
+import truongNguyen from "../images/people/truongnguyen.png"
+import hannahLi from "../images/people/hannahli.png"
+import tiaChang from "../images/people/tiachang.png"
+import ryanSun from "../images/people/ryansun.png"
+import raymondFeng from "../images/people/raymondfeng.png"
+import hanaMcnierney from "../images/people/hanamcnierney.png"
+import geetanjaliJain from "../images/people/geetanjalijain.png"
+import yutaYamada from "../images/people/yutayamada.png"
+import mayaHaylock from "../images/people/mayahaylock.png"
+import advaitMarathe from "../images/people/advaitmarathe.png"
+import katherineGan from "../images/people/katherinegan.png"
+import arnavGupta from "../images/people/arnavgupta.png"
+import jerryZhang from "../images/people/jerryzhang.png"
+import sahilMehta from "../images/people/sahilmehta.png"
+import vigneshSiva from "../images/people/vigneshsiva.png"
+import brandonQin from "../images/people/brandonqin.png"
+import justinQuan from "../images/people/justinquan.png"
+import aadhrikKuila from "../images/people/aadhrikkuila.png"
+import kayliJiang from "../images/people/kaylijiang.png"
+import prashantMalyala from "../images/people/prashantmalyala.png"
+import ismailAzam from "../images/people/ismailazam.png"
+import lilyLi from "../images/people/lilyli.png"
+import atharvaMehendale from "../images/people/atharvamehendale.png"
+import nealKothari from "../images/people/nealkothari.png"
+import trinityHuynh from "../images/people/trinityhuynh.png"
+import momoSiu from "../images/people/momosiu.png"
+import danZhu from "../images/people/danzhu.png"
+import michelleNguyen from "../images/people/michellenguyen.png"
+import tarunSreedhar from "../images/people/tarunsreedhar.png"
+import crystalChang from "../images/people/crystalchang.png"
+import romaDesai from "../images/people/romadesai.png"
+import tsadiObolu from "../images/people/tsadiobolu.png"
+import rickeyMcgregor from "../images/people/rickeymcgregor.png"
+import saumyaChoudhary from "../images/people/saumyachoudhary.png"
+import ananyaGupta from "../images/people/ananyagupta.png"
+import angelaZhang from "../images/people/angelazhang.png"
+import marissaJensen from "../images/people/marissajensen.png"
+import annaCheng from "../images/people/annacheng.png"
+import krishKumar from "../images/people/krishkumar.png"
+import suLee from "../images/people/sulee.png"
+import laurenSung from "../images/people/laurensung.png"
+import michelleLee from "../images/people/michellelee.png"
+import wesleyGriggs from "../images/people/wesleygriggs.png"
+import suhaniRamchandra from "../images/people/suhaniramchandra.png"
 
 const imageMap = {
-    "suhaniramchandra": suhani,
-    "wesley": wesley,
-    "michellelee": michelle,
-    "lauren": lauren,
-    "krishkumar": krish,
-    "su":su,
-    "annacheng":anna,
-    "marissa": marissa,
-    "angelazhang": angela,
-    "hanamcnierney": hana,
-    "yutayamada": yuta,
-    "raymondfeng": raymond,
-    "geetanjalijain": geetanjali,
-    "jordanyee": jordan,
-    "garrettchau": garrett,
-    "cadyhsu": cady,
-    "truongnguyen": truong,
-    "shannonor": shannon,
-    "kaydenfu": kayden,
-    "hannahli": hannah,
-    "tiachang": tia,
-    "ryansun": ryansun,
-    "tylermcnierney": tyler,
-    "mayahaylock": maya,
-    "advaitmarathe": advait,
-    "katherinegan": katherine,
-    "arnavgupta": arnav,
-    "jerryzhang": jerry,
-    "sahilmehta": sahil,
-    "vigneshsiva": vignesh,
-    "brandonqin": brandon,
-    "justinquan": justin,
-    "aadhrikkuila": aadhrik,
-    "kaylijiang": kayli,
-    "prashantmalyala": prashant,
-    "ismailazam": ismail,
-    "lilyli": lily,
-    "atharvamehendale": atharva,
-    "trinityhuynh": trinity,
-    "nealkothari": neal,
-    "momosiu": momo,
-    "danzhu": dan,
-    "michellenguyen": michellenguyen,
-    "tarunsreedhar": tarun,
-    "crystalchang": crystal,
-    "romadesai": roma,
-    "tsadiobolu": tsadi,
-    "rickeymcgregor": rickey,
-    "saumyachoudhary": saumya,
-    "ananyagupta": ananya
+    "suhaniramchandra": suhaniRamchandra,
+    "wesleygriggs": wesleyGriggs,
+    "michellelee": michelleLee,
+    "laurensung": laurenSung,
+    "krishkumar": krishKumar,
+    "sulee": suLee,
+    "annacheng": annaCheng,
+    "marissajensen": marissaJensen,
+    "angelazhang": angelaZhang,
+    "hanamcnierney": hanaMcnierney,
+    "yutayamada": yutaYamada,
+    "raymondfeng": raymondFeng,
+    "geetanjalijain": geetanjaliJain,
+    "jordanyee": jordanYee,
+    "garrettchau": garrettChau,
+    "cadyhsu": cadyHsu,
+    "truongnguyen": truongNguyen,
+    "shannonor": shannonOr,
+    "kaydenfu": kaydenFu,
+    "hannahli": hannahLi,
+    "tiachang": tiaChang,
+    "ryansun": ryanSun,
+    "tylermcnierney": tylerMcnierney,
+    "mayahaylock": mayaHaylock,
+    "advaitmarathe": advaitMarathe,
+    "katherinegan": katherineGan,
+    "arnavgupta": arnavGupta,
+    "jerryzhang": jerryZhang,
+    "sahilmehta": sahilMehta,
+    "vigneshsiva": vigneshSiva,
+    "brandonqin": brandonQin,
+    "justinquan": justinQuan,
+    "aadhrikkuila": aadhrikKuila,
+    "kaylijiang": kayliJiang,
+    "prashantmalyala": prashantMalyala,
+    "ismailazam": ismailAzam,
+    "lilyli": lilyLi,
+    "atharvamehendale": atharvaMehendale,
+    "trinityhuynh": trinityHuynh,
+    "nealkothari": nealKothari,
+    "momosiu": momoSiu,
+    "danzhu": danZhu,
+    "michellenguyen": michelleNguyen,
+    "tarunsreedhar": tarunSreedhar,
+    "crystalchang": crystalChang,
+    "romadesai": romaDesai,
+    "tsadiobolu": tsadiObolu,
+    "rickeymcgregor": rickeyMcgregor,
+    "saumyachoudhary": saumyaChoudhary,
+    "ananyagupta": ananyaGupta
 }
 
 function SeniorAdvisors() {
