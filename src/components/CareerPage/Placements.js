@@ -1,5 +1,183 @@
 const placements = [
     {
+        timeline: "2025 FULL TIME PLACEMENT",
+        data: [
+            {
+                name: "Cady Hsu",
+                company: "Atlassian",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Christine Wong",
+                company: "Coinbase",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Geetanjali Jain",
+                company: "Blackstone",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Lucas Omori",
+                company: "Mastercard",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Michelle Lee",
+                company: "Salesforce",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Oscar Chow",
+                company: "Coinbase",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Raymond Feng",
+                company: "Mastercard",
+                title: "Associate Product Manager",
+                year: "Senior"
+            },
+            {
+                name: "Yuta Yamada",
+                company: "Meta",
+                title: "Software Engineer",
+                year: "Senior"
+            }
+        ]
+    },
+        {
+        timeline: "2025 INTERNSHIP PLACEMENT",
+        data: [
+            {
+                name: "Amolak Preet Singh",
+                company: "Amazon",
+                title: "Engineering Program Manager Intern",
+                year: "Junior"
+            },
+            {
+                name: "Andy Wei",
+                company: "Qualtrics",
+                title: "Product Management Intern",
+                year: "Junior"
+            },
+            {
+                name: "Anisa Majhi",
+                company: "Microsoft",
+                title: "Product Management Intern",
+                year: "Junior"
+            },
+            {
+                name: "Anna Cheng",
+                company: "Salesforce",
+                title: "Associate Product Management Intern",
+                year: "Junior"
+            },
+            {
+                name: "Ayami Matsumura",
+                company: "TikTok ",
+                title: "Product Management Intern",
+                year: "Junior"
+            },
+            {
+                name: "Chris Lee",
+                company: "Capital One",
+                title: "Associate Product Management Intern",
+                year: "Junior"
+            },
+            {   
+                name: "Dasang Dolma",
+                company: "Typeface",
+                title: "Product Management Intern",
+                year: "Junior"
+            },
+            {
+                name: "Marissa Jensen",
+                company: "Amazon",
+                title: "Program Manager Intern",
+                year: "Junior"
+            },
+            {   
+                name: "Melanie Hsiang",
+                company: "The Trade Desk",
+                title: "Product Management Intern",
+                year: "Junior"
+            },
+            {   
+                name: "Carly Chan",
+                company: "Uber",
+                title: "Software Engineer Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Jennifer Huang",
+                company: "NVIDIA",
+                title: "DGX Cloud Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Jonathan Chiang",
+                company: "TikTok",
+                title: "Product Management Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Liana Kong",
+                company: "Times Publishing Limited",
+                title: "Software Engineer Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Michael Bohm",
+                company: "Amazon",
+                title: "Program Manager Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Rick Xu",
+                company: "US Bank",
+                title: "Product Management Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Tiffany Lin",
+                company: "SiriusXM",
+                title: "Product Management Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Timothy Zhou",
+                company: "Toast",
+                title: "Software Engineer Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Vaishavi Sahu",
+                company: "NVIDIA",
+                title: "AI Enterprise and Product Engineering Intern",
+                year: "Sophomore"
+            },
+            {
+                name: "Nicholas Chua",
+                company: "TikTok",
+                title: "Product Management Intern",
+                year: "Freshman"
+            },
+            {
+                name: "Steven Zhang",
+                company: "Homethrive",
+                title: "Product Analytics Intern",
+                year: "Freshman"
+            }
+        ]
+    },
+    {
         timeline: "2024 FULL TIME PLACEMENT",
         data: [
             {

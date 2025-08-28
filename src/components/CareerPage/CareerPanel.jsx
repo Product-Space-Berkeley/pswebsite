@@ -14,10 +14,10 @@ function CareerPanel() {
                 <HeadingSubtitle> 
                 Product Space represents a significant proportion 
                 of associate product managers from UC Berkeley. 
-                From Google to Reddit to Twitter, 20+ APM and PM 
+                From Google to Reddit to Twitter, 30+ APM and PM 
                 programs have had Product Space members as an intern 
                 or full-timer. We've compiled our members' career 
-                placement for 2024 below.
+                placement for 2025 below.
                 </HeadingSubtitle>
             </OpeningHeader>
             <PictureContainer>
