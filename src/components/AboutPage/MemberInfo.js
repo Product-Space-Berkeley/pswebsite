@@ -183,7 +183,7 @@ const members = {
         {
             imagepath: "../images/people/maanyaraghuram.png",
             imagekey: "maanyaraghuram",
-            fullname: "Jonathan Chiang",
+            fullname: "Maanya Raghuram",
             position: "Project Lead",
             grade: "Senior",
             major: "Economics",
