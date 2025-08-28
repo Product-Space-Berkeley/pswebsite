@@ -1,247 +1,323 @@
 const members = {
     leadership: [
         {
-            imagepath: "../images/people/anisa.png",
-            imagekey: "anisamajhi",
-            fullname: "Anisa Majhi",
-            position: "President",
-            grade: "Junior",
-            major: "Data Science, Economics",
-            hobbies: "Stargazing, traveling, hiking (viewpoints!), making matcha",
-            email: "anisamajhi@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/anisamajhi/",
-            calendlylink: "https://calendly.com/anisamajhi/sp-25-coffee-chat"
-        },
-        {
-            imagepath: "../images/people/chrislee.png",
-            imagekey: "chrislee",
-            fullname: "Christopher Lee",
-            position: "VP of Projects",
-            grade: "Junior",
-            major: "Computer Science, Data Science",
-            hobbies: "Poker, Gym, Basketball, Brawl Stars, bars",
-            email: "chrislee03@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/chrisjlee03/",
-            calendlylink: "https://calendly.com/chrislee03-berkeley/sp25-coffeechats"
-        }, 
-        {
-            imagepath: "../images/people/andywei.png",
-            imagekey: "andywei",
-            fullname: "Andy Wei",
-            position: "VP of Operations",
-            grade: "Junior",
-            major: "IEOR, Data Science",
-            hobbies: "AYCE restaurants, scenic hikes, Brawl Stars, watching sports, coffee chatting potential applicants 🤓",
-            email: "andyswei@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/andy-s-wei/",
-            calendlylink: "https://calendly.com/andyswei/ps-coffee-chats"
-        },
-        {
-            imagepath: "../images/people/christine.png",
-            imagekey: "christinewong",
-            fullname: "Christine Wong",
-            position: "VP of Development",
-            grade: "Senior",
-            major: "Data Science",
-            hobbies: "Reading, matcha whisking, window shopping, listening to house music",
-            email: "christineywong@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/christine-y-wong/",
-            calendlylink: "https://calendly.com/christineywong/30min?month=2025-01"
-        },
-        {
-            imagepath: "../images/people/melanie.png",
-            imagekey: "melaniehsiang",
-            fullname: "Melanie Hsiang",
-            position: "VP of Internal Affairs",
-            grade: "Junior",
-            major: "Cognitive Science, Data Science",
-            hobbies: "Cello, grocery shopping, retail therapy (in moderation)",
-            email: "melaniehsiang@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/melaniehsiang/",
-            calendlylink: "https://calendly.com/melaniehsiang/coffeechat"
-        },
-        {
-            imagepath: "../images/people/ryan.png",
-            imagekey: "ryancho",
-            fullname: "Ryan Cho",
-            position: "VP of Internal Affairs",
-            grade: "Junior",
-            major: "Bioengineering & Data Science",
-            hobbies: "Volleyball + Cooking + Avatar TLA + Eating",
-            email: "ryancho05@berkeley.edu",
-            linkedin: "www.linkedin.com/in/ryancho05",
-            calendlylink: "https://calendly.com/rycho07-berkeley/coffee-chats-1"
-        },
-        {
             imagepath: "../images/people/rickxu.png",
             imagekey: "rickxu",
             fullname: "Rick Xu",
-            position: "VP of Fellowship",
-            grade: "Sophomore",
-            major: "EECS, Business (M.E.T)",
-            hobbies: "Stalking dining.berkeley.edu, exploring the great outdoors, being afraid of horror movies",
+            position: "President",
+            grade: "Junior",
+            major: "EECS, Business Administration",
+            hobbies: "Touching grass (anything outdoors related), film photography, gym, trying new things",
             email: "rickxu@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/rickx",
-            calendlylink: "https://calendly.com/rickxu-berkeley/20min"
+            linkedin: "https://www.linkedin.com/in/rickx/",
+            calendlylink: "https://calendly.com/rickxu-berkeley/coffeechats"
         },
         {
-            imagepath: "../images/people/ninacheuck.png",
-            imagekey: "ninacheuck",
-            fullname: "Nina Cheuck",
-            position: "VP of Fellowship",
-            grade: "Junior",
-            major: "Data Science, Design",
-            hobbies: "Playing the guitar, having deep talks with friends, analyzing song lyrics (especially Taylor Swift's songs), karaoke, and cooking :)",
-            email: "nina.cheuck@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/nina-cheuck/",
-            calendlylink: "https://calendly.com/nina-cheuck/ps-sp25-coffee-chat-w-nina"
+            imagepath: "../images/people/vickyxiao.png",
+            imagekey: "vickyxiao",
+            fullname: "Vicky Xiao",
+            position: "VP of Development",
+            grade: "Senior",
+            major: "IEOR, Business Administration",
+            hobbies: "Eating, cooking/baking, hiking, tennis/pickleball, side questing",
+            email: "vickyx@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/vicky-x/",
+            calendlylink: "https://calendly.com/vickyx-berkeley/30min"
         },
         {
-            imagepath: "../images/people/ayami.png",
-            imagekey: "ayami",
+            imagepath: "../images/people/ayamimatsumura.png",
+            imagekey: "ayamimatsumura",
             fullname: "Ayami Matsumura",
-            position: "Fellowship Mentor",
-            grade: "Junior",
+            position: "VP of Fellowship",
+            grade: "Senior",
             major: "Cognitive Science, Data Science",
-            hobbies: "Trying out new sports, traveling, window shopping, cooking/eating",
+            hobbies: "Travelling, cooking, playing sports/being active, shopping",
             email: "amatsumura@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/ayami-matsumura/",
-            calendlylink: "https://calendly.com/amatsumura-ei0/ayami-s-coffee-chat?month=2025-01"
+            calendlylink: "https://calendly.com/amatsumura-ei0/ayami-s-meeting"
         },
         {
-            imagepath: "../images/people/lucas.png",
-            imagekey: "lucasomori",
-            fullname: "Lucas Omori",
-            position: "Fellowship Mentor",
-            grade: "Senior",
-            major: "Data Science",
-            hobbies: "Dance, Going to concerts (Kpop, Indie, RnB), Beli reviews",
-            email: "lomori@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/lucasomori/",
-            calendlylink: "https://calendly.com/lomori/lucas-coffee-chat"
-        },
-        {
-            imagepath: "../images/people/xiao.png",
-            imagekey: "xiao",
+            imagepath: "../images/people/xiaoli.png",
+            imagekey: "xiaoli",
             fullname: "Xiaojian Li",
-            position: "Fellowship Mentor",
-            grade: "Junior",
+            position: "VP of Fellowship",
+            grade: "Senior",
             major: "Economics, Data Science",
-            hobbies: "Basketball, volleyball, ranking food on Beli, singles inferno",
+            hobbies: "Love Island, basketball, volleyball, matcha",
             email: "xiaojianli@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/xiaojianli/",
-            calendlylink: "https://calendly.com/xiaojianli"
-        },
-        {
-            imagepath: "../images/people/carlychan.png",
-            imagekey: "carlychan",
-            fullname: "Carly Chan",
-            position: "Project Manager",
-            grade: "Sophomore",
-            major: "Computer Science, Applied Mathematics",
-            hobbies: "Cafes & caffeine overconsumption, collecting cute things, reading, sketching",
-            email: "carlychvn@berkeley.edu",
-            linkedin: "ww.linkedin.com/in/carly-chvn",
-            calendlylink: "https://calendly.com/carlychvn-berkeley/carly-s-coffee-chats"
-        },
-        {
-            imagepath: "../images/people/jonathanchiang.png",
-            imagekey: "jonathanchiang",
-            fullname: "Jonathan Chiang",
-            position: "Project Manager",
-            grade: "Sophomore",
-            major: "Economics, Data Science",
-            hobbies: "Exploring cafe/restaurants, basketball, bedrot",
-            email: "cchiang0410@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/jonathan-chiang-26026120a/",
-            calendlylink: "https://calendly.com/cchiang0410-berkeley/coffee-chat"
+            linkedin: "https://www.linkedin.com/in/xiaojianli",
+            calendlylink: "https://calendly.com/xiaojianli/ps-coffee-chat"
         },
         {
             imagepath: "../images/people/michaelbohm.png",
             imagekey: "michaelbohm",
             fullname: "Michael Bohm",
-            position: "Project Manager",
-            grade: "Sophomore",
-            major: "Economics, Minor in Data Science",
-            hobbies: "Working out, nonfiction reading, sleeping, playing with my dog",
+            position: "VP of Internal Affairs",
+            grade: "Junior",
+            major: "Business Administration",
+            hobbies: "Weightlifting, golf, hiking, reading",
             email: "mbohm357@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/michael-bohm-453292291/",
+            linkedin: "https://www.linkedin.com/in/michael-bohm-453292291",
             calendlylink: "https://calendly.com/mbohm357/20min"
         },
         {
-            imagepath: "../images/people/mischa.png",
-            imagekey: "mischa",
+            imagepath: "../images/people/mischamikami.png",
+            imagekey: "mischamikami",
             fullname: "Mischa Mikami",
-            position: "Project Manager",
-            grade: "Sophomore",
+            position: "VP of Internal Affairs",
+            grade: "Junior",
             major: "Data Science",
-            hobbies: "(Attempting to) cook, stargazing, going on side quests, napping",
+            hobbies: "(Attempting to) cook, stargazing, going on side quests, concerts, napping",
             email: "mmikami@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/mischa-mikami/",
             calendlylink: "https://calendly.com/mischamikami/mikami-coffee-chats"
         },
         {
+            imagepath: "../images/people/carlychan.png",
+            imagekey: "carlychan",
+            fullname: "Carly Chan",
+            position: "VP of Projects",
+            grade: "Junior",
+            major: "Data Science, Computer Science",
+            hobbies: "Making cafe drinks, binge watching stephanie soo vids, edm, liana kong",
+            email: "carlychvn@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/carly-chvn/",
+            calendlylink: "https://calendly.com/carlychvn-berkeley/carly-s-coffee-chats"
+        },
+        {
             imagepath: "../images/people/timzhou.png",
             imagekey: "timzhou",
             fullname: "Timothy Zhou",
-            position: "Project Manager",
-            grade: "Sophomore",
+            position: "VP of Operations",
+            grade: "Junior",
             major: "EECS, IEOR",
-            hobbies: "Soccer, traveling, movie soundtracks, baking, food videos",
+            hobbies: "Cooking, AI, soccer, baking, food videos, movie soundtracks",
             email: "zhouhaitz@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/timothyhzhou/",
-            calendlylink: "https://calendly.com/zhouhaitz-berkeley/sp25-coffee-chat"
+            calendlylink: "https://calendly.com/zhouhaitz-berkeley/new-meeting"
         },
         {
-            imagepath: "../images/people/vyoma.png",
-            imagekey: "vyoma",
-            fullname: "Vyoma Patel",
-            position: "Project Manager",
-            grade: "Sophomore",
-            major: "EECS, Business (M.E.T)",
-            hobbies: "Table tennis, photography, spicy food, rooftops + stargazing, down to talk about anything!",
-            email: "vyoma.patel@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/vyomapatel12/",
-            calendlylink: "https://calendly.com/vyoma-patel-berkeley/ps-vyoma-patel-coffee-chats"
-        },
-        {
-            imagepath: "../images/people/oscar.png",
-            imagekey: "oscarchow",
-            fullname: "Oscar Chow",
-            position: "Community Development Manager",
-            grade: "Senior",
-            major: "Cognitive Science",
-            hobbies: "Singing, Basketball, Carsss, Japanese Culture, Bar Hopping",
-            email: "ocwwp@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/oscar-chow2425/",
-            calendlylink: "https://calendly.com/ocwwp-berkeley"
-        },
-        {
-            imagepath: "../images/people/dasang.png",
-            imagekey: "dasangdolma",
-            fullname: "Dasang Dolma",
-            position: "Content Manager",
+            imagepath: "../images/people/jonathanchiang.png",
+            imagekey: "jonathanchiang",
+            fullname: "Jonathan Chiang",
+            position: "Fellowship Mentor",
             grade: "Junior",
-            major: "Business, Data Science",
-            hobbies: "Sunset hikes, cardamom buns + iced lattes, grocery shopping, hot yoga, bakery-hopping",
-            email: "dasangdolma@berkeley.edu",
-            linkedin: "https://linkedin.com/in/dasang-dolma-8740051b3",
-            calendlylink: "https://calendly.com/dasangdolma/dasang-coffee-chats"
+            major: "Data Science, Economics",
+            hobbies: "Exploring restaurants, basketball, clash royale",
+            email: "cchiang0410@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/jonathan-chiang-26026120a/",
+            calendlylink: "https://calendly.com/cchiang0410-berkeley/fall-25-coffee-chat"
         },
         {
-            imagepath: "../images/people/vaishavi.png",
-            imagekey: "vaishavi",
+            imagepath: "../images/people/jordanhuang.png",
+            imagekey: "jordanhuang",
+            fullname: "Jordan Huang",
+            position: "Fellowship Mentor",
+            grade: "Senior",
+            major: "Cognitive Science, Data Science",
+            hobbies: "AI, music production, content creation, pokémon cards, basketball, AYCE",
+            email: "johuang@berkeley.edu",
+            linkedin: "http://linkedin.com/in/johuang415",
+            calendlylink: "https://calendly.com/johuang-/30min"
+        },
+        {
+            imagepath: "../images/people/vaishavisahu.png",
+            imagekey: "vaishavisahu",
             fullname: "Vaishavi Sahu",
-            position: "Historian",
-            grade: "Sophomore",
-            major: "Cognitive Science, Neuroscience",
-            hobbies: "Reading, scrapbooking, watching rom-coms, listening to podcasts, hiking",
+            position: "Fellowship Mentor",
+            grade: "Junior",
+            major: "Cognitive Science, Neuroscience, Data Science Minor",
+            hobbies: "Hiking, reading, watching rom-coms and horror movies, organizing",
             email: "vaishavi_sahu@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/vaishavi-sahu-5400b5229/",
-            calendlylink: "https://calendly.com/vaishavi_sahu/30min"
+            calendlylink: "https://calendly.com/vaishavi_sahu/vaishavi-coffee-chat"
+        },
+        {
+            imagepath: "../images/people/alexvennemeyer.png",
+            imagekey: "alexvennemeyer",
+            fullname: "Alex Vennemeyer",
+            position: "Project Lead",
+            grade: "Sophomore",
+            major: "IEOR",
+            hobbies: "Volleyball, soccer, climbing, eating, photography",
+            email: "alexv@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/alex-vennemeyer/",
+            calendlylink: "https://calendly.com/alexv-berkeley/20min"
+        },
+        {
+            imagepath: "../images/people/danicahartawan.png",
+            imagekey: "danicahartawan",
+            fullname: "Danica Hartawan",
+            position: "Project Lead",
+            grade: "Sophomore",
+            major: "Cognitive Science, Mechanical Engineering (Undeclared)",
+            hobbies: "Making matcha, ceramics + art, TSITP, podcasts, free food hehe",
+            email: "danicahartawan@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/danicahartawan/",
+            calendlylink: "https://calendly.com/danicahartawan-berkeley/ps-coffee-chat-with-danica"
+        },
+        {
+            imagepath: "../images/people/ethanyang.png",
+            imagekey: "ethanyang",
+            fullname: "Ethan Yang",
+            position: "Project Lead",
+            grade: "Sophomore",
+            major: "Computer Science, Data Science",
+            hobbies: "Playing tennis, lifting, playing guitar, trying new foods, traveling",
+            email: "yang_ethan@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/ethanyang10/",
+            calendlylink: "https://calendly.com/yang_ethan-berkeley/30min"
+        },
+        {
+            imagepath: "../images/people/lianakong.png",
+            imagekey: "lianakong",
+            fullname: "Liana Kong",
+            position: "Project Lead",
+            grade: "Sophomore",
+            major: "Data Science, Cognitive Science, Design",
+            hobbies: "Sunset chasing, stationery hoarding, matcha whisking, napping, carly chan",
+            email: "lianakong@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/lianakong/",
+            calendlylink: "https://calendly.com/lianakong-berkeley/ps-coffee-chats-liana"
+        },
+        {
+            imagepath: "../images/people/maanyaraghuram.png",
+            imagekey: "maanyaraghuram",
+            fullname: "Jonathan Chiang",
+            position: "Project Lead",
+            grade: "Senior",
+            major: "Economics",
+            hobbies: "Going to concerts, reading, and flying planes!",
+            email: "maanya_raghuram@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/maanyaraghuram/",
+            calendlylink: "https://calendly.com/maanya_raghuram-berkeley/coffee-chat"
+        },
+        {
+            imagepath: "../images/people/tiffanylin.png",
+            imagekey: "tiffanylin",
+            fullname: "Tiffany Lin",
+            position: "Project Lead",
+            grade: "Junior",
+            major: "Economics, Data Science",
+            hobbies: "Vlogging, k-dramas, garden salsa sun chips, gym, golf, fantasy books",
+            email: "tiffany.lin@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/tiffanylin11/",
+            calendlylink: "https://calendly.com/tiffany-lin-berkeley/30min"
+        },
+        {
+            imagepath: "../images/people/meganharris.png",
+            imagekey: "meganharris",
+            fullname: "Megan Harris",
+            position: "Content Manager",
+            grade: "Sophomore",
+            major: "Economics, Cognitive Science",
+            hobbies: "Hiking, baking, skiing, thrifting, watching reality tv",
+            email: "meganharris@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/megan-patricia-harris/",
+            calendlylink: "https://calendly.com/meganharris-berkeley/30min"
+        },
+        {
+            imagepath: "../images/people/nicholaschua.png",
+            imagekey: "nicholaschua",
+            fullname: "Nicholas Chua",
+            position: "Historian",
+            grade: "Sophomore",
+            major: "IEOR",
+            hobbies: "GOLF!!!!, filming cinematography, health/fitness optimization, lowballing on Facebook Marketplace, having deep, thoughtful conversations about life",
+            email: "nicholaschua@berkeley.edu",
+            linkedin: "https://www.linkedin.com/in/nicholas-chua-ba870222b/",
+            calendlylink: "https://calendly.com/nicholaschua-berkeley/30min?month=2025-08"
         }
     ],
     senior_advisors: [
+        {
+            imagepath: "../images/people/anisamajhi.png",
+            imagekey: "anisamajhi",
+            fullname: "Anisa Majhi",
+            position: "President SP'25",
+            class: "2026",
+            major: "Data Science, Economics"
+        },
+        {
+            imagepath: "../images/people/andywei.png",
+            imagekey: "andywei",
+            fullname: "Andy Wei",
+            position: "VP Operations SP'25",
+            class: "2026",
+            major: "IEOR, Data Science",
+        },
+        {
+            imagepath: "../images/people/christinewong.png",
+            imagekey: "christinewong",
+            fullname: "Christine Wong",
+            position: "VP Development SP'25",
+            class: "2026",
+            major: "Data Science"
+        },
+        {
+            imagepath: "../images/people/chrislee.png",
+            imagekey: "chrislee",
+            fullname: "Christopher Lee",
+            position: "VP Projects SP'25",
+            class: "2026",
+            major: "Computer Science, Data Science"
+        },
+        {
+            imagepath: "../images/people/lucasomori.png",
+            imagekey: "lucasomori",
+            fullname: "Lucas Omori",
+            position: "VPP,IVP SP'24/FM SP'25",
+            class: "2025",
+            major: "Data Science",
+        },
+        {
+            imagepath: "../images/people/melaniehsiang.png",
+            imagekey: "melaniehsiang",
+            fullname: "Melanie Hsiang",
+            position: "IVP SP'25",
+            class: "2026",
+            major: "Cognitive Science, Data Science"
+        },
+        {
+            imagepath: "../images/people/ninacheuck.png",
+            imagekey: "ninacheuck",
+            fullname: "Nina Cheuck",
+            position: "VP Fellowship SP'25",
+            class: "2026",
+            major: "Data Science, Design",
+        },
+        {
+            imagepath: "../images/people/ryancho.png",
+            imagekey: "ryancho",
+            fullname: "Ryan Cho",
+            position: "IVP SP'25",
+            class: "2026",
+            major: "Bioengineering, Data Science",
+        },
+        {
+            imagepath: "../images/people/dasangdolma.png",
+            imagekey: "dasangdolma",
+            fullname: "Dasang Dolma",
+            position: "Content Manager SP'25",
+            class: "2026",
+            major: "Business, Data Science",
+        },
+        {
+            imagepath: "../images/people/oscarchow.png",
+            imagekey: "oscarchow",
+            fullname: "Oscar Chow",
+            position: "Community Dev Manager SP'25",
+            class: "2025",
+            major: "Cognitive Science",
+        },
+        {
+            imagepath: "../images/people/vyomapatel.png",
+            imagekey: "vyomapatel",
+            fullname: "Vyoma Patel",
+            position: "Project Lead SP'25",
+            class: "2027",
+            major: "EECS, Business (M.E.T)",
+        },
         {
             imagepath: "../images/people/krishkumar.png",
             imagekey: "krishkumar",
@@ -251,23 +327,23 @@ const members = {
             major: "Data Science"
         },
         {
-            imagepath: "../images/people/su.png",
-            imagekey: "su",
+            imagepath: "../images/people/sulee.png",
+            imagekey: "sulee",
             fullname: "Su Lee",
             position: "IVP FA'24",
             class: "2025",
             major: "Data Science"
         },
         {
-            imagepath: "../images/people/wesley.png",
-            imagekey: "wesley",
+            imagepath: "../images/people/wesleygriggs.png",
+            imagekey: "wesleygriggs",
             fullname: "Wesley Griggs",
             position: "IVP FA'24",
             class: "2025",
             major: "Cognitive Science, Data Science"
         },
         {
-            imagepath: "../images/people/angela.png",
+            imagepath: "../images/people/angelazhang.png",
             imagekey: "angelazhang",
             fullname: "Angela Zhang",
             position: "VP Fellowship FA'24",
@@ -283,7 +359,7 @@ const members = {
             major: "Business, Data Science"
         },
         {
-            imagepath: "../images/people/yuta.png",
+            imagepath: "../images/people/yutayamada.png",
             imagekey: "yutayamada",
             fullname: "Yuta Yamada",
             position: "VP Development FA'24",
@@ -291,10 +367,10 @@ const members = {
             major: "Computer Science, Data Science"
         },
         {
-            imagepath: "../images/people/lauren.png",
-            imagekey: "lauren",
+            imagepath: "../images/people/laurensung.png",
+            imagekey: "laurensung",
             fullname: "Lauren Sung",
-            position: "IVP SP'24 / PM FA'24",
+            position: "IVP SP'24 / PL FA'24",
             class: "2025",
             major: "Data Science"
         },
@@ -302,20 +378,20 @@ const members = {
             imagepath: "../images/people/annacheng.png",
             imagekey: "annacheng",
             fullname: "Anna Cheng",
-            position: "Project Manager FA'24",
+            position: "Project Lead FA'24",
             class: "2026",
             major: "Business (GMP), Computer Science"
         },
         {
-            imagepath: "../images/people/suhani.png",
+            imagepath: "../images/people/suhaniramchandra.png",
             imagekey: "suhaniramchandra",
             fullname: "Suhani Ramchandra",
-            position: "Project Manager FA'24",
+            position: "Project Lead FA'24",
             class: "2026",
             major: "Business (GMP), Data Science"
         },
         {
-            imagepath: "../images/people/hana.png",
+            imagepath: "../images/people/hanamcnierney.png",
             imagekey: "hanamcnierney",
             fullname: "Hana McNierney",
             position: "President SP'24",
@@ -323,7 +399,7 @@ const members = {
             major: "Business"
         },
         {
-            imagepath: "../images/people/geetanjali.png",
+            imagepath: "../images/people/geetanjalijain.png",
             imagekey: "geetanjalijain",
             fullname: "Geetanjali Jain",
             position: "VP Operations SP'24",
@@ -331,7 +407,7 @@ const members = {
             major: "Data Science"
         },
         {
-            imagepath: "../images/people/raymond.png",
+            imagepath: "../images/people/raymondfeng.png",
             imagekey: "raymondfeng",
             fullname: "Raymond Feng",
             position: "VP Development SP'24",
@@ -339,15 +415,15 @@ const members = {
             major: "Data Science, Economics"
         },
         {
-            imagepath: "../images/people/marissa.png",
-            imagekey: "marissa",
+            imagepath: "../images/people/marissajensen.png",
+            imagekey: "marissajensen",
             fullname: "Marissa Jensen",
-            position: "Project Manager SP '24",
+            position: "Project Lead SP'24",
             class: "2026",
             major: "Business (GMP), Data Science"
         },
         {
-            imagepath: "../images/people/jordan.png",
+            imagepath: "../images/people/jordanyee.png",
             imagekey: "jordanyee",
             fullname: "Jordan Yee",
             position: "President FA'23",
@@ -355,7 +431,7 @@ const members = {
             major: "EECS"
         },
         {
-            imagepath: "../images/people/garrett.png",
+            imagepath: "../images/people/garrettchau.png",
             imagekey:"garrettchau",
             fullname: "Garrett Chau",
             position: "Fellowship Mentor FA'23",
@@ -363,7 +439,7 @@ const members = {
             major: "Business, Data Science"
         },
         {
-            imagepath: "../images/people/cady.png",
+            imagepath: "../images/people/cadyhsu.png",
             imagekey: "cadyhsu",
             fullname: "Cady Hsu",
             position: "Fellowship Mentor FA'23",
@@ -371,18 +447,18 @@ const members = {
             major: "Data Science, Economics"
         },
         {
-            imagepath: "../images/people/truong.png",
+            imagepath: "../images/people/truongnguyen.png",
             imagekey:"truongnguyen",
             fullname: "Truong Nguyen",
-            position: "Project Manager FA'23",
+            position: "Project Lead FA'23",
             class: "2025",
             major: "Computer Science, Business"
         },
         {
-            imagepath: "../images/people/shannon.png",
+            imagepath: "../images/people/shannonor.png",
             imagekey: "shannonor",
             fullname: "Shannon Or",
-            position: "Project Manager FA'23",
+            position: "Project Lead FA'23",
             class: "2024",
             major: "EECS"
         },
@@ -411,7 +487,7 @@ const members = {
             major: "Computer Science, Business"
         },
         {
-            imagepath: "../images/people/tyler.png",
+            imagepath: "../images/people/tylermcnierney.png",
             imagekey: "tylermcnierney",
             fullname: "Tyler McNierney",
             position: "President SP'22/FA'22",
@@ -419,7 +495,7 @@ const members = {
             major: "EECS"
         },
         {
-            imagepath: "../images/people/ryan.png",
+            imagepath: "../images/people/ryansun.png",
             imagekey: "ryansun",
             fullname: "Ryan Sun",
             position: "VP Projects FA'22",
@@ -430,7 +506,7 @@ const members = {
             imagepath: "../images/people/trinityhuynh.png",
             imagekey: "trinityhuynh",
             fullname: "Trinity Huynh",
-            position: "Project Manager SP'23",
+            position: "Project Lead SP'23",
             class: "2023",
             major: "Business, Data Science"
         },
@@ -438,12 +514,12 @@ const members = {
             imagepath: "../images/people/tarunsreedhar.png",
             imagekey: "tarunsreedhar",
             fullname: "Tarun Sreedhar",
-            position: "Project Manager SP'23",
+            position: "Project Lead SP'23",
             class: "2023",
             major: "Computer Science, Data Science"
         },
         {
-            imagepath: "../images/people/trinityhuynh.png",
+            imagepath: "../images/people/michellenguyen.png",
             imagekey: "michellenguyen",
             fullname: "Michelle Nguyen",
             position: "Content Manager SP'23",
@@ -502,7 +578,7 @@ const members = {
             imagepath: "../images/people/jerryzhang.png",
             imagekey: "jerryzhang",
             fullname: "Jerry Zhang",
-            position: "Project Manager FA'22",
+            position: "Project Lead FA'22",
             class: "2023",
             major: "Computer Science, Business"
         },
@@ -642,10 +718,7 @@ const members = {
             position: "Co-Founder SP'20",
             class: "2022",
             major: "Computer Science, Business"
-        },
-        
-        
-        
+        }
     ]
 }
 

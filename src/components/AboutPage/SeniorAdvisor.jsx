@@ -51,8 +51,30 @@ import laurenSung from "../images/people/laurensung.png"
 import michelleLee from "../images/people/michellelee.png"
 import wesleyGriggs from "../images/people/wesleygriggs.png"
 import suhaniRamchandra from "../images/people/suhaniramchandra.png"
+import anisaMajhi from "../images/people/anisamajhi.png"
+import andyWei from "../images/people/andywei.png"
+import christinewong from "../images/people/christinewong.png"
+import chrisLee from "../images/people/chrislee.png"
+import lucasOmori from "../images/people/lucasomori.png"
+import melanieSsiang from "../images/people/melaniehsiang.png"
+import ninaCheuck from "../images/people/ninacheuck.png"
+import ryanCho from "../images/people/ryancho.png"
+import dasangDolma from "../images/people/dasangdolma.png"
+import oscarChow from "../images/people/oscarchow.png"
+import vyomaPatel from "../images/people/vyomapatel.png"
 
 const imageMap = {
+    "anisamajhi": anisaMajhi,
+    "andywei": andyWei,
+    "christinewong": christinewong,
+    "chrislee": chrisLee,
+    "lucasomori": lucasOmori,
+    "melaniehsiang": melanieSsiang,
+    "ninacheuck": ninaCheuck,
+    "ryancho": ryanCho,
+    "dasangdolma": dasangDolma,
+    "oscarchow": oscarChow,
+    "vyomapatel": vyomaPatel,
     "suhaniramchandra": suhaniRamchandra,
     "wesleygriggs": wesleyGriggs,
     "michellelee": michelleLee,

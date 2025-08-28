@@ -2,55 +2,49 @@ import React from "react";
 import styled from "styled-components"
 import LeadershipInfo from "./LeadershipInfo"
 
-import anisa from "../images/people/anisa.png"
-import chris from "../images/people/chrislee.png"
-import andy from "../images/people/andywei.png"
-import christine from "../images/people/christine.png"
-import melanie from "../images/people/melanie.png"
-import ryan from "../images/people/ryan.png"
-import rick from "../images/people/rickxu.png"
-import nina from "../images/people/ninacheuck.png"
-import ayami from "../images/people/ayami.png"
-import lucas from "../images/people/lucas.png"
-import xiao from "../images/people/xiao.png"
-import oscar from "../images/people/oscar.png"
-import carly from "../images/people/carlychan.png"
-import jonathan from "../images/people/jonathanchiang.png"
-import michael from "../images/people/michaelbohm.png"
-import mischa from "../images/people/mischa.png"
-import tim from "../images/people/timzhou.png"
-import vyoma from "../images/people/vyoma.png"
-import dasang from "../images/people/dasang.png"
-import vaishavi from "../images/people/vaishavi.png"
-
+import rickXu from "../images/people/rickxu.png"
+import vickyXiao from "../images/people/vickyxiao.png"
+import ayamiMatsumura from "../images/people/ayamimatsumura.png"
+import xiaoLi from "../images/people/xiaoli.png"
+import michaelBohm from "../images/people/michaelbohm.png"
+import mischaMikami from "../images/people/mischamikami.png"
+import carlyChan from "../images/people/carlychan.png"
+import timZhou from "../images/people/timzhou.png"
+import jonathanChiang from "../images/people/jonathanchiang.png"
+import jordanHuang from "../images/people/jordanhuang.png"
+import vaishaviSahu from "../images/people/vaishavisahu.png"
+import alexVennemeyer from "../images/people/alexvennemeyer.png"
+import danicaHartawan from "../images/people/danicahartawan.png"
+import ethanYang from "../images/people/ethanyang.png"
+import lianaKong from "../images/people/lianakong.png"
+import maanyaRaghuram from "../images/people/maanyaraghuram.png"
+import tiffanyLin from "../images/people/tiffanylin.png"
+import meganHarris from "../images/people/meganharris.png"
+import nicholasChua from "../images/people/nicholaschua.png"
 import memberInfo from "../AboutPage/MemberInfo"
 
 // Importing pictures is funky so I'm using a map here
 
 const imageMap = {
-    "anisamajhi": anisa,
-    "chrislee": chris,
-    "andywei": andy,
-    "christinewong": christine,
-    "melaniehsiang": melanie,
-    "ryancho": ryan,
-    "rickxu": rick,
-    "ninacheuck": nina,
-    "melaniehsiang": melanie,
-    "ryancho": ryan,
-    "ninacheuck": nina,
-    "ayami": ayami,
-    "lucasomori": lucas,
-    "xiao": xiao,
-    "carlychan": carly,
-    "jonathanchiang": jonathan,
-    "michaelbohm": michael,
-    "mischa": mischa,
-    "timzhou": tim,
-    "vyoma": vyoma,
-    "oscarchow": oscar,
-    "dasangdolma": dasang,
-    "vaishavi": vaishavi
+    "rickxu": rickXu,
+    "vickyxiao": vickyXiao,
+    "ayamimatsumura": ayamiMatsumura,
+    "xiaoli": xiaoLi,
+    "michaelbohm": michaelBohm,
+    "mischamikami": mischaMikami,
+    "carlychan": carlyChan,
+    "timzhou": timZhou,
+    "jonathanchiang": jonathanChiang,
+    "jordanhuang": jordanHuang,
+    "vaishavisahu": vaishaviSahu,
+    "alexvennemeyer": alexVennemeyer,
+    "danicahartawan": danicaHartawan,
+    "ethanyang": ethanYang,
+    "lianakong": lianaKong,
+    "maanyaraghuram": maanyaRaghuram,
+    "tiffanylin": tiffanyLin,
+    "meganharris": meganHarris,
+    "nicholaschua": nicholasChua
 }
 
 function Leadership() {
