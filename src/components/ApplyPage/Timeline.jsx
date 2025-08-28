@@ -12,15 +12,15 @@ function Timeline() {
     const openInNewTab = (url) => {
         window.open(url, "_blank", "noreferrer");
       };
-      
+
     return(
         <Container> 
-            
-            <Header> TIMELINE FOR SPRING 2025 </Header>
+
+            <Header> TIMELINE FOR FALL 2025 </Header>
             <Table>
                 <Row> 
                     <DateRow>
-                        <DateText> 1/21 (Tues) - 1/31 (Fri)</DateText>
+                        <DateText> 8/27 (Wed) - 9/5 (Fri)</DateText>
                     </DateRow> 
                     <InfoRow> 
                         <RowTitle> Tabling & Coffee Chats Open </RowTitle>
@@ -35,20 +35,20 @@ function Timeline() {
                 </Row>
                 <Row>
                     <DateRow>
-                        <DateText> 1/21 (Tue) </DateText>
+                        <DateText> 8/27 (Wed) </DateText>
                     </DateRow> 
                     <InfoRow> 
                         <RowTitle> Applications Open </RowTitle>
                         <ApplicationButton
                         role="link"
-                        onClick={() => openInNewTab("https://forms.gle/Mrq37q5T4aqj8LQT9")}>
+                        onClick={() => openInNewTab("https://forms.gle/3Eri4GnbXJdMcgPh7")}>
                             Start Application
                         </ApplicationButton>
                     </InfoRow>
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 1/29 (Wed) </DateText>
+                        <DateText> 9/2 (Tues) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> Info Session (8-10 PM PT) </RowTitle>
@@ -61,11 +61,11 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 1/30 (Thurs) </DateText>
+                        <DateText> 9/4 (Thurs) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> PS Case Workshop (8-10 PM PT) </RowTitle>
-                        <RowLocation> Location: TBD</RowLocation>
+                        <RowLocation> Location: TBD </RowLocation>
                         <RowDescription>
                         Whether you're completely new to PM or experienced, 
                         the Intro to PM workshop—led by a senior PS member—is 
@@ -78,18 +78,18 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 1/31 (Fri) </DateText>
+                        <DateText> 9/5 (Fri) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Applications Close! (8 PM PST)  </RowTitle>
+                        <RowTitle> Applications Close! (12 AM PST)  </RowTitle>
                         <RowDescription>
-                        Submit your Product Space application by 8 PM Pacific Time on this date!
+                        Submit your Product Space application by 12 AM Pacific Time on this date!
                         </RowDescription>
                     </InfoRow>
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 2/2 (Sun) - 2/3 (Mon) </DateText>
+                        <DateText> 9/6 (Sat) - 9/7 (Sun) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> 1st Round Interviews (invite only)</RowTitle>
@@ -101,7 +101,7 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 2/6 (Thurs) </DateText>
+                        <DateText> 9/10 (Wed) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> Final Round Interviews (invite only)</RowTitle>
@@ -113,7 +113,7 @@ function Timeline() {
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 2/6 (Thurs) </DateText>
+                        <DateText> 9/10 (Wed) </DateText>
                     </DateRow>
                     <InfoRow> 
                         <RowTitle> Social Night (7-9 PM PT) (invite only)</RowTitle>

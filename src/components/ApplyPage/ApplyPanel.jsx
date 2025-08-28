@@ -26,7 +26,7 @@ function ApplyPanel() {
                 <ApplicationButton style={{border: "none"}}/>
                <ApplicationButton
                         role="link" style={{zIndex: "100"}}
-                        onClick={() => openInNewTab("https://forms.gle/Mrq37q5T4aqj8LQT9")}>
+                        onClick={() => openInNewTab("https://forms.gle/3Eri4GnbXJdMcgPh7")}>
                             Start Application
                     </ApplicationButton> 
 
