@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.82e471af.js",
+    "main.js": "/static/js/main.c4391c27.js",
     "static/js/453.9660482d.chunk.js": "/static/js/453.9660482d.chunk.js",
     "static/media/xiaoli.png": "/static/media/xiaoli.52f651e28770e1207e56.png",
     "static/media/lianakong.png": "/static/media/lianakong.bbae93a4755542c0c861.png",
@@ -30,7 +30,6 @@
     "static/media/ryancho.png": "/static/media/ryancho.1cdc3dff2a8ef4bcf0a3.png",
     "static/media/StudentsPanelPic.png": "/static/media/StudentsPanelPic.c8eacc95176d8725fa4d.png",
     "static/media/truongnguyen.png": "/static/media/truongnguyen.685228ce2b467db8baed.png",
-    "static/media/meganharris.png": "/static/media/meganharris.295daeae5985babc729b.png",
     "static/media/caldaysp23.png": "/static/media/caldaysp23.cd4dbfcd72bb05d228bd.png",
     "static/media/shannonor.png": "/static/media/shannonor.a1b6f00ea4a3039c50d3.png",
     "static/media/andywei.png": "/static/media/andywei.eda76ebbc574f1f57dd4.png",
@@ -150,11 +149,11 @@
     "static/media/tesla2.png": "/static/media/tesla2.990cd0ea64558d30e9e1.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.82e471af.js.map": "/static/js/main.82e471af.js.map",
+    "main.c4391c27.js.map": "/static/js/main.c4391c27.js.map",
     "453.9660482d.chunk.js.map": "/static/js/453.9660482d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.82e471af.js"
+    "static/js/main.c4391c27.js"
   ]
 }

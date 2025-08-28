@@ -173,7 +173,7 @@ const members = {
             imagekey: "lianakong",
             fullname: "Liana Kong",
             position: "Project Lead",
-            grade: "Sophomore",
+            grade: "Junior",
             major: "Data Science, Cognitive Science, Design",
             hobbies: "Sunset chasing, stationery hoarding, matcha whisking, napping, carly chan",
             email: "lianakong@berkeley.edu",
@@ -203,18 +203,6 @@ const members = {
             email: "tiffany.lin@berkeley.edu",
             linkedin: "https://www.linkedin.com/in/tiffanylin11/",
             calendlylink: "https://calendly.com/tiffany-lin-berkeley/30min"
-        },
-        {
-            imagepath: "../images/people/meganharris.png",
-            imagekey: "meganharris",
-            fullname: "Megan Harris",
-            position: "Content Manager",
-            grade: "Sophomore",
-            major: "Economics, Cognitive Science",
-            hobbies: "Hiking, baking, skiing, thrifting, watching reality tv",
-            email: "meganharris@berkeley.edu",
-            linkedin: "https://www.linkedin.com/in/megan-patricia-harris/",
-            calendlylink: "https://calendly.com/meganharris-berkeley/30min"
         },
         {
             imagepath: "../images/people/nicholaschua.png",

@@ -19,7 +19,6 @@ import ethanYang from "../images/people/ethanyang.png"
 import lianaKong from "../images/people/lianakong.png"
 import maanyaRaghuram from "../images/people/maanyaraghuram.png"
 import tiffanyLin from "../images/people/tiffanylin.png"
-import meganHarris from "../images/people/meganharris.png"
 import nicholasChua from "../images/people/nicholaschua.png"
 import memberInfo from "../AboutPage/MemberInfo"
 
@@ -43,7 +42,6 @@ const imageMap = {
     "lianakong": lianaKong,
     "maanyaraghuram": maanyaRaghuram,
     "tiffanylin": tiffanyLin,
-    "meganharris": meganHarris,
     "nicholaschua": nicholasChua
 }
 
