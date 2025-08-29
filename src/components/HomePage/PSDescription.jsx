@@ -13,11 +13,11 @@ function PSDescription() {
             </Description>
             <NumbersGroup>
                 <NumContainer> 
-                    <Number>30+</Number>
+                    <Number>50+</Number>
                     <NumDesc>Active Members</NumDesc>
                 </NumContainer>
                 <NumContainer>
-                    <Number> 10</Number>
+                    <Number> 12</Number>
                     <NumDesc>Active Semesters</NumDesc>
                 </NumContainer>
             </NumbersGroup>
