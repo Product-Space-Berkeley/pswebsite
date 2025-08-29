@@ -51,11 +51,12 @@ function Timeline() {
                         <DateText> 9/2 (Tues) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Info Session (8-10 PM PT) </RowTitle>
+                        <RowTitle> Info Session (8:30-10 PM PT) </RowTitle>
                         <RowLocation> Location: Tan Hall 775 </RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do 
                             things at Product Space @ Berkeley.
+                            <Subtitle> *Please note that the infosession time changed from 8-10 PM to 8:30-10 PM</Subtitle>
                         </RowDescription>
                     </InfoRow>
                 </Row>
@@ -64,7 +65,7 @@ function Timeline() {
                         <DateText> 9/4 (Thurs) </DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> PS Case Workshop (8-10 PM PT) </RowTitle>
+                        <RowTitle> PS Case Workshop (8:30-10 PM PT) </RowTitle>
                         <RowLocation> Location: Tan Hall 775 </RowLocation>
                         <RowDescription>
                         Whether you're completely new to PM or experienced, 
@@ -73,6 +74,7 @@ function Timeline() {
                         management. We will also go over a popular product 
                         case interview framework that we recommend to use 
                         for our first round of interviews!
+                        <Subtitle> *Please note that the workshop time changed from 8-10 PM to 8:30-10 PM</Subtitle>
                         </RowDescription>
                     </InfoRow>
                 </Row>
