@@ -1,137 +1,232 @@
-// import {Text } from 'react'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import HomeLogo from './images/miscicons/psHomeLogo.png'
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import HomeLogo from "./images/miscicons/PSLogo.png";
+import instaLogo from "./images/miscicons/instaLogo.png";
+import linkedinLogo from "./images/miscicons/linkedinLogo.png";
 
 const handleLinkClick = () => {
-    window.scrollTo(0, 0);
-  };
+  window.scrollTo(0, 0);
+};
 
+const navLinks = [
+  { label: "Home", to: "/Home" },
+  { label: "About", to: "/About" },
+  { label: "Clients", to: "/Companies" },
+  { label: "Students", to: "/Students" },
+  { label: "Careers", to: "/Careers" },
+  { label: "Apply", to: "/Apply" }
+];
 
-function Footer() {
-    return (
-      <Container>
-        <ItemContainer>
-        <Item >
-            <Link to="/Home" onClick={handleLinkClick}>
-                <HomeIcon src={HomeLogo} alt='ImageNotLoading'/>
-            </Link>
-            <Text> 
-                We are a student group acting 
-                independently of the University of 
-                California. We take full responsibility 
-                for our organization and this web site.
-            </Text>
-        </Item>
-        <Item> 
-            <Header> General </Header>
-            <SubHeader to="/About" onClick={handleLinkClick}> About</SubHeader>
-        </Item>
-        <Item> 
-            <Header> Students</Header>
-            <SubHeader to="/Students" onClick={handleLinkClick}> For Students</SubHeader>
-            <SubHeader to="/Apply" onClick={handleLinkClick}> Apply</SubHeader>
-            </Item>
-        <Item> 
-            <Header>Companies</Header>
-            <SubHeader to="/Companies" onClick={handleLinkClick}> For Companies</SubHeader>
-        </Item>
-        <Item> 
-            <Header> Contact Us</Header>
-            <SubHeader> contact@product.berkeley.edu</SubHeader>
-        </Item>
-        </ItemContainer>
-      </Container>
-    );
-  }
-  
-  export default Footer;
+const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/product-space-inc/posts/?feedView=all", icon: linkedinLogo },
+  { label: "Instagram", href: "https://www.instagram.com/calproductspace/?hl=en", icon: instaLogo }
+];
 
-const Container = styled.div`
+function Footer({ compactBottom = false }) {
+  return (
+    <FooterWrap $compactBottom={compactBottom}>
+      <FooterInner $compactBottom={compactBottom}>
+        <BrandBlock>
+          <LogoRow to="/Home" onClick={handleLinkClick}>
+            <Logo src={HomeLogo} alt="Product Space logo" />
+            <BrandName>Product Space @ UC Berkeley</BrandName>
+          </LogoRow>
+          <BrandCopy>
+            We are a student group acting independently of the University of California.
+            We take full responsibility for our organization and this website.
+          </BrandCopy>
+        </BrandBlock>
+
+        <LinksBlock>
+          <BlockTitle>Explore</BlockTitle>
+          <LinksGrid>
+            {navLinks.map((item) => (
+              <FooterLink key={item.to} to={item.to} onClick={handleLinkClick}>
+                {item.label}
+              </FooterLink>
+            ))}
+          </LinksGrid>
+        </LinksBlock>
+
+        <ContactBlock>
+          <BlockTitle>Contact</BlockTitle>
+          <ContactText>
+            <ContactLink href="mailto:contact@product.berkeley.edu">
+              contact@product.berkeley.edu
+            </ContactLink>
+          </ContactText>
+          <SocialRow>
+            {socialLinks.map((item) => (
+              <SocialLink key={item.label} href={item.href} target="_blank" rel="noreferrer">
+                <SocialIcon src={item.icon} alt={item.label} />
+              </SocialLink>
+            ))}
+          </SocialRow>
+        </ContactBlock>
+      </FooterInner>
+
+      <LegalRow $compactBottom={compactBottom}>
+        <LegalText>© {new Date().getFullYear()} Product Space @ Berkeley.</LegalText>
+      </LegalRow>
+    </FooterWrap>
+  );
+}
+
+export default Footer;
+
+const FooterWrap = styled.footer`
+  width: 100vw;
+  margin-top: 40px;
+  margin-bottom: 0;
+  margin-left: calc(50% - 50vw);
+  background: #000000;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: none;
+  backdrop-filter: none;
+  padding-bottom: 0;
+
+  @media (max-width: 1199px) {
     width: 100%;
-    height: auto;
-    background-image: radial-gradient(circle at 1px 1px, #bdbab9 2px, transparent 0);
-    background-size: 30px 30px;
-    
+    margin-left: 0;
+  }
+`;
 
-    display: flex;
-    justify-content: center;
+const FooterInner = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 48px clamp(24px, 6vw, 120px) ${({ $compactBottom }) => ($compactBottom ? "0" : "20px")};
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 32px;
 
-    // border: solid black;
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-    @media only screen and (max-width: 400px) {
-        display: none;
-    }
+const BrandBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
 
-`
-const ItemContainer = styled.div`
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    padding-right: 50px;
-    margin-right: 50px;
-    gap: 50px;
+const LogoRow = styled(Link)`
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+`;
 
-    width: 80%;
-    // border: solid yellow;
+const Logo = styled.img`
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+`;
 
+const BrandName = styled.span`
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+`;
 
-    display: flex; 
-    align-items: center; 
-    flex-direction: row;
-    flex-wrap: wrap;
+const BrandCopy = styled.p`
+  margin: 0;
+  max-width: 360px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+`;
 
+const LinksBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+`;
 
-    @media only screen and (max-width: 400px) {
-        gap: 10px;
-        padding-bottom: 0px;
-    }
-`
+const ContactBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+`;
 
-const Item = styled.div`
-    height: 300px; 
-    flex-grow: 1;
-    max-width: 200px;
-    min-width: 150px;
-    padding-left: 30px;
-    // border: solid black;
+const BlockTitle = styled.h4`
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+`;
 
-    
-    display: flex; 
-    flex-direction: column;
+const LinksGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
 
-    @media only screen and (max-width: 400px) {
-        flex-wrap: wrap;
-        // border: solid yellow;
-    }
-    
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
-    // border: solid black;
+const FooterLink = styled(Link)`
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.2s ease;
 
-`
-const HomeIcon = styled.img`
-    height: 60px;
-    padding-bottom: 10px;
-`
+  &:hover {
+    color: #ff7bc6;
+  }
+`;
 
-const Header = styled.div`
-    font-size: 24px;
-    margin-bottom: 50px;
-`
+const ContactText = styled.div`
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.82);
+`;
 
-const SubHeader = styled(Link)`
-    color: black;
-    font-size: 20px;
-    text-decoration: none;
-    padding-bottom: 20px;
-`
+const ContactLink = styled.a`
+  color: inherit;
+  text-decoration: none;
+`;
 
+const SocialRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+`;
 
+const SocialLink = styled.a`
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 
-const Text = styled.div`
-    font-size: 16px;
-    line-height: 2;
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.14);
+  }
+`;
 
-`   
+const SocialIcon = styled.img`
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+`;
 
+const LegalRow = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 12px clamp(24px, 6vw, 120px) ${({ $compactBottom }) => ($compactBottom ? "0" : "10px")};
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+`;
 
+const LegalText = styled.p`
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+`;

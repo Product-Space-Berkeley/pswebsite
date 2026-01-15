@@ -66,6 +66,10 @@ const OpeningHeader = styled.div`
 
     // border: solid yellow;
 
+    @media only screen and (max-width: 1199px) {
+        width: min(600px, 100%);
+        height: auto;
+    }
 
     @media only screen and (max-width: 450px) {
         width: 80%;
@@ -95,6 +99,10 @@ const HeadingSubtitle = styled.div`
 
     // border: solid blue;
 
+    @media only screen and (max-width: 1199px) {
+        min-width: 0;
+        width: min(600px, 100%);
+    }
 
     @media only screen and (max-width: 450px) {
         height: 600px;
@@ -155,6 +163,10 @@ const AboutPanelPicContainer = styled.div`
         }
     }
 
+    @media only screen and (max-width: 1024px) {
+        margin-right: 0;
+    }
+
     @media only screen and (max-width: 450px) {
         display: none;
     }
@@ -167,6 +179,12 @@ const AboutHPictureBox = styled.img`
     object-fit: cover;
     object-position: center;
 
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 460px;
+        height: auto;
+    }
+
 `;
 const AboutVPictureBox = styled.img`
     width: 360px;
@@ -175,6 +193,10 @@ const AboutVPictureBox = styled.img`
     object-fit: cover;
     object-position: center;
     
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+    }
 
 `;
-

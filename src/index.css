@@ -1,13 +1,67 @@
+@import '@fontsource/instrument-sans/400.css';
+@import '@fontsource/instrument-sans/500.css';
+@import '@fontsource/instrument-sans/700.css';
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Responsiveness audit checklist:
+   - No horizontal scroll on 320px
+   - Nav usable on mobile (hamburger or stacked)
+   - Buttons/tap targets >= 44px
+   - Text does not overflow
+   - Images scale correctly
+*/
+
+:root {
+  --desktop-lock: 1200px;
+}
+
+@media (min-width: 1200px) {
+  /* Desktop lock: keep existing layout unchanged at and above 1200px. */
+}
+
+@media (max-width: 1024px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1199px) {
+  #root {
+    padding-top: 84px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }

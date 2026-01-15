@@ -63,11 +63,15 @@ const TextContainer = styled.div`
 
     // border: solid black;
 
+    @media only screen and (max-width: 1199px) {
+        width: min(500px, 100%);
+    }
+
     @media only screen and (max-width: 450px) {
 
         display: flex; 
         align-items: center;
-        width: 100px;
+        width: 100%;
         // border: solid red;
      }
 `
@@ -76,7 +80,7 @@ const Header = styled.div`
     font-size: 60px;
 
     @media only screen and (max-width: 450px) {
-        width: 300px;
+        width: min(300px, 100%);
         text-align: center;
 
         // border: solid black;
@@ -88,8 +92,17 @@ const Description = styled.div`
     width: 500px;
     min-width: 330px;
 
+    @media only screen and (max-width: 1199px) {
+        width: min(500px, 100%);
+        min-width: 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+    }
+
     @media only screen and (max-width: 450px) {
-        width: 330px;
+        width: min(330px, 100%);
         text-align: center;
 
      }
@@ -137,6 +150,10 @@ const PictureContainer = styled.div`
         }
     }
 
+    @media only screen and (max-width: 1199px) {
+       width: min(700px, 100%);
+    }
+
     @media only screen and (max-width: 700px) {
        display: none;
     }
@@ -146,5 +163,10 @@ const PictureBox = styled.img`
     width: 800px;
     height: 575px;
 
-`;
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+    }
 
+`;

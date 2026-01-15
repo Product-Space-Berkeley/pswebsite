@@ -1,105 +1,165 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 function PSDescription() {
-    return (
-        <Container>
-            <Title> WHAT IS PRODUCT SPACE @ BERKELEY? </Title>
-            <Description> 
-            Product Space @ Berkeley is the UC Berkeley chapter of 
-            Product Space, a nation-wide family of students who are 
-            passionate about product management. We strive to cultivate a 
-            tight-knit community of product leaders who are well-prepared 
-            to guide impactful products in industry.
-            </Description>
-            <NumbersGroup>
-                <NumContainer> 
-                    <Number>50+</Number>
-                    <NumDesc>Active Members</NumDesc>
-                </NumContainer>
-                <NumContainer>
-                    <Number> 12</Number>
-                    <NumDesc>Active Semesters</NumDesc>
-                </NumContainer>
-            </NumbersGroup>
-        </Container>
-    )
+  return (
+    <Section>
+      <Inner>
+        <Left>
+          <Title>WHO WE ARE</Title>
+          <Description>
+            Product Space @ Berkeley is the UC Berkeley chapter of Product Space,
+            a nation-wide family of students who are passionate about product
+            management. We strive to cultivate a tight-knit community of product
+            leaders who are well-prepared to guide impactful products in
+            industry.
+          </Description>
+        </Left>
+
+        <Right>
+          <Stat>
+            <Number>40</Number>
+            <StatLabel>Active Members</StatLabel>
+          </Stat>
+          <Stat>
+            <Number>30</Number>
+            <StatLabel>Client Projects</StatLabel>
+          </Stat>
+          <Stat>
+            <Number>13</Number>
+            <StatLabel>Active Semesters</StatLabel>
+          </Stat>
+        </Right>
+      </Inner>
+    </Section>
+  );
 }
 
 export default PSDescription;
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
+/* ============ styles ============ */
+
+const Section = styled.section`
+  width: 100%;
+  background: transparent; /* remove local background */
+`;
+
+const Inner = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+
+  /* slightly taller section */
+  padding: 76px 56px;
+
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 64px;
+  align-items: center;
+
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+    padding: 56px 28px;
     align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 90px;
-    // border: solid black;
+    text-align: center;
+  }
+`;
 
-`
-const Title = styled.div`
-    color: #EB5B8D;
-    font-size: 24px;
-    font-weight: 500;
-    padding-bottom: 10px;
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 
-    @media only screen and (max-width: 400px) {
-        width: 280px;
-        line-height: 1.5;
-        text-align: center;
-    }
-`
+  @media (max-width: 960px) {
+    align-items: center;
+  }
+`;
+
+const Title = styled.h2`
+  margin: 0;
+  color: #fff;
+  font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+
+  @media (max-width: 968px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 32px;
+  }
+`;
 
 const Description = styled.p`
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    color: #656565;
-    text-align: center;
+  margin: 0;
+  max-width: 560px;
 
-    width: 700px;
+  color: rgba(255, 255, 255, 0.68);
+  font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
 
-    @media only screen and (max-width: 400px) {
-        width: 300px;
-        line-height: 1.2;
+  @media (max-width: 960px) {
+    max-width: 100%;
+  }
+`;
 
-    }
+const Right = styled.div`
+  display: flex;
+  justify-content: center; /* center stats block in column */
+  align-items: center;
+  gap: 64px;
 
-`
-const NumbersGroup = styled.div`
-    width: 700px;
-    height: 100px;
-    display: flex; 
-    flex-direction: row;
-
-    // border: solid yellow;
-
-    @media only screen and (max-width: 400px) {
-        width: 300px;
-        line-height: 1.5;
-    }
-`
-
-const NumContainer = styled.div`
-    width: 600px;
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
+  @media (max-width: 960px) {
     justify-content: center;
+    gap: 44px;
+  }
 
+  @media (max-width: 520px) {
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+`;
 
-    // border: solid blue;
-`
+const Stat = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+
+  @media (max-width: 960px) {
+    align-items: flex-start;
+    min-width: 110px;
+  }
+`;
+
 const Number = styled.div`
+  color: #fff;
+  font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-size: 50px; /* larger numbers */
+  font-weight: 500;
+  line-height: 1;
+
+  @media (max-width: 480px) {
     font-size: 30px;
-    font-weight: 400;
-    color: #EB5B8D;
-`
-const NumDesc = styled.div`
+  }
+`;
 
-    @media only screen and (max-width: 450px) {
-        text-align: center;
-        line-height: 1.2;
-
-    }
-`
+const StatLabel = styled.div`
+  color: rgba(255, 255, 255, 0.55);
+  font-family: "Instrument Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+`;

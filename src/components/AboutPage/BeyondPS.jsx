@@ -102,7 +102,7 @@ const TextContainer = styled.div`
 const HeaderText = styled.h1`
     color: #EB5B8D;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400px;
     font-size: 30px;
 `
 const Description = styled.h2`

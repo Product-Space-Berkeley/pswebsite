@@ -15,117 +15,135 @@ function Timeline() {
 
     return(
         <Container> 
-
-            <Header> TIMELINE FOR FALL 2025 </Header>
+            <Header>RECRUITMENT TIMELINE</Header>
             <Table>
                 <Row> 
                     <DateRow>
-                        <DateText> 8/27 (Wed) - 9/5 (Fri)</DateText>
+                        <DateText>1/20 (Tues)<br />- 1/30 (Fri)</DateText>
                     </DateRow> 
                     <InfoRow> 
-                        <RowTitle> Tabling & Coffee Chats Open </RowTitle>
+                        <RowTitle>Tabling & Coffee Chats Open</RowTitle>
                         <RowDescription>
                             Find us tabling at Sproul or sign up for coffee chats with members at
-                            Product Space to learn more about the club! 
-                            <ALink to="../About" onClick={handleLinkClick}>
-                                <Subtitle> *Click here to sign up for coffee chats</Subtitle>
-                            </ALink>
+                            Product Space to learn more about the club, our teams, and the work
+                            we do each semester.
                         </RowDescription>
+                        <RowActions>
+                            <ALink to="../About" onClick={handleLinkClick}>
+                                <ActionButton type="button">Coffee Chats</ActionButton>
+                            </ALink>
+                        </RowActions>
                     </InfoRow>
                 </Row>
                 <Row>
                     <DateRow>
-                        <DateText> 8/27 (Wed) </DateText>
+                        <DateText>1/20 (Tues)</DateText>
                     </DateRow> 
                     <InfoRow> 
-                        <RowTitle> Applications Open </RowTitle>
-                        <ApplicationButton
-                        role="link"
-                        onClick={() => openInNewTab("https://forms.gle/3Eri4GnbXJdMcgPh7")}>
-                            Start Application
-                        </ApplicationButton>
+                        <RowTitle>Applications Open</RowTitle>
+                        <RowDescription>
+                            The application opens for interested students. Share your background,
+                            interests, and what you hope to learn by joining Product Space.
+                        </RowDescription>
+                        <RowActions>
+                            <ActionButton
+                                type="button"
+                                onClick={() => openInNewTab("https://forms.gle/JAWhDGXKSKisSuEg7")}>
+                                Application
+                            </ActionButton>
+                        </RowActions>
                     </InfoRow>
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/2 (Tues) </DateText>
+                        <DateText>1/27 (Tues)</DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> Info Session (8:30-10 PM PT) </RowTitle>
-                        <RowLocation> Location: Tan Hall 775 </RowLocation>
+                        <RowTitle>Info Session #1 (8-10 PM PT)</RowTitle>
+                        <RowLocation>Dwinelle 155</RowLocation>
                         <RowDescription>
-                            Join us to get a glimpse into the way we do 
-                            things at Product Space @ Berkeley.
-                            <Subtitle> *Please note that the infosession time changed from 8-10 PM to 8:30-10 PM</Subtitle>
+                            Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
+                            meet current members, and hear about our programs. 
+                        </RowDescription>
+                        <RowDescription> Note: both infosessions will present identical information, please only attend one out of the two sessions.</RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>1/28 (Wed)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>PS Case Workshop (8-10 PM PT)</RowTitle>
+                        <RowLocation>Tan Hall 775</RowLocation>
+                        <RowDescription>
+                            An intro to PM plus a case interview framework led by a senior PS member,
+                            with practical tips and time for questions.
                         </RowDescription>
                     </InfoRow>
                 </Row>
                 <Row> 
                     <DateRow>
-                        <DateText> 9/4 (Thurs) </DateText>
+                        <DateText>1/29 (Thurs)</DateText>
                     </DateRow>
                     <InfoRow> 
-                        <RowTitle> PS Case Workshop (8:30-10 PM PT) </RowTitle>
-                        <RowLocation> Location: Tan Hall 775 </RowLocation>
+                        <RowTitle>Info Session #2 (8-10 PM PT)</RowTitle>
+                        <RowLocation>Dwinelle 155</RowLocation>
                         <RowDescription>
-                        Whether you're completely new to PM or experienced, 
-                        the Intro to PM workshop—led by a senior PS member—is 
-                        an excellent way to be introduced to product
-                        management. We will also go over a popular product 
-                        case interview framework that we recommend to use 
-                        for our first round of interviews!
-                        <Subtitle> *Please note that the workshop time changed from 8-10 PM to 8:30-10 PM</Subtitle>
+                            Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
+                            meet current members, and hear about our programs. 
                         </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/5 (Fri) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Applications Close! (12 AM PST)  </RowTitle>
-                        <RowDescription>
-                        Submit your Product Space application by 12 AM Pacific Time on this date!
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/6 (Sat) - 9/7 (Sun) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> 1st Round Interviews (invite only)</RowTitle>
-                        <RowDescription>
-                        We'll cover a couple of behavioral questions and a product design
-                         question to learn more about you and your interest in Product Space.
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/10 (Wed) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Final Round Interviews (invite only)</RowTitle>
-                        <RowDescription>
-                        The final step will be a presentation on a prompt we will 
-                        provide to you ahead of time to see how you might fit into our club.
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
-                <Row> 
-                    <DateRow>
-                        <DateText> 9/10 (Wed) </DateText>
-                    </DateRow>
-                    <InfoRow> 
-                        <RowTitle> Social Night (7-9 PM PT) (invite only)</RowTitle>
-                        <RowDescription>
-                        Meet all of us in Product Space at our social night!
-                        </RowDescription>
-                    </InfoRow>
-                </Row>
+                        <RowDescription> Note: both infosessions will present identical information, please only attend one out of the two sessions.</RowDescription>
 
-
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>1/29 (Thurs)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>Applications Close (11:59PM PST)</RowTitle>
+                        <RowDescription>
+                            Submit your Product Space application by Thursday 11:59PM Pacific Time. Make sure all
+                            required fields are complete before the deadline. There is a 10 minute grace period for technical difficulties.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>1/31 (Sat)<br />- 2/1 (Sun)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>1st Round Interviews (Invite Only)</RowTitle>
+                        <RowDescription>
+                            Behavioral and product design questions to learn more about you, your experience,
+                            and your interest in Product Space.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>2/3 (Tues)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>Final Round Interviews (Invite Only)</RowTitle>
+                        <RowDescription>
+                            A presentation based on a prompt we provide ahead of time, focused on how you
+                            think through product problems.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>2/3 (Tues)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>Social Night (Invite Only)</RowTitle>
+                        <RowDescription>
+                            Meet all of us in Product Space at our social night and connect with the
+                            community in a relaxed setting.
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
             </Table>
         </Container>
     )
@@ -137,166 +155,153 @@ const Container = styled.div`
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    margin-top: 50px;
-    margin-bottom: 80px;
-
+    margin: 120px auto 140px;
+    padding: 0 clamp(28px, 8vw, 140px);
 `
-const Header = styled.div`
-    color: #EB5B8D;
-    font-size: 24px;
+const Header = styled.h2`
+    width: min(1320px, 100%);
+    margin: 0 0 24px;
+    font-size: 26px;
     font-weight: 500;
-    // padding-left: 450px;
-    // padding-bottom: 50px;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    text-align: center;
 `
 
 const Table = styled.div`
-    margin-top: 45px;
-    height: auto;
-    width: 70%;
-    
-
-    display: flex; 
+    width: min(1320px, 100%);
+    --date-col: 220px;
+    --row-gap: 40px;
+    --line-x: calc(var(--date-col) + (var(--row-gap) / 2));
+    margin-top: 28px;
+    position: relative;
+    display: flex;
     flex-direction: column;
-    justify-content: center; 
-    // align-items: center;
-    
+    gap: 40px;
 
-    // border: solid black; 
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(var(--line-x) - 1px);
+        top: 12px;
+        bottom: 12px;
+        width: 2px;
+        background: rgba(255, 255, 255, 0.22);
+    }
 
+    @media only screen and (max-width: 900px) {
+        --date-col: 140px;
+        --row-gap: 28px;
+        --line-x: calc(var(--date-col) + (var(--row-gap) / 2));
+        &::before {
+            left: calc(var(--line-x) - 1px);
+        }
+    }
 
-    @media only screen and (max-width: 450px) {
-        width: auto
+    @media only screen and (max-width: 720px) {
+        --date-col: 90px;
+        --row-gap: 18px;
+        --line-x: calc(var(--date-col) + (var(--row-gap) / 2));
+        &::before {
+            left: calc(var(--line-x) - 1px);
+        }
     }
 `
 
 const Row = styled.div`
-    display: flex; 
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: var(--date-col) minmax(0, 1fr);
+    gap: var(--row-gap);
+    position: relative;
 
+    &::before {
+        content: "";
+        position: absolute;
+        left: calc(var(--line-x) - 5px);
+        top: 12px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.12);
+    }
+
+    @media only screen and (max-width: 900px) {
+        &::before {
+            left: calc(var(--line-x) - 5px);
+        }
+    }
+
+    @media only screen and (max-width: 720px) {
+        &::before {
+            left: calc(var(--line-x) - 5px);
+        }
+    }
 `
 const DateRow = styled.div`
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
-
-    width: 200px;
-
-    // border: solid black;
-    @media only screen and (max-width: 450px) {
-        margin-right: 15px;
-        width: 100px;
-    }
+    align-items: flex-start; 
+    justify-content: flex-end; 
+    padding-top: 6px;
+    padding-right: 8px;
 `
 
 const DateText = styled.div`
-    width: 125px;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: center;
-    line-height: 1.5;
-
-    // border: solid yellow;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: right;
+    white-space: pre-line;
 `
 const InfoRow = styled.div`
     display: flex; 
     flex-direction: column;
-    
-    min-height: 200px;
-    height: auto;
-    padding-left: 30px;
-    border-bottom: solid #DEDEDE; 
-    border-bottom-width: 1px;
-    align-content: center;
-    background-color: #FEF4F7;
-    border-left: solid #EB5B8D;
-    border-left-width: 5px;
-    width: 800px;
-
-    background-image: linear-gradient(to right, transparent, transparent 100px, #F9D4DF);
-    background-position: left bottom;
-    background-size: 100% 3px;
-
-    // border: solid purple;
-
-    @media only screen and (max-width: 1000px) {
-        height: auto;
-    }
-    @media only screen and (max-width: 450px) {
-        width: 200px;
-    }
+    gap: 12px;
+    padding: 24px 28px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 `
 
 const RowTitle = styled.div`
-    font-family: Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 400;  
-    padding-top: 25px;
-    padding-bottom: 25px;
-
-    // border: solid red; 
+    font-size: 20px;
+    font-weight: 600;  
+    color: #ffffff;
 `
 
 const RowDescription = styled.div` 
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    margin-top: 10px;
-    margin-right: 20px;
-    margin-bottom: 15px;
-
-    // border: solid yellow; 
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.68);
 `
 const RowLocation = styled.div` 
-
-    font-family: Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    color: #EB5B8D;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
-    // border: solid blue; 
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
 `
 
-const Subtitle = styled.div`
-    color: #EB5B8D;
-    font-size: 18px;
-    // font-weight: 500;
-    text-decoration: none;
-
-    margin-top: 10px;
-    // width: 400px;
-
-    @media only screen and (max-width: 450px) {
-        width: auto;
-        text-align: center;
-        // border: solid red;
-    }
+const RowActions = styled.div`
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
 `
 
 const ALink = styled(Link)`
-    font-weight: 700;
     text-decoration: none;
 `
 
-const ApplicationButton = styled.button`
-    font-size: 20px;
-    color: #EB5B8D;
-    border: solid #EB5B8D 3px;
-    border-radius: 15px;
-    background: none;
-    width: 250px;
-    height: auto;
-
+const ActionButton = styled.button`
+    font-size: 11px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    background: transparent;
+    padding: 8px 18px;
 
     &:hover {
         cursor: pointer;
-    } 
-
-    @media only screen and (max-width: 600px) {
-        width: auto;
-
+        border-color: rgba(255, 255, 255, 0.8);
     }
 `
