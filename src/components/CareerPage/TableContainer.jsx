@@ -2,170 +2,104 @@ import styled from "styled-components"
 import placementData from "./Placements"
 
 function TableContainer() {
-    return (
-      <Container>
-            {placementData.map((placement) => (
-            <Table key={placement.timeline}>
-                <Header>{placement.timeline}</Header>
-                <HeaderRow>
-                    <HeaderName >Name</HeaderName>
-                    <HeaderCompany>Company</HeaderCompany>
-                    <HeaderTitle>Title</HeaderTitle>
-                    <HeaderYear>Year</HeaderYear>
-                </HeaderRow>
-                {placement.data.map((item) => (
-                    <Row key={item.name}>
-                        <Name>{item.name}</Name>
-                        <Company>{item.company}</Company>
-                        <Title>{item.title}</Title>
-                        <Year>{item.year}</Year>
-                </Row>
-                ))}
-            </Table>
+  return (
+    <Container>
+      {placementData.map((placement) => (
+        <Table key={placement.timeline}>
+          <Header>{placement.timeline}</Header>
+          <HeaderRow>
+            <HeaderName>Name</HeaderName>
+            <HeaderCompany>Company</HeaderCompany>
+            <HeaderTitle>Role</HeaderTitle>
+          </HeaderRow>
+          <Body>
+            {placement.data.map((item) => (
+              <Row key={`${item.name}-${item.company}-${item.title}`}>
+                <Name>{item.name}</Name>
+                <Company>{item.company}</Company>
+                <Title>{item.title}</Title>
+              </Row>
             ))}
-      </Container>
-    );
-  }
+          </Body>
+        </Table>
+      ))}
+    </Container>
+  );
+}
   
   export default TableContainer;
   
 
 const Container = styled.div`
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-
-    // border: solid black;
-`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+`;
 
 const Table = styled.div`
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    padding-bottom: 50px;
-    padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0 50px;
+  width: 100%;
+`;
 
-    // border: solid purple;
-`
 const Header = styled.div`
-    color: #EB5B8D;
-    font-size: 24px;
-    font-weight: 500;
-    padding-bottom: 50px;
-    display: flex; 
-    justify-content: center;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 500;
+  padding-bottom: 18px;
+  display: flex;
+  justify-content: center;
+`;
 
-    // border: solid red;
+const HeaderRow = styled.div`
+  width: min(960px, 100%);
+  min-height: 34px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.6fr;
+  align-items: center;
+  background: #b5a2cf;
+  color: #3a2a54;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0 18px;
+`;
 
-`
+const Body = styled.div`
+  width: min(960px, 100%);
+  margin-top: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+`;
 
 const Row = styled.div`
-    width: 80%;
-    height: 50px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    border-bottom: 1px solid gray;
+  min-height: 50px;
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 1.6fr;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 8px 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+`;
 
-    // border: solid blue;
-
-`
-const HeaderRow = styled.div`
-    width: 80%;
-    height: 40px;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    background: #6F358E;
-    font-weight: bold;
-    color: white;
-
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-`
-
-const HeaderName = styled.div`
-    padding-left: 15px;
-    color: white; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-`
-const HeaderCompany = styled.div`
-    color: white; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-
-`
-const HeaderTitle = styled.div`
-    width: 350px;
-    color: white; 
-    padding-right: 20px;
-
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-
-    @media only screen and (max-width: 450px) {
-        display: none;
-    }
-
-
-`
-const HeaderYear = styled.div`
-    color: white; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        display: none;
-    }
-`
+const HeaderName = styled.div``;
+const HeaderCompany = styled.div``;
+const HeaderTitle = styled.div``;
 
 const Name = styled.div`
-    padding-left: 15px;
-    color: #656565; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-`
+  line-height: 1.5;
+  word-break: break-word;
+`;
 const Company = styled.div`
-    color: #656565; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-
-`
+  line-height: 1.5;
+  word-break: break-word;
+`;
 const Title = styled.div`
-    width: 350px;
-    color: #656565; 
-    padding-right: 20px;
-
-    @media only screen and (max-width: 1000px) {
-        width: 200px;
-    }
-    
-    @media only screen and (max-width: 450px) {
-        display: none;
-    }
-`
-const Year = styled.div`
-    color: #656565; 
-    width: 300px;
-
-    @media only screen and (max-width: 1000px) {
-        display: none;
-    }
-
-
-`
+  line-height: 1.5;
+  word-break: break-word;
+`;

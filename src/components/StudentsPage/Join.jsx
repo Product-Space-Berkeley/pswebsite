@@ -35,6 +35,13 @@ const Container = styled.div`
 
     // border: solid black;
 
+    @media only screen and (max-width: 1199px) {
+        margin-right: 0;
+        justify-content: center;
+        padding-left: clamp(16px, 6vw, 40px);
+        padding-right: clamp(16px, 6vw, 40px);
+    }
+
     @media only screen and (max-width: 450px) {
         width: 100%;
         padding-left: 30px;
@@ -57,6 +64,11 @@ const TextContainer = styled.div`
     gap: 40px;
 
     // border: solid black;
+
+    @media only screen and (max-width: 1199px) {
+        width: min(350px, 100%);
+        margin-right: 0;
+    }
 `
 const Header = styled.div`
     padding-top: 30px;

@@ -1,13 +1,5 @@
 import styled from 'styled-components'
-import ApplyBG from '../images/pictures/applyBG.png'
-import HomePG from '../images/pictures/HomeBG.png'
-import { Link } from "react-router-dom"
-import sp23funboard from "../images/pictures/funboardsp23.jpg"
-
-const handleLinkClick = () => {
-    window.scrollTo(0, 1200);
-  };
-
+import sp23funboard from "../images/pictures/fa24JPG.JPG"
 
 function ApplyPanel() {
     const openInNewTab = (url) => {
@@ -16,27 +8,23 @@ function ApplyPanel() {
 
     return (
     <Panel> 
-        <OpeningHeader>
-            <HeadingTitle> Apply</HeadingTitle>
-            <HeadingSubtitle> 
-                <HeadingInfo>
-                Product Space welcomes anyone with a passion for PM 
-                to apply. Join us and shape your product journey! 
-                </HeadingInfo>
-                <ApplicationButton style={{border: "none"}}/>
-               <ApplicationButton
-                        role="link" style={{zIndex: "100"}}
-                        onClick={() => openInNewTab("https://forms.gle/3Eri4GnbXJdMcgPh7")}>
-                            Start Application
-                    </ApplicationButton> 
-
-             </HeadingSubtitle>
-
-            
-        </OpeningHeader>
-        <PictureContainer> 
-             <PictureBox src={sp23funboard} />
-        </PictureContainer>
+        <HeroGrid>
+            <OpeningHeader>
+                <HeadingTitle>Apply</HeadingTitle>
+                <HeadingSubtitle>
+                    Product Space welcomes anyone with a passion for PM to apply. Join
+                    us and shape your product journey!
+                </HeadingSubtitle>
+                <ApplicationButton
+                    role="link"
+                    onClick={() => openInNewTab("https://forms.gle/JAWhDGXKSKisSuEg7")}>
+                    Start Application
+                </ApplicationButton>
+            </OpeningHeader>
+            <PictureContainer> 
+                 <PictureBox src={sp23funboard} alt="Product Space team" />
+            </PictureContainer>
+        </HeroGrid>
      </Panel> 
     )
 }
@@ -45,171 +33,93 @@ export default ApplyPanel;
 
 const Panel = styled.div`
     width: 100%;
-    height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-    background: url(${HomePG});
-    background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
-
-
-    @media only screen and (max-width: 450px){
-        display: flex; 
-        // justify-content: center;
-        // align-items: center;
-    }
-    // border: solid black; 
+    padding: clamp(88px, 14vh, 170px) clamp(32px, 8vw, 140px) 90px;
+    position: relative;
+    background: transparent;
+    overflow: hidden;
 `
+const HeroGrid = styled.div`
+    width: min(1320px, 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    align-items: center;
+    gap: clamp(36px, 7vw, 90px);
+
+    @media only screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+    }
+`
+
 const OpeningHeader = styled.div`
-    width: auto; 
-    height: 300px;
-    
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    
-    gap: 10px;
-    padding-left: 90px;
+    gap: 18px;
+    position: relative;
+    z-index: 1;
+`
 
-    // border: solid yellow;
+const HeadingEyebrow = styled.span`
+    font-size: 12px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+`
 
-    @media only screen and (max-width: 450px) {
-        display: flex; 
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        padding-left: 0px;
+const HeadingTitle = styled.h1`
+    font-size: clamp(44px, 6vw, 70px);
+    margin: 0;
+    letter-spacing: -0.4px;
+`
 
-        // border: solid yellow;
-        
+const HeadingSubtitle = styled.p`
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+    max-width: 560px;
+
+    @media only screen and (max-width: 900px) {
+        max-width: 520px;
     }
 `
 
-const HeadingTitle = styled.div`
-    font-size: 60px;
-    padding-bottom: 20px;
-
-    @media only screen and (max-width: 450px) {
-        margin-top: 30px;
-        text-align: center;
-
-        // border: solid red;
-    }
-
-`
-
-const HeadingSubtitle = styled.div`
-    font-size: 22px;
-    padding-bottom: 40px;
-    width: 600px;
-
-    // border: solid black;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 0; /* Allow content to expand vertically */
-
-    @media only screen and (max-width: 450px) {
-        width: 250px;
-        text-align: center;
-        // border: solid red;
-    }
-`
-
-
-const Subtitle = styled.div`
-    color: #EB5B8D;
-    font-size: 18px;
-    // font-weight: 500;
-    text-decoration: none;
-
-    margin-top: 10px;
-    width: 400px;
-
-    @media only screen and (max-width: 450px) {
-        width: 250px;
-        text-align: center;
-        // border: solid red;
-    }
-`
-
-const HeadingInfo = styled.div`
-
-`
-const ALink = styled(Link)`
-    font-weight: 700;
-    text-decoration: none;
-`
-
-const MoreInfo = styled.div`
-    margin-top: 100px;
-
-    // border: solid red;
-`
 const PictureContainer = styled.div`
-    height: auto;
-    width: 700px;
-
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 50px;
-
-    // border: solid black; 
-
-    animation: Appear 0.5s ease-in-out 0.5s both;
-
-    @keyframes Appear {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
-
-    @media only screen and (max-width: 400px) {
-        display: none;
-    }
-
+    width: min(720px, 100%);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    z-index: 1;
 `
-const PictureBox = styled.img`
-    width: 680px;
-    height: 430px;
 
-`;
+const PictureBox = styled.img`
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: 35% center;
+`
 
 const ApplicationButton = styled.button`
-    font-size: 24px;
-    color: #EB5B8D;
-    border: solid #EB5B8D 3px;
-    border-radius: 15px;
-    background: none;
-    width: 250px;
-    height: auto;
-
-    margin-top: 40px;
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    padding: 13px 28px;
+    width: fit-content;
 
     &:hover {
         cursor: pointer;
-    } 
-    @media only screen and (max-width: 600px) {
-        width: auto;
-
+        border-color: rgba(255, 255, 255, 0.9);
     }
-
-    
-
-    // border: solid black 1px;
 `
-
-
-
-

@@ -59,6 +59,11 @@ const OpeningHeader = styled.div`
     gap: 10px;
     // padding-left: 90px;
 
+    @media only screen and (max-width: 1199px) {
+        width: min(500px, 100%);
+        height: auto;
+    }
+
     @media only screen and (max-width: 450px) {
         display: flex; 
         align-items: center;
@@ -81,8 +86,13 @@ const HeadingSubtitle = styled.div`
     padding-bottom: 40px;
     min-width: 350px;
 
+    @media only screen and (max-width: 1199px) {
+        min-width: 0;
+        width: min(500px, 100%);
+    }
+
     @media only screen and (max-width: 450px) {
-        width: 350px;
+        width: min(350px, 100%);
         height: 300px;
         text-align: center;
         // border: solid red;
@@ -113,6 +123,10 @@ const PictureContainer = styled.div`
         }
     }
 
+    @media only screen and (max-width: 1199px) {
+        width: min(800px, 100%);
+    }
+
     @media only screen and (max-width: 600px) {
         display: none;
     }
@@ -121,5 +135,11 @@ const PictureContainer = styled.div`
 const PictureBox = styled.img`
     width: 700px;
     height: 550px;
+
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
 
 `;

@@ -61,6 +61,11 @@ const OpeningHeader = styled.div`
 
     // border: solid yellow;
 
+    @media only screen and (max-width: 1199px) {
+        width: min(600px, 100%);
+        height: auto;
+    }
+
     @media only screen and (max-width: 450px) {
         align-items: center;
         width: 300px;
@@ -69,6 +74,7 @@ const OpeningHeader = styled.div`
 
 const HeadingTitle = styled.div`
     font-size: 60px;
+    font-weight: 600;
     padding-bottom: 20px;
 
 `
@@ -78,6 +84,11 @@ const HeadingSubtitle = styled.div`
     padding-bottom: 40px;
     height: auto; 
     min-width: 250px;
+
+    @media only screen and (max-width: 1199px) {
+        min-width: 0;
+        width: min(600px, 100%);
+    }
 
     @media only screen and (max-width: 450px) {
         // width: 350px;
@@ -114,6 +125,11 @@ const PictureContainer = styled.div`
         }
     }
 
+    @media only screen and (max-width: 1199px) {
+        width: min(600px, 100%);
+        margin-right: 0;
+    }
+
     @media only screen and (max-width: 450px) {
         display: none;
     }
@@ -123,9 +139,21 @@ const HPictureBox = styled.img`
     width: 450px;
     height: 300px;
 
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+
 `;
 const VPictureBox = styled.img`
     width: 220px;
     height: 300px;
+
+    @media only screen and (max-width: 1199px) {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+    }
 
 `;

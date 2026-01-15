@@ -11,7 +11,7 @@ function ForStudents() {
         <Container> 
             <PictureBox src={AdvaitLineage} /> 
             <Box>
-                <Title> FOR STUDENTS</Title>
+                <Title > FOR STUDENTS</Title>
                 <Description> 
                     2 different programs where you can thrive
                 </Description>
@@ -24,7 +24,7 @@ function ForStudents() {
                 <Button to="/Students" onClick={handleLinkClick}> Learn More </Button>
             </Box>
         </Container>
-    )
+    ) 
 };
 
 export default ForStudents;
