@@ -122,7 +122,7 @@ function About() {
           <MissionContent className="reveal" data-reveal>
             <MissionBadge>MISSION</MissionBadge>
             <MissionTitle>
-              BUIDLING THE NEXT
+              BUILDING THE NEXT
               <br />
               GENERATION OF
               <br />

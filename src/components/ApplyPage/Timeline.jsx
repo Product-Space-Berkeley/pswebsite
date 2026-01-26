@@ -60,12 +60,24 @@ function Timeline() {
                     </DateRow>
                     <InfoRow> 
                         <RowTitle>Info Session #1 (8-10 PM PT)</RowTitle>
-                        <RowLocation>Dwinelle 155</RowLocation>
+                        <RowLocation>Tan Hall 775</RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
                             meet current members, and hear about our programs. 
                         </RowDescription>
                         <RowDescription> Note: both infosessions will present identical information, please only attend one out of the two sessions.</RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row> 
+                    <DateRow>
+                        <DateText>1/28 (Wed)</DateText>
+                    </DateRow>
+                    <InfoRow> 
+                        <RowTitle>Meet the Members (7-8 PM PT)</RowTitle>
+                        <RowLocation>Latimer Courtyard</RowLocation>
+                        <RowDescription>
+                            Come meet the members of Product Space and mingle!
+                        </RowDescription>
                     </InfoRow>
                 </Row>
                 <Row> 
@@ -87,7 +99,7 @@ function Timeline() {
                     </DateRow>
                     <InfoRow> 
                         <RowTitle>Info Session #2 (8-10 PM PT)</RowTitle>
-                        <RowLocation>Dwinelle 155</RowLocation>
+                        <RowLocation>Tan Hall 775</RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
                             meet current members, and hear about our programs. 
