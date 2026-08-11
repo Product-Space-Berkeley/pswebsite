@@ -37,38 +37,9 @@ function RevealSection({ children, className }) {
     return () => observer.disconnect();
   }, [visible]);
 
-  useEffect(() => {
-    const node = ref.current;
-    if (!node) return undefined;
-    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    if (reduceMotion) {
-      node.style.setProperty("--parallax-offset", "0px");
-      return undefined;
-    }
-    let frame = 0;
-    const update = () => {
-      const rect = node.getBoundingClientRect();
-      const offset = Math.max(-70, Math.min(70, rect.top * -0.18));
-      node.style.setProperty("--parallax-offset", `${offset}px`);
-      frame = 0;
-    };
-    const onScroll = () => {
-      if (frame) return;
-      frame = window.requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      if (frame) window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
   return (
     <section ref={ref} className={`${className} ${visible ? "is-visible" : ""}`}>
-      <div className="parallax-inner">{children}</div>
+      {children}
     </section>
   );
 }
@@ -175,21 +146,10 @@ const SectionReveal = styled(RevealSection)`
     transform: translateY(0);
   }
 
-  .parallax-inner {
-    transform: translateY(var(--parallax-offset, 0px));
-    transition: transform 0.15s ease-out;
-    will-change: transform;
-  }
-
   @media (prefers-reduced-motion: reduce) {
     opacity: 1;
     transform: none;
     transition: none;
-
-    .parallax-inner {
-      transform: none;
-      transition: none;
-    }
   }
 `;
 
@@ -233,10 +193,6 @@ const HeroSectionWrap = styled(SectionReveal)`
 const FooterReveal = styled(SectionReveal)`
   margin-top: auto;
   width: 100%;
-
-  .parallax-inner {
-    transform: none !important;
-  }
 `;
 
 /* spacing under PSDescription */

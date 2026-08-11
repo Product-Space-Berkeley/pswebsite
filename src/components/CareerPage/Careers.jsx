@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useRef } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -87,6 +87,9 @@ function Careers() {
         <HeroSection ref={heroRef}>
           <HeroBadge>CAREERS</HeroBadge>
           <HeroTitle>Beyond Product Space</HeroTitle>
+          <HeroSubtitle>
+            Our members go on to build products and shape technology at some of the world's leading companies, bringing the skills and community they developed at Product Space with them.
+          </HeroSubtitle>
         </HeroSection>
 
         <GallerySection ref={galleryRef}>
@@ -198,6 +201,26 @@ function Careers() {
 
 export default Careers;
 
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 const Page = styled.div`
   position: relative;
   min-height: 100vh;
@@ -205,6 +228,12 @@ const Page = styled.div`
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+    }
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -215,6 +244,12 @@ const BackgroundImage = styled.img`
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
+  will-change: transform;
+  animation: ${fadeIn} 1200ms ease forwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 const Content = styled.div`
@@ -244,7 +279,7 @@ const HeroSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 18px;
   will-change: transform;
 `;
 
@@ -257,6 +292,8 @@ const HeroBadge = styled.span`
   padding: 6px 14px;
   border-radius: 999px;
   text-transform: uppercase;
+  opacity: 0;
+  animation: ${fadeUp} 700ms ease forwards;
 `;
 
 const HeroTitle = styled.h1`
@@ -264,11 +301,24 @@ const HeroTitle = styled.h1`
   font-size: clamp(34px, 5vw, 56px);
   font-weight: 600;
   color: #ffffff;
+  opacity: 0;
+  animation: ${fadeUp} 800ms ease 80ms forwards;
+`;
+
+const HeroSubtitle = styled.p`
+  margin: 0;
+  max-width: 720px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.72);
+  opacity: 0;
+  animation: ${fadeUp} 900ms ease 140ms forwards;
 `;
 
 const GallerySection = styled.section`
   width: 100%;
-  margin: 10px auto 60px;
+  margin: 48px auto 60px;
   will-change: transform;
 `;
 
@@ -297,6 +347,8 @@ const GalleryCard = styled.div`
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
   aspect-ratio: ${props => props.$ratio || "4 / 5"};
   min-height: 220px;
+  opacity: 0;
+  animation: ${fadeUp} 900ms ease 200ms forwards;
 
   @media (max-width: 1024px) {
     min-height: 200px;
@@ -328,6 +380,8 @@ const LogosSection = styled.section`
   align-items: center;
   gap: 18px;
   will-change: transform;
+  opacity: 0;
+  animation: ${fadeUp} 900ms ease 300ms forwards;
 `;
 
 const LogosTitle = styled.h2`
@@ -419,4 +473,6 @@ const TablesSection = styled.section`
   width: 100%;
   margin: 0 auto 120px;
   will-change: transform;
+  opacity: 0;
+  animation: ${fadeUp} 900ms ease 400ms forwards;
 `;

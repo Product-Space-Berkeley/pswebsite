@@ -365,7 +365,7 @@ const HeroPhoto = styled.img`
 
 const MissionSection = styled.section`
   width: min(1100px, 100%);
-  margin: 0 auto 180px;
+  margin: 0 auto 100px;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr);
   gap: 42px;
@@ -520,7 +520,7 @@ const CardText = styled.p`
 
 const CoffeeSection = styled.section`
   width: min(1100px, 100%);
-  margin: 140px auto 20px;
+  margin: 60px auto 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
