@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import OpeningPanel from "./OpeningPanel";
@@ -7,42 +6,6 @@ import PSDescription from "./PSDescription";
 import WhatWeOffer from "./WhatWeOffer";
 import GetInTouch from "./GetInTouch";
 import HomeBG from "../images/pictures/HomeBGNew.png";
-
-function RevealSection({ children, className }) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    if (visible) return;
-    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    if (reduceMotion) {
-      setVisible(true);
-      return;
-    }
-    const node = ref.current;
-    if (!node || !("IntersectionObserver" in window)) {
-      setVisible(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [visible]);
-
-  return (
-    <section ref={ref} className={`${className} ${visible ? "is-visible" : ""}`}>
-      {children}
-    </section>
-  );
-}
 
 function Home() {
   return (
@@ -66,9 +29,9 @@ function Home() {
           <WhatWeOffer />
         </OfferSection>
 
-        <SectionReveal>
+        <GetInTouchSection>
           <GetInTouch />
-        </SectionReveal>
+        </GetInTouchSection>
         <FooterReveal>
           <Footer />
         </FooterReveal>
@@ -86,6 +49,7 @@ const PageWrapper = styled.div`
   width: 100%;
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
 `;
@@ -136,44 +100,49 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const SectionReveal = styled(RevealSection)`
+const SectionReveal = styled.section`
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  animation: delayedFadeIn 0.7s ease 0.05s forwards;
 
-  &.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes delayedFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     opacity: 1;
     transform: none;
-    transition: none;
+    animation: none;
   }
 `;
 
 const HeroSectionWrap = styled(SectionReveal)`
   margin-bottom: 0;
+  animation-delay: 0.05s;
 
   & [data-hero-item] {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    transition-delay: var(--reveal-delay, 0ms);
+    animation: heroItemFadeIn 0.8s ease forwards;
+    animation-delay: var(--reveal-delay, 0ms);
     will-change: opacity, transform;
   }
 
-  &.is-visible [data-hero-item] {
-    opacity: 1;
-    transform: translateY(0);
+  @keyframes heroItemFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
     & [data-hero-item] {
       opacity: 1;
       transform: none;
-      transition: none;
+      animation: none;
     }
   }
 
@@ -190,14 +159,20 @@ const HeroSectionWrap = styled(SectionReveal)`
   }
 `;
 
+const GetInTouchSection = styled(SectionReveal)`
+  animation-delay: 0.35s;
+`;
+
 const FooterReveal = styled(SectionReveal)`
   margin-top: auto;
   width: 100%;
+  animation-delay: 0.45s;
 `;
 
 /* spacing under PSDescription */
 const PSSection = styled(SectionReveal)`
   margin: 80px 0 64px;
+  animation-delay: 0.15s;
 
   @media (max-width: 1200px) {
     margin: 48px 0 48px;
@@ -215,6 +190,7 @@ const PSSection = styled(SectionReveal)`
 /* spacing under WhatWeOffer */
 const OfferSection = styled(SectionReveal)`
   margin-bottom: 180px;
+  animation-delay: 0.25s;
 
   @media (max-width: 1200px) {
     margin-bottom: 120px;

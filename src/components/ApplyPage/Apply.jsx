@@ -1,45 +1,8 @@
 import styled from 'styled-components'
-import { useEffect, useRef, useState } from 'react'
 import ApplyPanel from './ApplyPanel'
 import Navbar from '../Navbar'
 import Timeline from './Timeline'
 import Footer from '../Footer'
-
-function RevealSection({ children, className }) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    if (visible) return;
-    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-    if (reduceMotion) {
-      setVisible(true);
-      return;
-    }
-    const node = ref.current;
-    if (!node || !("IntersectionObserver" in window)) {
-      setVisible(true);
-      return;
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(node);
-    return () => observer.disconnect();
-  }, [visible]);
-
-  return (
-    <section ref={ref} className={`${className} ${visible ? "is-visible" : ""}`}>
-      {children}
-    </section>
-  );
-}
 
 const Container = styled.div`
     background: radial-gradient(circle at 20% 0%, rgba(62, 38, 100, 0.3), transparent 55%),
@@ -52,30 +15,14 @@ const Container = styled.div`
 
 @media only screen and (max-width: 800px) {
     overflow-x: hidden;
+    overflow-y: visible;
 }
 `
 
-const SectionReveal = styled(RevealSection)`
+const SectionReveal = styled.section`
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-
-  &.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-`;
-
-const TimelineWrapper = styled.div`
-  opacity: 0;
-  transform: translateY(24px);
-  animation: delayedFadeIn 0.7s ease 0.3s forwards;
+  animation: delayedFadeIn 0.7s ease 0.05s forwards;
 
   @keyframes delayedFadeIn {
     to {
@@ -83,6 +30,18 @@ const TimelineWrapper = styled.div`
       transform: translateY(0);
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+`;
+
+const TimelineWrapper = styled.div`
+  opacity: 0;
+  transform: translateY(24px);
+  animation: delayedFadeIn 0.7s ease 0.3s forwards;
 
   @media (prefers-reduced-motion: reduce) {
     opacity: 1;
