@@ -401,6 +401,14 @@ const NavWrap = styled.div`
 const HeroSection = styled.section`
   width: 100%;
   margin: 120px 0 80px;
+
+  @media (max-width: 720px) {
+    margin: 48px 0 20px;
+  }
+
+  @media (max-width: 520px) {
+    margin: 32px 0 14px;
+  }
 `;
 
 /* ✅ Container for the exported PNG */
@@ -429,9 +437,7 @@ const HeroBox = styled.div`
   }
 
   @media (max-width: 520px) {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
+    min-height: 440px;
   }
 `;
 
@@ -465,14 +471,6 @@ const HeroGraphic = styled.img`
     width: 100%;
     height: 100%;
   }
-
-  @media (max-width: 520px) {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
 `;
 
 /* ✅ Text overlay positioned on top of the PNG */
@@ -498,8 +496,6 @@ const HeroOverlay = styled.div`
   }
 
   @media (max-width: 520px) {
-    position: relative;
-    inset: auto;
     padding: 20px 22px 26px;
     align-items: flex-start;
   }
@@ -834,6 +830,14 @@ const PastClientsReveal = styled(SectionReveal)`
   flex-direction: column;
   align-items: center;
   gap: 18px;
+
+  @media (max-width: 720px) {
+    margin: 12px 0 56px;
+  }
+
+  @media (max-width: 520px) {
+    margin: 10px 0 48px;
+  }
 `;
 
 const PastClientsTitle = styled.h2`
