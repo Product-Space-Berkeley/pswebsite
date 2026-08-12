@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -19,12 +19,43 @@ import timelineIcon from "../images/miscicons/timeline-icon.svg";
 import checklistIcon from "../images/miscicons/checklist-icon.svg";
 import studentIcon from "../images/miscicons/student-icon.svg";
 
+function RevealSection({ children, className }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    if (visible) return;
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (reduceMotion) {
+      setVisible(true);
+      return;
+    }
+    const node = ref.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      setVisible(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return (
+    <section ref={ref} className={`${className} ${visible ? "is-visible" : ""}`}>
+      {children}
+    </section>
+  );
+}
+
 function Companies() {
-  const heroRef = useRef(null);
-  const heroGraphicRef = useRef(null);
-  const clientsRef = useRef(null);
-  const howRef = useRef(null);
-  const contactRef = useRef(null);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -36,54 +67,7 @@ function Companies() {
   const [heroStatus, setHeroStatus] = useState(null);
 
   useEffect(() => {
-    if (typeof window === "undefined") return undefined;
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const sections = [
-      { ref: heroRef, factor: 0.4, max: 180 },
-      { ref: clientsRef, factor: 0.36, max: 160 },
-      { ref: howRef, factor: 0.32, max: 140 },
-      { ref: contactRef, factor: 0.28, max: 120 }
-    ];
-
-    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-    let frame = 0;
-
-    const update = () => {
-      sections.forEach(({ ref, factor, max }) => {
-        if (!ref.current) return;
-        if (reduceMotion) {
-          ref.current.style.transform = "translate3d(0, 0, 0)";
-          return;
-        }
-        const rect = ref.current.getBoundingClientRect();
-        const offset = clamp(rect.top * -factor, -max, max);
-        ref.current.style.transform = `translate3d(0, ${offset}px, 0)`;
-      });
-      if (heroGraphicRef.current) {
-        if (reduceMotion) {
-          heroGraphicRef.current.style.transform = "translate3d(0, 0, 0)";
-        } else {
-          const rect = heroGraphicRef.current.getBoundingClientRect();
-          const offset = clamp(rect.top * -0.22, -90, 90);
-          heroGraphicRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
-        }
-      }
-      frame = 0;
-    };
-
-    const onScroll = () => {
-      if (frame) return;
-      frame = window.requestAnimationFrame(update);
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      if (frame) window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    // No parallax effects - just static page with animations on load
   }, []);
 
   const handleChange = (event) => {
@@ -161,10 +145,10 @@ function Companies() {
           <Navbar />
         </NavWrap>
 
-        <HeroSection ref={heroRef}>
+        <HeroSection>
           <HeroBox>
             {/* the graphic IS the entire hero box */}
-            <HeroGraphic ref={heroGraphicRef} src={ClientGraphic} alt="" />
+            <HeroGraphic src={ClientGraphic} alt="" />
 
             {/* text sits on top */}
             <HeroOverlay>
@@ -193,7 +177,7 @@ function Companies() {
           </HeroBox>
         </HeroSection>
 
-        <PastClientsSection ref={clientsRef}>
+        <PastClientsReveal>
           <PastClientsTitle>PAST CLIENTS</PastClientsTitle>
           <CarouselContainer>
             <CarouselTrack>
@@ -206,9 +190,9 @@ function Companies() {
               )}
             </CarouselTrack>
           </CarouselContainer>
-        </PastClientsSection>
+        </PastClientsReveal>
 
-        <HowItWorksSection ref={howRef}>
+        <HowItWorksReveal>
           <SectionTitle>HOW IT WORKS</SectionTitle>
           <SectionSubtitle>
             We partner with companies to ship focused product work through PM‑led student
@@ -260,9 +244,9 @@ function Companies() {
               </InfoCard>
             ))}
           </CardsGrid>
-        </HowItWorksSection>
+        </HowItWorksReveal>
 
-        <GetInTouchSection ref={contactRef}>
+        <GetInTouchReveal>
           <SectionTitle>GET IN TOUCH</SectionTitle>
           <SectionSubtitle>
             Get in touch to learn how Product Space can support your company goals.
@@ -314,7 +298,7 @@ function Companies() {
             <SubmitButton type="submit">Submit</SubmitButton>
             {status && <FormStatus data-type={status.type}>{status.message}</FormStatus>}
           </ContactForm>
-        </GetInTouchSection>
+        </GetInTouchReveal>
 
         <FooterWrap>
           <Footer />
@@ -326,15 +310,61 @@ function Companies() {
 
 export default Companies;
 
+/* ============ animations ============ */
+
+const fadeUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 /* ============ layout ============ */
+
+const SectionReveal = styled(RevealSection)`
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+`;
 
 const Page = styled.div`
   position: relative;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+    }
+  }
 `;
 
 const BackgroundImage = styled.img`
@@ -345,6 +375,11 @@ const BackgroundImage = styled.img`
   object-fit: cover;
   z-index: -2;
   pointer-events: none;
+  animation: ${fadeIn} 1200ms ease forwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 const Content = styled.div`
@@ -365,8 +400,15 @@ const NavWrap = styled.div`
 
 const HeroSection = styled.section`
   width: 100%;
-  margin: 120px 0 140px;
-  will-change: transform;
+  margin: 120px 0 80px;
+
+  @media (max-width: 720px) {
+    margin: 48px 0 20px;
+  }
+
+  @media (max-width: 520px) {
+    margin: 32px 0 14px;
+  }
 `;
 
 /* ✅ Container for the exported PNG */
@@ -395,13 +437,11 @@ const HeroBox = styled.div`
   }
 
   @media (max-width: 520px) {
-    display: flex;
-    flex-direction: column;
-    min-height: auto;
+    min-height: 440px;
   }
 `;
 
-/* ✅ The PNG itself (no CSS “card” behind it) */
+/* ✅ The PNG itself (no CSS "card" behind it) */
 const HeroGraphic = styled.img`
   position: absolute;
   inset: 0;
@@ -414,6 +454,8 @@ const HeroGraphic = styled.img`
 
   pointer-events: none;
   user-select: none;
+  opacity: 0;
+  animation: ${fadeIn} 1000ms ease 100ms forwards;
 
   @media (max-width: 1024px) {
     width: 108%;
@@ -428,14 +470,6 @@ const HeroGraphic = styled.img`
   @media (max-width: 720px) {
     width: 100%;
     height: 100%;
-  }
-
-  @media (max-width: 520px) {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
   }
 `;
 
@@ -462,8 +496,6 @@ const HeroOverlay = styled.div`
   }
 
   @media (max-width: 520px) {
-    position: relative;
-    inset: auto;
     padding: 20px 22px 26px;
     align-items: flex-start;
   }
@@ -505,6 +537,8 @@ const HeroBadge = styled.span`
   border-radius: 999px;
   text-transform: uppercase;
   width: fit-content;
+  opacity: 0;
+  animation: ${fadeUp} 700ms ease forwards;
 
   @media (max-width: 720px) {
     font-size: 10px;
@@ -517,6 +551,8 @@ const HeroTitle = styled.h1`
   font-size: clamp(36px, 4.6vw, 56px);
   font-weight: 600;
   color: #fff;
+  opacity: 0;
+  animation: ${fadeUp} 800ms ease 80ms forwards;
 
   @media (max-width: 720px) {
     font-size: 28px;
@@ -529,6 +565,8 @@ const HeroSubtitle = styled.p`
   font-size: 16px;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.72);
+  opacity: 0;
+  animation: ${fadeUp} 900ms ease 140ms forwards;
 
   @media (max-width: 720px) {
     font-size: 12px;
@@ -541,6 +579,8 @@ const CtaRow = styled.form`
   align-items: center;
   gap: 12px;
   margin-top: 10px;
+  opacity: 0;
+  animation: ${fadeUp} 1000ms ease 220ms forwards;
 
   @media (max-width: 640px) {
     flex-direction: column;
@@ -621,11 +661,10 @@ const FooterWrap = styled.div`
   margin-top: auto;
 `;
 
-const HowItWorksSection = styled.section`
+const HowItWorksReveal = styled(SectionReveal)`
   width: min(760px, 100%);
-  margin: 140px auto 80px;
+  margin: 80px auto 80px;
   text-align: center;
-  will-change: transform;
 `;
 
 const SectionTitle = styled.h3`
@@ -708,11 +747,10 @@ const CardText = styled.p`
   color: var(--card-text);
 `;
 
-const GetInTouchSection = styled.section`
+const GetInTouchReveal = styled(SectionReveal)`
   width: min(760px, 100%);
-  margin: 300px auto 140px;
+  margin: 80px auto 140px;
   text-align: center;
-  will-change: transform;
 `;
 
 const ContactForm = styled.form`
@@ -784,14 +822,22 @@ const FormStatus = styled.div`
   font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 `;
-const PastClientsSection = styled.section`
+
+const PastClientsReveal = styled(SectionReveal)`
   width: 100%;
-  margin: 150px 0 150px;
+  margin: 60px 0 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 18px;
-  will-change: transform;
+
+  @media (max-width: 720px) {
+    margin: 12px 0 56px;
+  }
+
+  @media (max-width: 520px) {
+    margin: 10px 0 48px;
+  }
 `;
 
 const PastClientsTitle = styled.h2`

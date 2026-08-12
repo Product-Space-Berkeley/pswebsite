@@ -60,6 +60,10 @@ const OpeningHeader = styled.div`
     gap: 18px;
     position: relative;
     z-index: 1;
+
+    @media only screen and (max-width: 900px) {
+        align-items: center;
+    }
 `
 
 const HeadingEyebrow = styled.span`

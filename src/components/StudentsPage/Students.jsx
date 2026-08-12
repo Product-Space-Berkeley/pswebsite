@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
@@ -12,92 +12,55 @@ import Photo5 from "../images/pictures/PS Photoshoot DSCF3630.JPG";
 import Photo6 from "../images/pictures/Past Photoshoot DSCF3622.JPG";
 import Photo7 from "../images/pictures/Past Photoshoot DSCF3710.JPG";
 
-function Students() {
-  const heroRef = useRef(null);
-  const programsRef = useRef(null);
+function RevealSection({ children, className }) {
+  const ref = useRef(null);
+  const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    if (visible) return;
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+    if (reduceMotion) {
+      setVisible(true);
+      return;
+    }
+    const node = ref.current;
+    if (!node || !("IntersectionObserver" in window)) {
+      setVisible(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [visible]);
+
+  return (
+    <section ref={ref} className={`${className} ${visible ? "is-visible" : ""}`}>
+      {children}
+    </section>
+  );
+}
+
+function Students() {
   useEffect(() => {
     if (typeof window === "undefined") {
       return undefined;
     }
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const parallaxItems = Array.from(document.querySelectorAll("[data-parallax]"));
     const revealItems = Array.from(document.querySelectorAll("[data-reveal]"));
 
     if (reduceMotion) {
-      parallaxItems.forEach((item) => {
-        item.style.transform = "translate3d(0, 0, 0)";
-      });
       revealItems.forEach((item) => item.classList.add("is-visible"));
       return undefined;
     }
-
-    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-    let raf = 0;
-
-    const sections = [
-      { ref: heroRef, factor: 0.3, max: 160 },
-      { ref: programsRef, factor: 0.26, max: 140 }
-    ];
-
-    const getParallaxMode = () => {
-      const width = window.innerWidth || 0;
-      if (width < 1200) return "off";
-      return "full";
-    };
-
-    const updateParallax = (scrollY) => {
-      if (!heroRef.current) {
-        return;
-      }
-
-      const mode = getParallaxMode();
-      if (mode === "off") {
-        parallaxItems.forEach((item) => {
-          item.style.transform = "translate3d(0, 0, 0)";
-        });
-        sections.forEach(({ ref }) => {
-          if (ref.current) {
-            ref.current.style.transform = "translate3d(0, 0, 0)";
-          }
-        });
-        return;
-      }
-
-      const heroTop = heroRef.current.offsetTop;
-      const heroHeight = heroRef.current.offsetHeight || 1;
-      const progress = clamp((scrollY - heroTop) / heroHeight, 0, 1);
-      const baseOffset = (progress - 0.5) * 2;
-
-      parallaxItems.forEach((item) => {
-        const speed = Number(item.dataset.speed || 0.6);
-        const offset = clamp(baseOffset * 40 * speed, -60, 60);
-        item.style.transform = `translate3d(0, ${offset}px, 0)`;
-      });
-
-      sections.forEach(({ ref, factor, max }) => {
-        if (!ref.current) return;
-        const rect = ref.current.getBoundingClientRect();
-        const offset = clamp(rect.top * -factor, -max, max);
-        ref.current.style.transform = `translate3d(0, ${offset}px, 0)`;
-      });
-    };
-
-    const onScroll = () => {
-      const scrollY = window.scrollY || window.pageYOffset;
-      if (raf) {
-        return;
-      }
-      raf = window.requestAnimationFrame(() => {
-        updateParallax(scrollY);
-        raf = 0;
-      });
-    };
-
-    updateParallax(window.scrollY || window.pageYOffset);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -114,11 +77,6 @@ function Students() {
     revealItems.forEach((item) => observer.observe(item));
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) {
-        window.cancelAnimationFrame(raf);
-      }
       observer.disconnect();
     };
   }, []);
@@ -132,7 +90,7 @@ function Students() {
           <Navbar />
         </NavWrap>
 
-        <HeroSection ref={heroRef}>
+        <HeroSection>
           <HeroBadge data-reveal>FOR STUDENTS</HeroBadge>
           <HeroTitle data-reveal>Your Product Community</HeroTitle>
           <HeroSubtitle data-reveal>
@@ -143,33 +101,33 @@ function Students() {
           <GallerySection data-reveal>
             <GalleryGrid>
               <GalleryCard $span={4} $ratio="4 / 3" data-reveal>
-                <GalleryImage data-parallax data-speed="0.6" src={Photo1} alt="Students group moment" />
+                <GalleryImage src={Photo1} alt="Students group moment" />
               </GalleryCard>
               <GalleryCard $span={4} $ratio="4 / 3" data-reveal>
-                <GalleryImage data-parallax data-speed="0.7" src={Photo2} alt="Students at retreat" />
+                <GalleryImage src={Photo2} alt="Students at retreat" />
               </GalleryCard>
               <GalleryCard $span={4} $ratio="4 / 3" data-reveal>
-                <GalleryImage data-parallax data-speed="0.65" src={Photo3} alt="Students at event" />
+                <GalleryImage src={Photo3} alt="Students at event" />
               </GalleryCard>
               <GalleryCard $span={2} data-reveal>
-                <GalleryImage data-parallax data-speed="0.75" src={Photo4} alt="Fellowship group" />
+                <GalleryImage src={Photo4} alt="Fellowship group" />
               </GalleryCard>
               <GalleryCard $span={4} data-reveal>
-                <GalleryImage data-parallax data-speed="0.7" src={Photo5} alt="Board fun photo" />
+                <GalleryImage src={Photo5} alt="Board fun photo" />
               </GalleryCard>
               <GalleryCard $span={4} data-reveal>
-                <GalleryImage data-parallax data-speed="0.8" src={Photo6} alt="Fellowship photo" />
+                <GalleryImage src={Photo6} alt="Fellowship photo" />
               </GalleryCard>
               <GalleryCard $span={2} data-reveal>
-                <GalleryImage data-parallax data-speed="0.65" src={Photo7} alt="Club group photo" />
+                <GalleryImage src={Photo7} alt="Club group photo" />
               </GalleryCard>
             </GalleryGrid>
           </GallerySection>
         </HeroSection>
 
-        <ProgramsSection ref={programsRef} data-reveal>
+        <ProgramsReveal>
           <OurPrograms />
-        </ProgramsSection>
+        </ProgramsReveal>
 
         <FooterWrap>
           <Footer />
@@ -206,6 +164,7 @@ const Page = styled.div`
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: visible;
   display: flex;
   flex-direction: column;
 
@@ -304,9 +263,9 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   margin: 0;
-  max-width: 680px;
-  font-size: 14px;
-  line-height: 1.6;
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.7;
   color: rgba(255, 255, 255, 0.74);
   opacity: 0;
 
@@ -400,14 +359,12 @@ const GalleryCard = styled.div`
 
 const GalleryImage = styled.img`
   width: 100%;
-  height: 115%;
+  height: 100%;
   min-height: 200px;
   object-fit: cover;
   display: block;
-  will-change: transform;
 
   @media (max-width: 1199px) {
-    height: 100%;
     min-height: 0;
   }
 `;
@@ -417,12 +374,24 @@ const FooterWrap = styled.div`
   margin-top: auto;
 `;
 
-const ProgramsSection = styled.section`
-  width: 100%;
-  margin: 20px 0 120px;
+const SectionReveal = styled(RevealSection)`
   opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
 
   &.is-visible {
-    animation: ${fadeUp} 900ms ease 140ms forwards;
+    opacity: 1;
+    transform: translateY(0);
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+`;
+
+const ProgramsReveal = styled(SectionReveal)`
+  width: 100%;
+  margin: 20px 0 120px;
 `;
