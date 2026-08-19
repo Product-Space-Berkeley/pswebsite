@@ -15,6 +15,7 @@ const data = {
       { name: 'Melanie Hsiang', company: 'The Trade Desk', role: 'Product Manager' },
       { name: 'Andy Wei', company: 'McKinsey', role: 'PDP Fellow' },
       { name: 'Ryan Cho', company: 'UCSF', role: 'Biomechanics Researcher' },
+      { name: 'Vicky Xiao', company: 'Mastercard', role: 'Associate Product Specialist' },
     ],
     internship: [
       { name: 'Rick Xu', company: 'Google', role: 'Associate Product Management Intern' },
@@ -41,6 +42,8 @@ const data = {
       { name: 'Athreya Iyer', company: 'SPARKFUL', role: 'Software Intern' },
       { name: 'Olin Engh', company: 'Bridge Asia Group', role: 'Product Strategy Intern' },
       { name: 'Victoria Tran', company: 'Alcorn', role: 'Product Training Intern' },
+      { name: 'Vyoma Patel', company: 'Coinbase', role: 'Associate Product Management Intern' },
+      { name: 'Srivar Kalisetti', company: 'Soundverse AI', role: 'Technical Product Management Intern' },
     ],
   },
   '2025': {
