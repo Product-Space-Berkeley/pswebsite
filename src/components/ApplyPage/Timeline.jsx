@@ -17,11 +17,11 @@ function Timeline() {
         <Container> 
             <Header>RECRUITMENT TIMELINE</Header>
             <Table>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/20 (Tues)<br />- 1/30 (Fri)</DateText>
-                    </DateRow> 
-                    <InfoRow> 
+                        <DateText>8/26 (Wed)<br />- 9/2 (Wed)</DateText>
+                    </DateRow>
+                    <InfoRow>
                         <RowTitle>Tabling & Coffee Chats Open</RowTitle>
                         <RowDescription>
                             Find us tabling at Sproul or sign up for coffee chats with members at
@@ -37,9 +37,9 @@ function Timeline() {
                 </Row>
                 <Row>
                     <DateRow>
-                        <DateText>1/20 (Tues)</DateText>
-                    </DateRow> 
-                    <InfoRow> 
+                        <DateText>8/26 (Wed)</DateText>
+                    </DateRow>
+                    <InfoRow>
                         <RowTitle>Applications Open</RowTitle>
                         <RowDescription>
                             The application opens for interested students. Share your background,
@@ -48,31 +48,31 @@ function Timeline() {
                         <RowActions>
                             <ActionButton
                                 type="button"
-                                onClick={() => openInNewTab("https://forms.gle/JAWhDGXKSKisSuEg7")}>
+                                onClick={() => openInNewTab("https://forms.gle/XNiEhNisfE69yDw97")}>
                                 Application
                             </ActionButton>
                         </RowActions>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/27 (Tues)</DateText>
+                        <DateText>8/31 (Mon)</DateText>
                     </DateRow>
-                    <InfoRow> 
-                        <RowTitle>Info Session #1 (8-10 PM PT)</RowTitle>
+                    <InfoRow>
+                        <RowTitle>Info Session #1 (9-11 PM PT)</RowTitle>
                         <RowLocation>Tan Hall 775</RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
-                            meet current members, and hear about our programs. 
+                            meet current members, and hear about our programs.
                         </RowDescription>
                         <RowDescription> Note: both infosessions will present identical information, please only attend one out of the two sessions.</RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/28 (Wed)</DateText>
+                        <DateText>9/1 (Tue)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>Meet the Members (7-8 PM PT)</RowTitle>
                         <RowLocation>Latimer Courtyard</RowLocation>
                         <RowDescription>
@@ -80,11 +80,11 @@ function Timeline() {
                         </RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/28 (Wed)</DateText>
+                        <DateText>9/1 (Tue)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>PS Case Workshop (8-10 PM PT)</RowTitle>
                         <RowLocation>Tan Hall 775</RowLocation>
                         <RowDescription>
@@ -93,38 +93,50 @@ function Timeline() {
                         </RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/29 (Thurs)</DateText>
+                        <DateText>9/2 (Wed)</DateText>
                     </DateRow>
-                    <InfoRow> 
-                        <RowTitle>Info Session #2 (8-10 PM PT)</RowTitle>
+                    <InfoRow>
+                        <RowTitle>Meet the Members (8-9 PM PT)</RowTitle>
+                        <RowLocation>Latimer Courtyard</RowLocation>
+                        <RowDescription>
+                            Come meet the members of Product Space and mingle!
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row>
+                    <DateRow>
+                        <DateText>9/2 (Wed)</DateText>
+                    </DateRow>
+                    <InfoRow>
+                        <RowTitle>Info Session #2 (9-10 PM PT)</RowTitle>
                         <RowLocation>Tan Hall 775</RowLocation>
                         <RowDescription>
                             Join us to get a glimpse into the way we do things at Product Space @ Berkeley,
-                            meet current members, and hear about our programs. 
+                            meet current members, and hear about our programs.
                         </RowDescription>
                         <RowDescription> Note: both infosessions will present identical information, please only attend one out of the two sessions.</RowDescription>
 
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/29 (Thurs)</DateText>
+                        <DateText>9/2 (Wed)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>Applications Close (11:59PM PST)</RowTitle>
                         <RowDescription>
-                            Submit your Product Space application by Thursday 11:59PM Pacific Time. Make sure all
-                            required fields are complete before the deadline. There is a 10 minute grace period for technical difficulties.
+                            Submit your Product Space application by Wednesday 11:59PM Pacific Time. Make sure all
+                            required fields are complete before the deadline. There is a 30 minute grace period for technical difficulties.
                         </RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>1/31 (Sat)<br />- 2/1 (Sun)</DateText>
+                        <DateText>9/4 (Fri)<br />- 9/5 (Sat)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>1st Round Interviews (Invite Only)</RowTitle>
                         <RowDescription>
                             Behavioral and product design questions to learn more about you, your experience,
@@ -132,11 +144,11 @@ function Timeline() {
                         </RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>2/3 (Tues)</DateText>
+                        <DateText>9/7 (Mon)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>Final Round Interviews (Invite Only)</RowTitle>
                         <RowDescription>
                             A presentation based on a prompt we provide ahead of time, focused on how you
@@ -144,11 +156,11 @@ function Timeline() {
                         </RowDescription>
                     </InfoRow>
                 </Row>
-                <Row> 
+                <Row>
                     <DateRow>
-                        <DateText>2/3 (Tues)</DateText>
+                        <DateText>9/7 (Mon)</DateText>
                     </DateRow>
-                    <InfoRow> 
+                    <InfoRow>
                         <RowTitle>Social Night (Invite Only)</RowTitle>
                         <RowDescription>
                             Meet all of us in Product Space at our social night and connect with the

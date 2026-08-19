@@ -17,7 +17,7 @@ function ApplyPanel() {
                 </HeadingSubtitle>
                 <ApplicationButton
                     role="link"
-                    onClick={() => openInNewTab("https://forms.gle/JAWhDGXKSKisSuEg7")}>
+                    onClick={() => openInNewTab("https://forms.gle/XNiEhNisfE69yDw97")}>
                     Start Application
                 </ApplicationButton>
             </OpeningHeader>
