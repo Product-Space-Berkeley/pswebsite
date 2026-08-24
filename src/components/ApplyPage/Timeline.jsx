@@ -56,6 +56,18 @@ function Timeline() {
                 </Row>
                 <Row>
                     <DateRow>
+                        <DateText>8/30 (Sun)</DateText>
+                    </DateRow>
+                    <InfoRow>
+                        <RowTitle>Breaking into Tech: URM Panel (8-10 PM PT)</RowTitle>
+                        <RowLocation>SOCS 60</RowLocation>
+                        <RowDescription>
+                            Hear from diverse perspectives on how to start your career in tech!
+                        </RowDescription>
+                    </InfoRow>
+                </Row>
+                <Row>
+                    <DateRow>
                         <DateText>8/31 (Mon)</DateText>
                     </DateRow>
                     <InfoRow>
